@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Password Best Practices on Dan Munro - Dev-Sec-Ops Engineer</title>
+    <link>https://danmunro.com/tags/password-best-practices/</link>
+    <description>Recent content in Password Best Practices on Dan Munro - Dev-Sec-Ops Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Jul 2018 08:22:24 -0500</lastBuildDate>
+    
+        <atom:link href="https://danmunro.com/tags/password-best-practices/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Password Is Dead, Long Live The Password!</title>
+      <link>https://danmunro.com/posts/the-password-is-dead/</link>
+      <pubDate>Wed, 25 Jul 2018 08:22:24 -0500</pubDate>
+      
+      <guid>https://danmunro.com/posts/the-password-is-dead/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;They just don&amp;rsquo;t meet the challenge for anything you really want to secure.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Bill Gates, 2004&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;You will never need a password again.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;IBM, predicting five years out in 2011&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Passwords and simple bearer tokens, such as cookies, are no longer sufficient to keep users safe.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Eric Grosse, Google, 2015&lt;/p&gt;
+
+&lt;p&gt;Passwords are not going away any time soon &lt;sup&gt;&lt;a href=&#34;#myfootnote1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. If our collective hygiene does not improve, we will all die in fiery apocalyptic digital anarchy, probably. Or not. However, just like hygiene for our bodies, prevention and care is far cheaper and more effective than remediation and recovery.&lt;/p&gt;
+
+&lt;h2 id=&#34;managing-the-chaos&#34;&gt;Managing The Chaos&lt;/h2&gt;
+
+&lt;p&gt;How many passwords does the average person keep track of? Information regarding password usage is not widely circulated, but if a recent report from LastPass is to be trusted, in 2017 that answer is &lt;strong&gt;191&lt;/strong&gt;. Assuming we follow good password hygiene and all passwords are at least 8 characters in length (or more!), that’s 1528 total characters. &lt;em&gt;At least&lt;/em&gt;. My password manager is configured to generate 64 character passwords by default, which would total &lt;em&gt;12,224 characters&lt;/em&gt;. It goes without saying, but that’s simply too much for one person to remember. The necessity for using a password manager is stronger today than ever before.&lt;/p&gt;
+
+&lt;p&gt;So do some research. Find a password manager that looks like a good fit and sign up. Download the browser plugin, the mobile app, and the native app if it’s available. Make it easy to do the right thing.&lt;/p&gt;
+
+&lt;h2 id=&#34;wash-behind-the-ears&#34;&gt;Wash Behind The Ears&lt;/h2&gt;
+
+&lt;p&gt;Then, for every re-used password, change that sucker! If possible, only copy and paste passwords from the password manager app/plugin. This makes it practical to use longer passwords. At first, a 64 character password seems impractical, but if it’s never manually typed, does the length matter? At this point the limitation is on the service requiring the password.&lt;/p&gt;
+
+&lt;h2 id=&#34;looking-forward&#34;&gt;Looking Forward&lt;/h2&gt;
+
+&lt;p&gt;It is 2018, and the inexorable march of time propels us forward. What other options are there to increase personal security? 2FA is spectacular, ubiquitous, and easy to get started with. Apps are available which provide 2FA, as well as physical security keys. Biometrics, including fingerprint and face scanners are promising and becoming more mainstream. Any of these options will dramatically increase a user’s defensive posture against attacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a name=&#34;myfootnote1&#34;&gt;1&lt;/a&gt;. This, apparently, is not a common perception&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

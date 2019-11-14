@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zero Trust on Dan Munro - Dev-Sec-Ops Engineer</title>
+    <link>https://danmunro.com/tags/zero-trust/</link>
+    <description>Recent content in Zero Trust on Dan Munro - Dev-Sec-Ops Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Aug 2018 22:02:47 -0500</lastBuildDate>
+    
+        <atom:link href="https://danmunro.com/tags/zero-trust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thinking Beyond M &amp; M Security</title>
+      <link>https://danmunro.com/posts/thinking-beyond-mm-security/</link>
+      <pubDate>Sat, 11 Aug 2018 22:02:47 -0500</pubDate>
+      
+      <guid>https://danmunro.com/posts/thinking-beyond-mm-security/</guid>
+      <description>
+
+&lt;p&gt;For the uninitiated, “M &amp;amp; M” security is a pejorative term, comparing a security posture to candy: a hardened shell with a soft, delicious interior. This comparison is apt for a few reasons, but mainly because it highlights a larger theme in information security: why do we so consistently get things so wrong?&lt;/p&gt;
+
+&lt;h2 id=&#34;foot-in-the-door&#34;&gt;Foot In The Door&lt;/h2&gt;
+
+&lt;p&gt;Even a partial compromise of an edge node inside of a multi-tiered architecture built following this security strategy can be catastrophic. Privilege escalation via credential siphoning, packet sniffing, or other means, will inevitably allow complete infiltration of that edge and inevitable further penetration of the network.&lt;/p&gt;
+
+&lt;p&gt;In a hypothetical M &amp;amp; M scenario, our adversary has already attained a complete compromise of our infrastructure, or will do so as a function of time. They may now proceed unhindered to attaining their goal. In case it’s not clear, this is bad news.&lt;/p&gt;
+
+&lt;h3 id=&#34;unauthorized-shell-access-inside-a-network-is-bad-news&#34;&gt;Unauthorized Shell Access Inside A Network Is Bad News&lt;/h3&gt;
+
+&lt;p&gt;For an adversary with shell access inside a network, there are a few immediate goals:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Understand the network topology&lt;/li&gt;
+&lt;li&gt;Siphon any available credentials, keys, accounts, repositories, configs&lt;/li&gt;
+&lt;li&gt;Privilege escalation&lt;/li&gt;
+&lt;li&gt;Destroy evidence of the intrusion&lt;/li&gt;
+&lt;li&gt;Create a backdoor whereby access can be regained later. This is done by opening a port to the internet and running an unsigned executable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At this point in the attack, the adversary already has an enormous advantage. Hindering an ongoing attack, while successfully quarantining an intrusion without service interruption to end users becomes exponentially more challenging.&lt;/p&gt;
+
+&lt;h2 id=&#34;attack-mitigation-and-remediation&#34;&gt;Attack Mitigation And Remediation&lt;/h2&gt;
+
+&lt;p&gt;Affected infrastructure must be disconnected, isolated, and stopped for later analysis. Compromised credentials and keys must be replaced with pristine infrastructure, and all rotated in sychronized action. If any of these actions are not automated and practiced via playbooks, considering human error under duress, the odds are not good for a quick recovery.&lt;/p&gt;
+
+&lt;p&gt;For any known compromised node, all assets and unsecured attached resources &lt;em&gt;must&lt;/em&gt; be considered compromised and treated as such.&lt;/p&gt;
+
+&lt;p&gt;So what is a better approach? The problem is complicated, and the solution involves both infrastructure hardening and organizational preparation.&lt;/p&gt;
+
+&lt;h3 id=&#34;infrastructure-planning&#34;&gt;Infrastructure Planning&lt;/h3&gt;
+
+&lt;p&gt;Take steps during the design phase of a platform to make actions transparent, isolation at the hardware or OS level, and mitigation/remeditation as painless as possible.&lt;/p&gt;
+
+&lt;h4 id=&#34;zero-trust-networks&#34;&gt;Zero Trust Networks&lt;/h4&gt;
+
+&lt;p&gt;Use internal proxies to verify requests between platform services. Disallow direct service to service communication, by modifying &lt;code&gt;/etc/hosts&lt;/code&gt; on the client as well as via network layout.&lt;/p&gt;
+
+&lt;p&gt;Think about access, authorization, and process execution on a whitelist basis, instead of the traditional blacklist strategy. Does the internal proxy expect a connection from executable A on port N? If not, maybe we don&amp;rsquo;t want to outright block the connection, but we do want to monitor it closely and automatically generate a context-bound report of that connection&amp;rsquo;s activities.&lt;/p&gt;
+
+&lt;h4 id=&#34;credential-hygiene&#34;&gt;Credential Hygiene&lt;/h4&gt;
+
+&lt;p&gt;Have a process in place for revoking and regenerating credentials at any level of the system. These credentials should be defined with minimal permissions, have a TTL, and live in an encrypted store. Credentials can be shared across services if the services reside within the same network space. However, credentials should &lt;em&gt;never&lt;/em&gt; be used by services across network boundaries. The reason is simple.&lt;/p&gt;
+
+&lt;h4 id=&#34;a-ship-metaphor&#34;&gt;A Ship Metaphor&lt;/h4&gt;
+
+&lt;p&gt;Modern ship design includes a feature called bulkheads. By partitioning the ship into sections, which can be easily shut off from one another, the ship becomes much more robust in the face of catastrophic failure.&lt;/p&gt;
+
+&lt;p&gt;Applied to modern security architecture, one environment might be spread out over multiple firewalls. Each firewall has tight access controls, with keys and credentials isolated from one resource to another. Compromise of one network bulkhead limits the blast radius of an attacker scooping credentials or sniffing traffic.&lt;/p&gt;
+
+&lt;h4 id=&#34;offsite-logging&#34;&gt;Offsite Logging&lt;/h4&gt;
+
+&lt;p&gt;Log often, and ship logs to a log aggregation service. In addition to aiding in transparency and auditing, destruction of evidence by the attacker is much more difficult.&lt;/p&gt;
+
+&lt;h3 id=&#34;organizational-prep&#34;&gt;Organizational Prep&lt;/h3&gt;
+
+&lt;p&gt;An organization&amp;rsquo;s employees are its most valuable asset, and this is doubly true when responding to a security incident. There is nothing more dangerous than a sentient, motivated, responsive attacker.&lt;/p&gt;
+
+&lt;h4 id=&#34;plan-to-be-pwned&#34;&gt;Plan To Be Pwned&lt;/h4&gt;
+
+&lt;p&gt;Carve out an internal red team that will perform an attack against the production environment. Their goal is root access, database dumps, api keys, and other credentials.&lt;/p&gt;
+
+&lt;p&gt;If red team is successful, measure some key metrics:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Time to intrusion discovery&lt;/li&gt;
+&lt;li&gt;Was the attack successfully quarantined? How long did it take?&lt;/li&gt;
+&lt;li&gt;Was end service affected?&lt;/li&gt;
+&lt;li&gt;Duration of the attack&lt;/li&gt;
+&lt;li&gt;Was the scope of the breach understood?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Collecting this information will help with a blameless retro and continuous improvement for the organization.&lt;/p&gt;
+
+&lt;h4 id=&#34;incident-playbooks&#34;&gt;Incident Playbooks&lt;/h4&gt;
+
+&lt;p&gt;Playbooks are nothing special. They are simply defined processes for security responders to follow given a breach scenario. A typical playbook will include what systems to check, how to perform a quarantine, and how to recover with pristine infrastructure, credentials, and configs, while minimizing mean time to recovery (MTTR).&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Focusing on perimeter security, to the exclusion of other concerns, is a one dimensional approach to a hard problem.&lt;/p&gt;
+
+&lt;p&gt;Thinking about isolation of resources within an environment during the design phase will pay off in dividends. If, in order to compromise sensitive customer information, an attacker must breach multiple firewalls and steal encrypted credentials for every section of the infrastructure&amp;hellip; well, the time this buys is crucial for responders to mount a coherent response.&lt;/p&gt;
+
+&lt;p&gt;When attack vectors are defined and understood, it becomes easier to monitor and respond more quickly. Diagnosis of the depth of the intrusion should be easier too. And when responders have practiced their roles, the likelihood of mistakes being made during a stressful moment is lessened.&lt;/p&gt;
+
+&lt;p&gt;Breaches are terrible, and may be inevitable in an engineer&amp;rsquo;s career, but our preparation and ability to respond effectively is ours to control.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

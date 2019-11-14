@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ietf on Dan Munro - Dev-Sec-Ops Engineer</title>
+    <link>https://danmunro.com/tags/ietf/</link>
+    <description>Recent content in Ietf on Dan Munro - Dev-Sec-Ops Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Aug 2018 22:59:37 -0500</lastBuildDate>
+    
+        <atom:link href="https://danmunro.com/tags/ietf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>TLS 1.3 RFC Draft Published</title>
+      <link>https://danmunro.com/posts/tls-1.3-is-here/</link>
+      <pubDate>Mon, 13 Aug 2018 22:59:37 -0500</pubDate>
+      
+      <guid>https://danmunro.com/posts/tls-1.3-is-here/</guid>
+      <description>
+
+&lt;p&gt;The Internet Engineering Task Force (IETF) has &lt;a href=&#34;https://tools.ietf.org/html/rfc8446&#34;&gt;published an RFC&lt;/a&gt; for version 1.3 of the venerable Transport Layer Security (TLS) protocol. A yearslong process, this upgrade addresses a number of flaws identified in the previous version.&lt;/p&gt;
+
+&lt;p&gt;The internet is about to get a little safer, and a little faster.&lt;/p&gt;
+
+&lt;h2 id=&#34;articles-about-the-new-spec&#34;&gt;Articles About The New Spec&lt;/h2&gt;
+
+&lt;p&gt;These articles do a much better job summarizing the changes than I could here:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ietf.org/blog/tls13/&#34;&gt;IETF Blog&lt;/a&gt; - straight from the horse&amp;rsquo;s mouth.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cloudflare.com/learning-resources/tls-1-3/&#34;&gt;Cloudflare&lt;/a&gt; - a really digestible technical overview of the important changes.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.cnet.com/news/protecting-data-on-web-about-to-get-faster-with-tls-1-3/&#34;&gt;CNET&lt;/a&gt; - less technical but still good.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://kinsta.com/blog/tls-1-3/&#34;&gt;Kinsta&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;short-summary-of-tls-1-2-exploits&#34;&gt;Short Summary of TLS 1.2 Exploits&lt;/h2&gt;
+
+&lt;p&gt;Perhaps the most notable vulnerability, Hearbleed, was disclosed in 2014. However, there have been a number of disclosed vulnerabilities since.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://heartbleed.com/&#34;&gt;Heartbleed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/POODLE&#34;&gt;POODLE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://robotattack.org/&#34;&gt;ROBOT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/FREAK&#34;&gt;FREAK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mitls.org/pages/attacks/Logjam&#34;&gt;Logjam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sweet32.info/&#34;&gt;Sweet32&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

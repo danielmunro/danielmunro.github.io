@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Recommendations</title>
+	
+	<meta name="description" content="Tools and methods which increase organization security for users and systems alike.">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="Recommendations">
+	<meta itemprop="description" content="Tools and methods which increase organization security for users and systems alike.">
+	<meta itemprop="image" content="">
+	
+	<meta name="og:title" content="Recommendations">
+	<meta name="og:description" content="Tools and methods which increase organization security for users and systems alike.">
+	
+	<meta name="og:url" content="https://danmunro.com/recommendations/">
+	<meta name="og:site_name" content="Recommendations">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:tag" content="">
+	<link rel="stylesheet" type="text/css" href="https://danmunro.com/css/style.css">
+	
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123776938-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body>
+
+<header>
+	
+	<a href="https://danmunro.com/" style="float: left;color:#ff3b30;">Dan Munro - Dev-Sec-Ops Engineer</a>
+	
+	&nbsp;&nbsp;<a href="https://danmunro.com/news/" style="color:#777;">News</a>&nbsp;&nbsp;<a href="https://danmunro.com/archives/" style="color:#777;">Archives</a>&nbsp;&nbsp;<a href="https://danmunro.com/recommendations/" style="color:#777;">Recommendations</a>
+	
+	<a href="https://danmunro.com/posts/index.xml" style="color:#777;float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+</header>
+
+
+<div class="content">
+  <h1>Recommendations</h1>
+  <aside></aside>
+  <p>
+
+<p>The tools below have been used both in personal and professional capacities. They have solved problems and helped make security easier to do right on a daily basis.</p>
+
+<p>This section is an active work in progress and should expand over time.</p>
+
+<p>The sections are outlined below:</p>
+
+<ul>
+<li><a href="#section-1">Section 1: Daily Needs</a></li>
+<li><a href="#section-2">Section 2: Design</a></li>
+<li><a href="#section-3">Section 3: Ops &amp; Auditing</a></li>
+<li><a href="#section-4">Section 4: Investigation &amp; Exploitation</a></li>
+</ul>
+
+<p><a name="section-1"></a></p>
+
+<h2 id="section-1-daily-needs">Section 1: Daily Needs</h2>
+
+<p>Good security hygiene requires investment in the right tools. These tools should reduce our overall cognitive burden, and add value in increased protection.</p>
+
+<h3 id="hard-disk-encryption">Hard Disk Encryption</h3>
+
+<p>Modern operating systems offer hard drive encryption either via native OS integration (MacOS, many linux distributions), or through third-party software (Windows). Hard disk encryption offers a much better security posture over unencrypted disks. In the event that hardware is stolen or lost, an encrypted hard drive means that the contents are not readable by anyone without the decryption key.</p>
+
+<h3 id="automatic-updates">Automatic Updates</h3>
+
+<p>This recommendation is not without its own healthy debate, but desktop software should be regularly
+updated. New vulnerabilities are disclosed daily, putting engineering and security teams on
+the defensive. Patches are responsive in nature. Since this feedback loop means we are never completely secure, we must choose the most pragmatic option: apply patches as soon as they are available.</p>
+
+<h3 id="password-manager">Password Manager</h3>
+
+<p>Recommendation: <a href="https://lastpass.com/">LastPass</a>.</p>
+
+<p>With a browser plugin, mobile apps, teams, and enterprise support, LastPass has a comprehensive suite of offerings for a range of needs. Individuals and companies alike can derive value from these offerings. <a href="https://blog.lastpass.com/">LastPass&rsquo; blog</a> has a lot of good content, both for current events and technical information.</p>
+
+<p>Drawbacks include that LastPass is proprietary. Important things like pricing, ongoing service and support, code quality, and organization policies are out of scope for users to know or influence.</p>
+
+<p>The user experience can be unintuitive at times, but serves its purpose.</p>
+
+<h3 id="browser-extensions">Browser Extensions</h3>
+
+<p>For Google Chrome, here are some very helpful security plugins:</p>
+
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/password-checkup/pncabnpcffmalkkjpajodfhijclecjno">Password checkup</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/password-alert/noondiphcddnnabmjcihcjfbhfklnnep">Password alert</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp">HTTPS everywhere</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/https-everywhere/gcbommkclmclpchllfjekcdonpmejbdp">Web of trust</a></li>
+</ul>
+
+<h3 id="communication">Communication</h3>
+
+<p>Sensitive peer-to-peer communication, team credentials, datasets, documents, etc. Don&rsquo;t use email or slack &ndash; neither should be considered secure for sensitive information. Instead, consider some of the tools below to fit these needs.</p>
+
+<h4 id="keybase-io">Keybase.io</h4>
+
+<p>Keybase is a <a href="https://keybase.io/">security application</a> that is designed to make it easy to do common tasks securely. Main features include team chat, and file sharing, both of which are encrypted E2E.</p>
+
+<p>Keybase is also <a href="https://github.com/keybase/client">open source</a>.</p>
+
+<h4 id="gpg">GPG</h4>
+
+<p><a href="https://gpgtools.org/">GPG</a> is an excellent open source option for transmitting encrypted data. It requires a slightly higher level of technical knowledge to understand and use than something like Keybase for encrypted communication, but it&rsquo;s an excellent option for its use-cases.</p>
+
+<p><a name="section-2"></a></p>
+
+<h2 id="section-2-design">Section 2: Design</h2>
+
+<p>This section is geared toward engineers whose primary responsibilities include designing and implementing secure systems.</p>
+
+<h3 id="https-everywhere">HTTPS Everywhere</h3>
+
+<p>It&rsquo;s time to put HTTP out to pasture. Without guarantees against <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">payload modification</a>, the protocol is fundamentally no longer appropriate for content transmission.</p>
+
+<p>Even when the source and destination are in the same internal network, we&rsquo;re taking unnecessary risks if there&rsquo;s any expectation that the payload should be unmodified or protected from unauthorized access. A breach within the internal network will quickly lead to privilege escalation or data siphoning if further safety measures are not in place (such as HTTPS).</p>
+
+<p>As far as CA, consider your hosting provider as well as <a href="https://letsencrypt.org/">LetsEncrypt</a>.</p>
+
+<h3 id="password-requirement-best-practices">Password Requirement Best Practices</h3>
+
+<p>The time of forced password expiration <a href="https://www.schneier.com/blog/archives/2017/10/changes_in_pass.html">is over</a>, and I&rsquo;m <a href="https://blog.lastpass.com/2018/08/often-change-password.html/">not alone</a> in <a href="https://pages.nist.gov/800-63-3/sp800-63b.html">this assessment</a> (see section 5.1.1.2). The same is true for arbitrary complexity rules. Instead, encourage use of a password manager, and never re-use passwords.</p>
+
+<p>For the love of all things good, don&rsquo;t set a low max length requirement (NIST says at least 64 character max, if not more). Encourage use of pass phrases, which are long and memorable.</p>
+
+<h3 id="vault">Vault</h3>
+
+<p><a href="https://www.vaultproject.io/">Vault</a> by HashiCorp is a multi-purpose secret manager. One of my favorite features is <a href="https://learn.hashicorp.com/vault/getting-started/dynamic-secrets">dynamic secrets</a>, in which Vault integrates directly with AWS in order to generate pre-configured credentials upon request. Best practices describe defining very narrow-scoped roles (IAM policies) on a service-by-service basis. The generated credentials have a lease with an expiration, automating much of the tedious and brittle parts of credential rotation.</p>
+
+<p>Other features include management of certificates, keys, tokens, passwords, and other secrets. Vault can be used over CLI, web UI, or API.</p>
+
+<h3 id="vpn">VPN</h3>
+
+<p>Open source, easy to setup and use, <a href="https://pritunl.com/">Pritunl</a> makes the top of the recommendation list in this category. Being open source, Pritunl can be audited for backdoors, cryptographic security flaws, and can receive improvement feedback from the community.</p>
+
+<h3 id="firewalls">Firewalls</h3>
+
+<p>As a first line of defense, well defined firewall rules around all networked devices is essential. Unused ports should be closed. Just because a port isn&rsquo;t used <em>now</em>, doesn&rsquo;t mean <em>someone</em> won&rsquo;t use it later (authorized or not).</p>
+
+<p>An example of authorized usage might be a developer setting up a proof-of-concept using an open port and forgetting about it. By using a port policy of default-closed, our hypothetical PoC and the port it requires would be tracked through a change management process. The change management process (a ticket in a project tracker is enough) will track follow up, including closing the port when the PoC completes.</p>
+
+<p>Public ports should be IP restricted if possible. There are exceptions, like web and mail servers, but exceptions should be limited and tracked. One section below discusses Scout2, an AWS account auditing tool, which will report on firewall rules across the account.</p>
+
+<p>Firewall rules should be applied to internal networks as well. Service-to-service communication should be strictly limited, monitored, and audited. Anomalies require investigation, and resolution. What was the cause? Was a new service deployed? Is the network model wrong? Or was there an intrusion? These questions are important.</p>
+
+<p><a name="section-3"></a></p>
+
+<h2 id="section-3-ops-auditing">Section 3: Ops &amp; Auditing</h2>
+
+<p>This section is written for individuals in engineering security roles, where tracking, auditability, and observability can really improve the role&rsquo;s effectiveness.</p>
+
+<h3 id="defectdojo">DefectDojo</h3>
+
+<p>An open source offering from OWASP, <a href="https://www.defectdojo.org/">Defect Dojo</a> helps manage CVE concerns. CVE information, remediation tracking, KPIs (time to discovery, time to remediation, among others),and suggested fixes are all part of Defect Dojo&rsquo;s offerings.</p>
+
+<h3 id="scout2">Scout2</h3>
+
+<p>Scout2 is a <a href="https://nccgroup.github.io/Scout2/">comprehensive AWS account auditing tool</a>. It will analyze both global settings &amp; services, and region-specific services. Scout2 outputs HTML, so it&rsquo;s good to have it running on a schedule and publishing findings to a non-public http server. Review the output on a regular basis with the affected teams. Prioritize fixes based on relative risk, and track improvements as they are implemented.</p>
+
+<h3 id="multi-factor-authentication">Multi Factor Authentication</h3>
+
+<p>All essential services (email, communication, code repositories, infrastructure consoles) should require every user to use MFA. After all, if it&rsquo;s good enough for <a href="https://www.popularmechanics.com/technology/security/a22530218/google-yubikey-fishing-krebs/">Google</a>, it&rsquo;s good enough for you.</p>
+
+<h3 id="risk-assessment">Risk Assessment</h3>
+
+<p>Documentation quickly rots, and <a href="https://www.investopedia.com/terms/b/boil-the-ocean.asp">boiling the ocean</a> should be avoided. So do we avoid thinking about risk altogether? Not really. Instead, we need a lightweight framework for identifying, assessing, triaging, and tracking <em>important</em> risks.</p>
+
+<p>Initial risk identification should scope to the business, its clients, and requirements around the data the business needs in order to operate. GDPR, SOC compliance, HIPAA regulations. If these or other regulations apply, start by understanding them and what architectural and business processes are required in order to comply.</p>
+
+<p>Other important sources of risk are: lack of observability in operations; loose or non-existent processes around credentials and authorizations; ad-hoc infrastructure configurations; CVEs. These risks and others must be identified, scored by severity, and prioritized into a backlog.</p>
+
+<p>Proactive risk assessment is a critical component of a comprehensive <a href="https://www.rutter-net.com/blog/3-essential-components-of-your-it-security-roadmap">security roadmap</a>.</p>
+
+<p><a name="section-4"></a></p>
+
+<h2 id="section-4-investigation-exploitation">Section 4: Investigation &amp; Exploitation</h2>
+
+<p>There are a lot of different tools and distros to choose from for pentesting these days. One distro that works well and gets regular updates is <a href="https://www.backbox.org/">Backbox</a>. Based on <a href="https://www.ubuntu.com/">Ubuntu</a>, with the <a href="https://www.xfce.org/">XFCE window manager</a>, Backbox comes preloaded with an array of tools for network analysis, sniffing, vulnerability assessment, and exploitation, among others.</p>
+
+<p>Some, like <a href="https://github.com/zaproxy/zaproxy">OWASP ZAP</a>, are pretty dead simple to fire up and run with minimal configuration. Others, like <a href="https://www.metasploit.com/">metasploit</a>, have a slightly steeper learning curve. Metasploit serves as an exploitation and penetration testing framework, which can be configured with plugins for specific use-cases.</p>
+</p>
+</div>
+
+
+
+<footer>
+</footer>
+</body>
+</html>

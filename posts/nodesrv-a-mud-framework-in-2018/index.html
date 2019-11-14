@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Nodesrv: A MUD Framework In 2018</title>
+	
+	<meta name="description" content="Making a MUD in 2018.">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="Nodesrv: A MUD Framework In 2018">
+	<meta itemprop="description" content="Making a MUD in 2018.">
+	<meta itemprop="image" content="">
+	
+	<meta name="og:title" content="Nodesrv: A MUD Framework In 2018">
+	<meta name="og:description" content="Making a MUD in 2018.">
+	
+	<meta name="og:url" content="https://danmunro.com/posts/nodesrv-a-mud-framework-in-2018/">
+	<meta name="og:site_name" content="Nodesrv: A MUD Framework In 2018">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:tag" content="">
+	<link rel="stylesheet" type="text/css" href="https://danmunro.com/css/style.css">
+	
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123776938-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body>
+
+<header>
+	
+	<a href="https://danmunro.com/" style="float: left;color:#ff3b30;">Dan Munro - Dev-Sec-Ops Engineer</a>
+	
+	&nbsp;&nbsp;<a href="https://danmunro.com/news/" style="color:#777;">News</a>&nbsp;&nbsp;<a href="https://danmunro.com/archives/" style="color:#777;">Archives</a>&nbsp;&nbsp;<a href="https://danmunro.com/recommendations/" style="color:#777;">Recommendations</a>
+	
+	<a href="https://danmunro.com/posts/index.xml" style="color:#777;float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+</header>
+
+
+<div class="content">
+  <h1>Nodesrv: A MUD Framework In 2018</h1>
+  <aside></aside>
+  <p>
+
+<p>In this article I want to share my free-time project, a <a href="https://en.wikipedia.org/wiki/MUD">MUD</a>, or multi-user dungeon. This particular project is not quite a game per-se, but a framework for building a game. It&rsquo;s called <a href="https://github.com/danielmunro/nodesrv">nodesrv</a>. Prefaced with a short story about the history of MUDs to provide some context, I&rsquo;ll lay out my reasoning for such a peculiar project and why I think it has value today.</p>
+
+<h2 id="a-narrated-history">A Narrated History</h2>
+
+<p>Back in the early days of the consumer internet, when social interactions happened in text over <a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a>, a new form of leisure entertainment was starting to take shape. There weren&rsquo;t many defining characteristics for this emerging genre of games, however they did share some traits.</p>
+
+<p>Fantasy in the form of medieval, LOTR, and scifi themes were common. Dungeon crawling, usually via cardinal directions, was also a defining trait. Complex application state, network connections that measured in the hundreds, authentication over unencrypted protocols, bespoke persistence schemes, and a culture that did not include automated tests. Truly, it was a wild west.</p>
+
+<p>Blended with social aspects of <a href="https://en.wikipedia.org/wiki/Bulletin_board_system">BBS</a>, these games were an audacious mix of technology and imagination. Often developed and run by volunteers, each game represented an experiment in anarchy, value was derived through individual interactions and connections between people. Friendships blossomed where individuals would have otherwise never known one another.</p>
+
+<h2 id="what">What</h2>
+
+<p>The project consists of two repositories, the main <a href="https://github.com/danielmunro/nodesrv">server component</a>, and its <a href="https://github.com/danielmunro/nodeclient">client</a>. Both projects utilize <a href="https://www.typescriptlang.org/">Typescript</a>, and are licensed under MIT now and forever.</p>
+
+<h3 id="the-client">The Client</h3>
+
+<p>The app runtime is <a href="https://electronjs.org/">Electron</a>, which means a few things. It is cross-platform and built with JavaScript, HTML, and CSS. Connections to the server utilize <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API">web sockets</a>.</p>
+
+<p><img src="/images/client.png" alt="While the client app is text-based and currently incredibly bare-bones, there is potential." /></p>
+
+<h3 id="the-server">The Server</h3>
+
+<p>The server runtime is <a href="https://github.com/TypeStrong/ts-node">ts-node</a>, a Typescript execution environment for node.js. Persistence is managed via <a href="http://typeorm.io/#/">TypeORM</a>. Tests are provided using <a href="https://jestjs.io/">Jest</a>.</p>
+
+<p><img src="/images/tests.png" alt="Tests" /></p>
+
+<p>The universe is represented in a graph, with rooms as the edges, connected by directed exits. <a href="https://en.wikipedia.org/wiki/Mob_(gaming)">Mobiles</a>, or mobs, populate the world. The world currently consists of only a few dozen rooms, randomly generated into a single scene.</p>
+
+<p>The current strategy is to <a href="https://en.wikipedia.org/wiki/Procedural_generation">procedurally generate</a> the world, by defining characteristics of smaller regions and then joining these smaller regions together randomly.</p>
+
+<p>The Typescript node runtime makes for an excellent asynchronous execution environment when managing long-running, complex application state and bi-directional client communication.</p>
+
+<h2 id="the-future">The Future</h2>
+
+<p>Another budding interest of mine, <a href="https://en.wikipedia.org/wiki/Machine_learning">machine learning</a>, offers some very interesting opportunities for unique and engaging stories within a game universe. While the tooling is still young, there are a few promising libraries published already that can make getting started easier:</p>
+
+<ul>
+<li><a href="https://github.com/erikgerrits/machine-learning">machine-learning</a></li>
+<li><a href="https://js.tensorflow.org/">TensorFlow.js</a></li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>On its face, creating a MUD today seems like a bizarre hobby. But it&rsquo;s less about what the project <em>is</em> and more about what the project <em>represents</em>; learning, playing with technology, testing assumptions, refactoring, and flexing the imagination, to name a few.</p>
+
+<p>It&rsquo;s a huge work in progress, and a lot of things have been done wrong along the way. But each mistake has been a potential learning opportunity. And a lot of those opportunities have been actualized into knowledge gained.</p>
+
+<p>The first generation of MUDs were born from a wealth of ingenuity, curiousity, and playful imaginations.  And while MUDs may well never experience the popularity they once had, that&rsquo;s okay. To pay homage in some small way to such a radical and whimsy vision is enough.</p>
+</p>
+</div>
+
+
+  <p>Written on Aug 24, 2018.</p>
+
+
+<footer>
+</footer>
+</body>
+</html>
