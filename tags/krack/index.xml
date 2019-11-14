@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KRACK on Dan Munro - Dev-Sec-Ops Engineer</title>
-    <link>https://danmunro.com/tags/krack/</link>
+    <link>danmunro.com/tags/krack/</link>
     <description>Recent content in KRACK on Dan Munro - Dev-Sec-Ops Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Aug 2018 07:25:01 -0500</lastBuildDate>
     
-        <atom:link href="https://danmunro.com/tags/krack/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="danmunro.com/tags/krack/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>KRACK Attacks</title>
-      <link>https://danmunro.com/posts/krack-attacks/</link>
+      <link>danmunro.com/posts/krack-attacks/</link>
       <pubDate>Fri, 10 Aug 2018 07:25:01 -0500</pubDate>
       
-      <guid>https://danmunro.com/posts/krack-attacks/</guid>
+      <guid>danmunro.com/posts/krack-attacks/</guid>
       <description>
 
 &lt;p&gt;In case you haven&amp;rsquo;t heard, &lt;a href=&#34;https://www.krackattacks.com/&#34;&gt;a critical security flaw&lt;/a&gt; has been uncovered in &lt;a href=&#34;https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPA2&#34;&gt;WPA2&lt;/a&gt;. The scope of this flaw includes all modern wifi routers, and requires only close proximity to the device in order to carry out the attack.&lt;/p&gt;
