@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About Me on Dan Munro - Dev-Sec-Ops Engineer</title>
-    <link>danmunro.com/</link>
+    <link>/</link>
     <description>Recent content in About Me on Dan Munro - Dev-Sec-Ops Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 08 Jul 2019 22:26:44 -0500</lastBuildDate>
     
-        <atom:link href="danmunro.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>News</title>
-      <link>danmunro.com/news/</link>
+      <link>/news/</link>
       <pubDate>Mon, 08 Jul 2019 22:26:44 -0500</pubDate>
       
-      <guid>danmunro.com/news/</guid>
+      <guid>/news/</guid>
       <description>
 
 &lt;h2 id=&#34;october-2019&#34;&gt;October 2019&lt;/h2&gt;
@@ -82,19 +82,19 @@
     
     <item>
       <title>Posts</title>
-      <link>danmunro.com/posts/</link>
+      <link>/posts/</link>
       <pubDate>Sat, 18 May 2019 16:19:24 -0500</pubDate>
       
-      <guid>danmunro.com/posts/</guid>
+      <guid>/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Recommendations</title>
-      <link>danmunro.com/recommendations/</link>
+      <link>/recommendations/</link>
       <pubDate>Sat, 08 Dec 2018 21:12:15 -0600</pubDate>
       
-      <guid>danmunro.com/recommendations/</guid>
+      <guid>/recommendations/</guid>
       <description>
 
 &lt;p&gt;The tools below have been used both in personal and professional capacities. They have solved problems and helped make security easier to do right on a daily basis.&lt;/p&gt;
@@ -241,10 +241,10 @@ the defensive. Patches are responsive in nature. Since this feedback loop means 
     
     <item>
       <title>About</title>
-      <link>danmunro.com/about/</link>
+      <link>/about/</link>
       <pubDate>Sat, 11 Aug 2018 09:20:09 -0500</pubDate>
       
-      <guid>danmunro.com/about/</guid>
+      <guid>/about/</guid>
       <description>
 
 &lt;p&gt;In no particular order: engineer, security researcher, tinkerer, devil&amp;rsquo;s advocate, husband, dad, cyclist, recovering cynic.&lt;/p&gt;
@@ -279,10 +279,10 @@ the defensive. Patches are responsive in nature. Since this feedback loop means 
     
     <item>
       <title>Archives</title>
-      <link>danmunro.com/archives/</link>
+      <link>/archives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>danmunro.com/archives/</guid>
+      <guid>/archives/</guid>
       <description></description>
     </item>
     

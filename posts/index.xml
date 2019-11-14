@@ -1,21 +1,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Dan Munro - Dev-Sec-Ops Engineer</title>
-    <link>danmunro.com/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Dan Munro - Dev-Sec-Ops Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 18 May 2019 16:19:24 -0500</lastBuildDate>
     
-        <atom:link href="danmunro.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Salesforce Database Fiasco</title>
-      <link>danmunro.com/posts/salesforce-database-fiasco/</link>
+      <link>/posts/salesforce-database-fiasco/</link>
       <pubDate>Sat, 18 May 2019 16:19:24 -0500</pubDate>
       
-      <guid>danmunro.com/posts/salesforce-database-fiasco/</guid>
+      <guid>/posts/salesforce-database-fiasco/</guid>
       <description>
 
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;To all of our &lt;a href=&#34;https://twitter.com/salesforce?ref_src=twsrc%5Etfw&#34;&gt;@salesforce&lt;/a&gt; customers, please be aware that we are experiencing a major issue with our service and apologize for the impact it is having on you. Please know that we have all hands on this issue and are resolving as quickly as possible.&lt;/p&gt;&amp;mdash; Parker Harris (@parkerharris) &lt;a href=&#34;https://twitter.com/parkerharris/status/1129426438325587969?ref_src=twsrc%5Etfw&#34;&gt;May 17, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
@@ -109,7 +109,7 @@
 
 &lt;h3 id=&#34;incident-planning-disaster-recovery&#34;&gt;Incident Planning, Disaster Recovery&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/dumpster-fire.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/dumpster-fire.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Proper planning prevents piss-poor performance.&lt;/p&gt;
@@ -140,13 +140,13 @@
     
     <item>
       <title>Cracks Forming In US Cyber Security</title>
-      <link>danmunro.com/posts/cracks-forming-in-us-cyber-security/</link>
+      <link>/posts/cracks-forming-in-us-cyber-security/</link>
       <pubDate>Fri, 11 Jan 2019 22:05:19 -0600</pubDate>
       
-      <guid>danmunro.com/posts/cracks-forming-in-us-cyber-security/</guid>
+      <guid>/posts/cracks-forming-in-us-cyber-security/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/capitol-closed.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/capitol-closed.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A few important things are happening right now as a direct consequence of the ongoing government shutdown. And the longer the shutdown continues, the more damage will accumulate. Some damage may end up being irreversible by the time a spending bill is passed, the government is reopened, and agencies begin staffing up again.&lt;/p&gt;
 
@@ -173,15 +173,15 @@
     
     <item>
       <title>Marriott Hack: An Update</title>
-      <link>danmunro.com/posts/marriott-hack-an-update/</link>
+      <link>/posts/marriott-hack-an-update/</link>
       <pubDate>Fri, 04 Jan 2019 19:48:53 -0600</pubDate>
       
-      <guid>danmunro.com/posts/marriott-hack-an-update/</guid>
+      <guid>/posts/marriott-hack-an-update/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/marriott.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/marriott.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This is an update on the initial news report, &lt;a href=&#34;danmunro.com/posts/the-colossal-monumental-screw-up-that-is-marriott-security/&#34;&gt;which broke in November 2018&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is an update on the initial news report, &lt;a href=&#34;/posts/the-colossal-monumental-screw-up-that-is-marriott-security/&#34;&gt;which broke in November 2018&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;In addition to 5.25 million unencrypted passport numbers, &lt;a href=&#34;https://www.washingtonpost.com/technology/2019/01/04/marriott-hackers-accessed-more-than-million-passport-numbers-during-novembers-massive-data-breach/&#34;&gt;20.3 million encrypted passport numbers&lt;/a&gt; were also swiped. This is a huge admission, and represents one of the largest known compromises of passport numbers in history. Still, the passports represent only a small fraction of the total data compromised.&lt;/p&gt;
 
@@ -203,13 +203,13 @@
     
     <item>
       <title>Organization Hardening</title>
-      <link>danmunro.com/posts/organization-hardening/</link>
+      <link>/posts/organization-hardening/</link>
       <pubDate>Tue, 04 Dec 2018 19:40:30 -0600</pubDate>
       
-      <guid>danmunro.com/posts/organization-hardening/</guid>
+      <guid>/posts/organization-hardening/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/fortress.jpg&#34; alt=&#34;https://www.thisismoney.co.uk/money/investing/article-3049542/Will-safe-Fortress-Bond-New-bond-Castle-Trust-promises-pay-4-5.html&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/fortress.jpg&#34; alt=&#34;https://www.thisismoney.co.uk/money/investing/article-3049542/Will-safe-Fortress-Bond-New-bond-Castle-Trust-promises-pay-4-5.html&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This article is written for security specialists working at cloud-native companies. On-prem systems will have different requirements around physical security than ones which don&amp;rsquo;t have infrastructure hardware on site. Device security for employees will be covered, along with other physical and employee risks.&lt;/p&gt;
 
@@ -237,7 +237,7 @@
 
 &lt;p&gt;There is a lot of misinformation out there about passwords and what makes for good policy. Fortunately, we do have some fairly objective ways to measure the effectiveness of various password practices and policies.&lt;/p&gt;
 
-&lt;p&gt;To start out, we must acknowledge the current state of password-based security: &lt;a href=&#34;danmunro.com/posts/the-password-is-dead/&#34;&gt;the password is dead&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To start out, we must acknowledge the current state of password-based security: &lt;a href=&#34;/posts/the-password-is-dead/&#34;&gt;the password is dead&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Having minimum, or no requirements, around passwords is not acceptable. However, burdensome policies can actually make password hygiene &lt;em&gt;worse&lt;/em&gt; among users. So what policies are proven to work?&lt;/p&gt;
 
@@ -313,13 +313,13 @@
     
     <item>
       <title>The Colossal, Monumental Screw Up That Is Marriott Security</title>
-      <link>danmunro.com/posts/the-colossal-monumental-screw-up-that-is-marriott-security/</link>
+      <link>/posts/the-colossal-monumental-screw-up-that-is-marriott-security/</link>
       <pubDate>Fri, 30 Nov 2018 20:10:09 -0600</pubDate>
       
-      <guid>danmunro.com/posts/the-colossal-monumental-screw-up-that-is-marriott-security/</guid>
+      <guid>/posts/the-colossal-monumental-screw-up-that-is-marriott-security/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/marriott.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/marriott.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;the-damage&#34;&gt;The Damage&lt;/h1&gt;
 
@@ -409,7 +409,7 @@
 
 &lt;h2 id=&#34;zero-trust-networks&#34;&gt;Zero Trust Networks&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;danmunro.com/posts/thinking-beyond-mm-security/&#34;&gt;M &amp;amp; M security&lt;/a&gt; (a hardened perimeter with a soft, tasty interior) is not enough anymore. Consider any connection potentially hostile, even internal traffic. Use E2E encryption. Segregate and partition resources and authorizations.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/posts/thinking-beyond-mm-security/&#34;&gt;M &amp;amp; M security&lt;/a&gt; (a hardened perimeter with a soft, tasty interior) is not enough anymore. Consider any connection potentially hostile, even internal traffic. Use E2E encryption. Segregate and partition resources and authorizations.&lt;/p&gt;
 
 &lt;p&gt;Minimize permissions on credentials to bare minimum, single purpose use-cases. Then, name those credentials after that single purpose. For example, in AWS, define specific roles (not machine users), such as: &lt;code&gt;ses-mailer&lt;/code&gt;, &lt;code&gt;s3-uploader-svc-x&lt;/code&gt;, &lt;code&gt;s3-viewer-svc-y&lt;/code&gt;.&lt;/p&gt;
 
@@ -435,10 +435,10 @@
     
     <item>
       <title>Upgrade Adobe Acrobat Reader</title>
-      <link>danmunro.com/posts/upgrade-adobe-acrobat-reader/</link>
+      <link>/posts/upgrade-adobe-acrobat-reader/</link>
       <pubDate>Wed, 28 Nov 2018 21:40:08 -0600</pubDate>
       
-      <guid>danmunro.com/posts/upgrade-adobe-acrobat-reader/</guid>
+      <guid>/posts/upgrade-adobe-acrobat-reader/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.cvedetails.com/vulnerability-list.php?vendor_id=0&amp;amp;product_id=0&amp;amp;version_id=0&amp;amp;page=1&amp;amp;hasexp=0&amp;amp;opdos=0&amp;amp;opec=0&amp;amp;opov=0&amp;amp;opcsrf=0&amp;amp;opgpriv=0&amp;amp;opsqli=0&amp;amp;opxss=0&amp;amp;opdirt=0&amp;amp;opmemc=0&amp;amp;ophttprs=0&amp;amp;opbyp=0&amp;amp;opfileinc=0&amp;amp;opginf=0&amp;amp;cvssscoremin=9&amp;amp;cvssscoremax=0&amp;amp;year=2018&amp;amp;month=10&amp;amp;cweid=0&amp;amp;order=1&amp;amp;trc=55&amp;amp;sha=4557eded0d640c29adace3b6e505ddd5f349c168&#34;&gt;That&amp;rsquo;s a whole lotta red.&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A long list of versions are affected by this disclosure. Upgrade to a &lt;a href=&#34;https://get.adobe.com/reader/&#34;&gt;new version&lt;/a&gt; as soon as possible.&lt;/p&gt;
@@ -449,13 +449,13 @@
     
     <item>
       <title>New T2 Security Chip Details</title>
-      <link>danmunro.com/posts/new-t2-security-chip-details/</link>
+      <link>/posts/new-t2-security-chip-details/</link>
       <pubDate>Tue, 30 Oct 2018 20:56:11 -0500</pubDate>
       
-      <guid>danmunro.com/posts/new-t2-security-chip-details/</guid>
+      <guid>/posts/new-t2-security-chip-details/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/t2-chip.jpg&#34; alt=&#34;T2 Chip via iFixit: https://www.ifixit.com/Teardown/iMac+Pro+Teardown/101807&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/t2-chip.jpg&#34; alt=&#34;T2 Chip via iFixit: https://www.ifixit.com/Teardown/iMac+Pro+Teardown/101807&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Apple&amp;rsquo;s new hardware event revealed several new devices. These devices are, with little surprise, thinner, faster, and have fewer ports (if that is possible). To be honest, the author didn&amp;rsquo;t even watch the event, because that was not the interesting news of the day.&lt;/p&gt;
 
@@ -467,7 +467,7 @@
 
 &lt;h2 id=&#34;t2-architecture&#34;&gt;T2 Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/t2-architecture.png&#34; alt=&#34;T2 Architecture&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/t2-architecture.png&#34; alt=&#34;T2 Architecture&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The T2 chip writes encrypted data to memory, storing the key within its Secure Enclave coprocessor (in addition to other sensitive system information, such as FileVault encryption keys, Touch ID algorithms, secure boot, and other essential system controllers).&lt;/p&gt;
 
@@ -479,23 +479,23 @@
 
 &lt;p&gt;Secure boot is described in more detail in the white paper, including how low level software components are verified using a chain of trust based in hardware.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/t2-secure-boot-chain.png&#34; alt=&#34;Secure boot chain of trust&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/t2-secure-boot-chain.png&#34; alt=&#34;Secure boot chain of trust&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A T2-enabled computer has a new startup security utility, allowing more fine-grained controls over security requirements.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/t2-startup-utility.png&#34; alt=&#34;Startup security utility&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/t2-startup-utility.png&#34; alt=&#34;Startup security utility&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Thoughts On The Chinese Motherboard Hack</title>
-      <link>danmunro.com/posts/thoughts-on-the-chinese-motherboard-hack/</link>
+      <link>/posts/thoughts-on-the-chinese-motherboard-hack/</link>
       <pubDate>Tue, 09 Oct 2018 22:16:41 -0500</pubDate>
       
-      <guid>danmunro.com/posts/thoughts-on-the-chinese-motherboard-hack/</guid>
+      <guid>/posts/thoughts-on-the-chinese-motherboard-hack/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/the-big-hack.jpg&#34; alt=&#34;The Big Hack&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/the-big-hack.jpg&#34; alt=&#34;The Big Hack&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bloomberg News earlier this month &lt;a href=&#34;https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies&#34;&gt;reported the results of an investigation&lt;/a&gt;, which check all the boxes of a classic international spy drama. Actors include nation states, global server equipment manufacturers, and tech companies familiar to most American households.&lt;/p&gt;
 
@@ -551,13 +551,13 @@
     
     <item>
       <title>Foreshadow, Another Echo Of Spectre</title>
-      <link>danmunro.com/posts/foreshadow-another-echo-of-spectre/</link>
+      <link>/posts/foreshadow-another-echo-of-spectre/</link>
       <pubDate>Wed, 29 Aug 2018 22:31:46 -0500</pubDate>
       
-      <guid>danmunro.com/posts/foreshadow-another-echo-of-spectre/</guid>
+      <guid>/posts/foreshadow-another-echo-of-spectre/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/foreshadow.svg&#34; style=&#34;float: left; width: 50%&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/foreshadow.svg&#34; style=&#34;float: left; width: 50%&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A new duo of exploits collectively called &lt;a href=&#34;https://foreshadowattack.eu/&#34;&gt;Foreshadow-NG&lt;/a&gt; were &lt;a href=&#34;https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00161.html&#34;&gt;confirmed by Intel on August 14th&lt;/a&gt;. In the same family as &lt;a href=&#34;https://meltdownattack.com/&#34;&gt;Spectre&lt;/a&gt; and related to an exploit &lt;a href=&#34;https://foreshadowattack.eu/foreshadow.pdf&#34;&gt;previously reported in January 2018&lt;/a&gt;, this new generation allows unauthorized access to the L1 data cache layer inside a processor core. The L1 data cache layer is considered privileged and contains information about the operating system, drivers, userland applications, virtualized resources, and other information stored in the processor core. All an attacker needs is the ability to run code (without root privileges).&lt;/p&gt;
 
@@ -579,10 +579,10 @@
     
     <item>
       <title>Nodesrv: A MUD Framework In 2018</title>
-      <link>danmunro.com/posts/nodesrv-a-mud-framework-in-2018/</link>
+      <link>/posts/nodesrv-a-mud-framework-in-2018/</link>
       <pubDate>Fri, 24 Aug 2018 21:59:42 -0500</pubDate>
       
-      <guid>danmunro.com/posts/nodesrv-a-mud-framework-in-2018/</guid>
+      <guid>/posts/nodesrv-a-mud-framework-in-2018/</guid>
       <description>
 
 &lt;p&gt;In this article I want to share my free-time project, a &lt;a href=&#34;https://en.wikipedia.org/wiki/MUD&#34;&gt;MUD&lt;/a&gt;, or multi-user dungeon. This particular project is not quite a game per-se, but a framework for building a game. It&amp;rsquo;s called &lt;a href=&#34;https://github.com/danielmunro/nodesrv&#34;&gt;nodesrv&lt;/a&gt;. Prefaced with a short story about the history of MUDs to provide some context, I&amp;rsquo;ll lay out my reasoning for such a peculiar project and why I think it has value today.&lt;/p&gt;
@@ -603,13 +603,13 @@
 
 &lt;p&gt;The app runtime is &lt;a href=&#34;https://electronjs.org/&#34;&gt;Electron&lt;/a&gt;, which means a few things. It is cross-platform and built with JavaScript, HTML, and CSS. Connections to the server utilize &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API&#34;&gt;web sockets&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/client.png&#34; alt=&#34;While the client app is text-based and currently incredibly bare-bones, there is potential.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/client.png&#34; alt=&#34;While the client app is text-based and currently incredibly bare-bones, there is potential.&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;the-server&#34;&gt;The Server&lt;/h3&gt;
 
 &lt;p&gt;The server runtime is &lt;a href=&#34;https://github.com/TypeStrong/ts-node&#34;&gt;ts-node&lt;/a&gt;, a Typescript execution environment for node.js. Persistence is managed via &lt;a href=&#34;http://typeorm.io/#/&#34;&gt;TypeORM&lt;/a&gt;. Tests are provided using &lt;a href=&#34;https://jestjs.io/&#34;&gt;Jest&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/tests.png&#34; alt=&#34;Tests&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/tests.png&#34; alt=&#34;Tests&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The universe is represented in a graph, with rooms as the edges, connected by directed exits. &lt;a href=&#34;https://en.wikipedia.org/wiki/Mob_(gaming)&#34;&gt;Mobiles&lt;/a&gt;, or mobs, populate the world. The world currently consists of only a few dozen rooms, randomly generated into a single scene.&lt;/p&gt;
 
@@ -638,13 +638,13 @@
     
     <item>
       <title>Practical Kubernetes Security</title>
-      <link>danmunro.com/posts/practical-kubernetes-security/</link>
+      <link>/posts/practical-kubernetes-security/</link>
       <pubDate>Sat, 18 Aug 2018 08:14:14 -0500</pubDate>
       
-      <guid>danmunro.com/posts/practical-kubernetes-security/</guid>
+      <guid>/posts/practical-kubernetes-security/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/k8slogo.png&#34; style=&#34;float: left;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/k8slogo.png&#34; style=&#34;float: left;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kubernetes is a fascinating software development that has rapidly revolutionized the container and ops spaces. However, with quick evolution comes new attack vectors.&lt;/p&gt;
 
@@ -678,7 +678,7 @@
 
 &lt;p&gt;Disable with &lt;code&gt;--insecure-port=0&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/kubernetes.webp&#34; alt=&#34;Kubernetes at a high level&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/kubernetes.webp&#34; alt=&#34;Kubernetes at a high level&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;kubelet-settings&#34;&gt;Kubelet Settings&lt;/h2&gt;
 
@@ -706,7 +706,7 @@
 
 &lt;p&gt;Disallow direct ssh access to Kubernetes nodes. Instead expose one edge node, which serves as a proxy between the internet and the private network. This is a small detail but has huge advantages. Auditing and logging become much easier concerns to monitor. And in the case of a breach, there is one location to disable ssh.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/awsbastion.png&#34; alt=&#34;AWS bastion host setup within a VPC&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/awsbastion.png&#34; alt=&#34;AWS bastion host setup within a VPC&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The bastion host should still be protected by ip rules, such as security groups in AWS. &lt;a href=&#34;https://aws.amazon.com/blogs/security/how-to-record-ssh-sessions-established-through-a-bastion-host/&#34;&gt;Here&amp;rsquo;s a good guide&lt;/a&gt; for AWS bastion host setup (not for kubernetes but the concept is the same).&lt;/p&gt;
 
@@ -738,11 +738,11 @@
     
     <item>
       <title>Have I Been Pwned?</title>
-      <link>danmunro.com/posts/have-i-been-pwned/</link>
+      <link>/posts/have-i-been-pwned/</link>
       <pubDate>Thu, 16 Aug 2018 22:35:09 -0500</pubDate>
       
-      <guid>danmunro.com/posts/have-i-been-pwned/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;danmunro.com/images/pnwed.png&#34; alt=&#34;Have I Been Pwned?&#34; /&gt;&lt;/p&gt;
+      <guid>/posts/have-i-been-pwned/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/pnwed.png&#34; alt=&#34;Have I Been Pwned?&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://haveibeenpwned.com/&#34;&gt;Check here now&lt;/a&gt;&lt;/p&gt;
 
@@ -750,16 +750,16 @@
 
 &lt;p&gt;Equally surprising, my work email had been included in hacks as well. This, despite being registered with far fewer accounts and all with good reputations.&lt;/p&gt;
 
-&lt;p&gt;All of this emphasizes the need for &lt;a href=&#34;danmunro.com/posts/the-password-is-dead/&#34;&gt;good password hygiene&lt;/a&gt;, including using strong, unique passwords for every account.&lt;/p&gt;
+&lt;p&gt;All of this emphasizes the need for &lt;a href=&#34;/posts/the-password-is-dead/&#34;&gt;good password hygiene&lt;/a&gt;, including using strong, unique passwords for every account.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Infrastructure Validation And Auditing</title>
-      <link>danmunro.com/posts/infrastructure-validation-and-auditing/</link>
+      <link>/posts/infrastructure-validation-and-auditing/</link>
       <pubDate>Wed, 15 Aug 2018 04:15:31 -0500</pubDate>
       
-      <guid>danmunro.com/posts/infrastructure-validation-and-auditing/</guid>
+      <guid>/posts/infrastructure-validation-and-auditing/</guid>
       <description>
 
 &lt;p&gt;There are many reasons why infrastructure and security validation checks are manual. Maybe the reliability of infrastructure provisioning is trusted; ops and dev teams are overloaded with work already; the perception that a manual check provides equivalent value to an automated check.&lt;/p&gt;
@@ -800,10 +800,10 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
     
     <item>
       <title>TLS 1.3 RFC Draft Published</title>
-      <link>danmunro.com/posts/tls-1.3-is-here/</link>
+      <link>/posts/tls-1.3-is-here/</link>
       <pubDate>Mon, 13 Aug 2018 22:59:37 -0500</pubDate>
       
-      <guid>danmunro.com/posts/tls-1.3-is-here/</guid>
+      <guid>/posts/tls-1.3-is-here/</guid>
       <description>
 
 &lt;p&gt;The Internet Engineering Task Force (IETF) has &lt;a href=&#34;https://tools.ietf.org/html/rfc8446&#34;&gt;published an RFC&lt;/a&gt; for version 1.3 of the venerable Transport Layer Security (TLS) protocol. A yearslong process, this upgrade addresses a number of flaws identified in the previous version.&lt;/p&gt;
@@ -838,13 +838,13 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
     
     <item>
       <title>Thinking Beyond M &amp; M Security</title>
-      <link>danmunro.com/posts/thinking-beyond-mm-security/</link>
+      <link>/posts/thinking-beyond-mm-security/</link>
       <pubDate>Sat, 11 Aug 2018 22:02:47 -0500</pubDate>
       
-      <guid>danmunro.com/posts/thinking-beyond-mm-security/</guid>
+      <guid>/posts/thinking-beyond-mm-security/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/mm.jpg&#34; alt=&#34;Candy with a soft center. Good model for candy, not so much for security.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/mm.jpg&#34; alt=&#34;Candy with a soft center. Good model for candy, not so much for security.&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For the uninitiated, “M &amp;amp; M” security is a pejorative term, comparing a security posture to candy: a hardened shell with a soft, delicious interior. This comparison is apt for a few reasons, but mainly because it highlights a larger theme in information security: why do we so consistently get things so wrong?&lt;/p&gt;
 
@@ -878,7 +878,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
 
 &lt;p&gt;So what is a better approach? The problem is complicated, and the solution involves both infrastructure hardening and organizational preparation.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/fort.jpg&#34; alt=&#34;As threat vectors evolve, defenses of yesterday are no longer sufficient.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/fort.jpg&#34; alt=&#34;As threat vectors evolve, defenses of yesterday are no longer sufficient.&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;infrastructure-planning&#34;&gt;Infrastructure Planning&lt;/h2&gt;
 
@@ -886,7 +886,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
 
 &lt;h3 id=&#34;automate-infrastructure-tests&#34;&gt;Automate Infrastructure Tests&lt;/h3&gt;
 
-&lt;p&gt;Use &lt;a href=&#34;danmunro.com/posts/infrastructure-validation-and-auditing/&#34;&gt;infrastructure testing&lt;/a&gt; to automatically validate assumptions about the platform. These assumptions can range from provisioning tool correctness to security audits.&lt;/p&gt;
+&lt;p&gt;Use &lt;a href=&#34;/posts/infrastructure-validation-and-auditing/&#34;&gt;infrastructure testing&lt;/a&gt; to automatically validate assumptions about the platform. These assumptions can range from provisioning tool correctness to security audits.&lt;/p&gt;
 
 &lt;h3 id=&#34;zero-trust-architecture&#34;&gt;Zero Trust Architecture&lt;/h3&gt;
 
@@ -940,7 +940,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
 
 &lt;p&gt;Playbooks are nothing special. They are simply defined processes for security responders to follow given a breach scenario. A typical playbook will include what systems to check, how to perform a quarantine, and how to recover with pristine infrastructure, credentials, and configs, while minimizing mean time to recovery (MTTR).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;danmunro.com/images/castle.jpg&#34; alt=&#34;Security as a feature.&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/castle.jpg&#34; alt=&#34;Security as a feature.&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
 
@@ -966,10 +966,10 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
     
     <item>
       <title>KRACK Attacks</title>
-      <link>danmunro.com/posts/krack-attacks/</link>
+      <link>/posts/krack-attacks/</link>
       <pubDate>Fri, 10 Aug 2018 07:25:01 -0500</pubDate>
       
-      <guid>danmunro.com/posts/krack-attacks/</guid>
+      <guid>/posts/krack-attacks/</guid>
       <description>
 
 &lt;p&gt;In case you haven&amp;rsquo;t heard, &lt;a href=&#34;https://www.krackattacks.com/&#34;&gt;a critical security flaw&lt;/a&gt; has been uncovered in &lt;a href=&#34;https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPA2&#34;&gt;WPA2&lt;/a&gt;. The scope of this flaw includes all modern wifi routers, and requires only close proximity to the device in order to carry out the attack.&lt;/p&gt;
@@ -998,10 +998,10 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
     
     <item>
       <title>The Password Is Dead, Long Live The Password!</title>
-      <link>danmunro.com/posts/the-password-is-dead/</link>
+      <link>/posts/the-password-is-dead/</link>
       <pubDate>Wed, 25 Jul 2018 08:22:24 -0500</pubDate>
       
-      <guid>danmunro.com/posts/the-password-is-dead/</guid>
+      <guid>/posts/the-password-is-dead/</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -1048,10 +1048,10 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
     
     <item>
       <title>Working Remotely</title>
-      <link>danmunro.com/posts/working-remotely/</link>
+      <link>/posts/working-remotely/</link>
       <pubDate>Tue, 01 Sep 2015 08:19:54 -0500</pubDate>
       
-      <guid>danmunro.com/posts/working-remotely/</guid>
+      <guid>/posts/working-remotely/</guid>
       <description>
 
 &lt;p&gt;A little over a year ago I took the plunge and joined a small startup working remotely as lead software engineer. I was nervous for a lot of reasons. This was my first lead position, my first job at a fully remote company. And being a startup, finances were not guaranteed. Could I handle it?&lt;/p&gt;
@@ -1114,10 +1114,10 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
     
     <item>
       <title>Make for Asset Management</title>
-      <link>danmunro.com/posts/make-for-asset-management/</link>
+      <link>/posts/make-for-asset-management/</link>
       <pubDate>Fri, 14 Aug 2015 07:00:28 -0500</pubDate>
       
-      <guid>danmunro.com/posts/make-for-asset-management/</guid>
+      <guid>/posts/make-for-asset-management/</guid>
       <description>
 
 &lt;p&gt;&lt;strong&gt;tldr:&lt;/strong&gt; &lt;a href=&#34;#tldr&#34;&gt;the good stuff&lt;/a&gt;&lt;/p&gt;
@@ -1231,10 +1231,10 @@ clean:
     
     <item>
       <title></title>
-      <link>danmunro.com/posts/ten-immutable-laws-of-security-thoughts/</link>
+      <link>/posts/ten-immutable-laws-of-security-thoughts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>danmunro.com/posts/ten-immutable-laws-of-security-thoughts/</guid>
+      <guid>/posts/ten-immutable-laws-of-security-thoughts/</guid>
       <description>
 
 &lt;p&gt;****&amp;mdash;
