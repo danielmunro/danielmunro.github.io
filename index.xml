@@ -271,7 +271,7 @@ the defensive. Patches are responsive in nature. Since this feedback loop means 
 
 &lt;h2 id=&#34;about-this-site&#34;&gt;About This Site&lt;/h2&gt;
 
-&lt;p&gt;This site was created using the excellent static site generator &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Hosting is via &lt;a href=&#34;https://docs.aws.amazon.com/AmazonS3/latest/user-guide/static-website-hosting.html&#34;&gt;AWS S3&lt;/a&gt; behind a &lt;a href=&#34;https://aws.amazon.com/premiumsupport/knowledge-center/cloudfront-https-requests-s3/&#34;&gt;CloudFront distribution&lt;/a&gt; providing SSL.&lt;/p&gt;
+&lt;p&gt;This site was created using the excellent static site generator &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;. Hosting via Github Pages.&lt;/p&gt;
 
 &lt;p&gt;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by/4.0/88x31.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by/4.0/&#34;&gt;Creative Commons Attribution 4.0 International License&lt;/a&gt;&lt;/p&gt;
 </description>
