@@ -16,28 +16,18 @@
       <pubDate>Fri, 10 Aug 2018 07:25:01 -0500</pubDate>
       
       <guid>/posts/krack-attacks/</guid>
-      <description>
-
-&lt;p&gt;In case you haven&amp;rsquo;t heard, &lt;a href=&#34;https://www.krackattacks.com/&#34;&gt;a critical security flaw&lt;/a&gt; has been uncovered in &lt;a href=&#34;https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPA2&#34;&gt;WPA2&lt;/a&gt;. The scope of this flaw includes all modern wifi routers, and requires only close proximity to the device in order to carry out the attack.&lt;/p&gt;
-
+      <description>&lt;p&gt;In case you haven&#39;t heard, &lt;a href=&#34;https://www.krackattacks.com/&#34;&gt;a critical security flaw&lt;/a&gt; has been uncovered in &lt;a href=&#34;https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPA2&#34;&gt;WPA2&lt;/a&gt;. The scope of this flaw includes all modern wifi routers, and requires only close proximity to the device in order to carry out the attack.&lt;/p&gt;
 &lt;p&gt;All devices are affected because the flaw is in the standard itself, and not an individual product or implementation. Specifically, correct implementations of WPA2 are affected by KRACK attacks.&lt;/p&gt;
-
 &lt;p&gt;While firmware updates are not yet available, there are scripts to detect susceptibility to the attack &lt;a href=&#34;https://github.com/vanhoefm/krackattacks-scripts&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
 &lt;p&gt;&lt;a href=&#34;https://arstechnica.com/information-technology/2017/10/severe-flaw-in-wpa2-protocol-leaves-wi-fi-traffic-open-to-eavesdropping/&#34;&gt;Here&lt;/a&gt; is another good write up of the attack.&lt;/p&gt;
-
 &lt;h2 id=&#34;steps-to-take-now&#34;&gt;Steps To Take Now&lt;/h2&gt;
-
 &lt;p&gt;If possible:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Use a wired connection&lt;/li&gt;
 &lt;li&gt;Use HTTPS exclusively&lt;/li&gt;
 &lt;li&gt;Check your router vendor regularly for updates&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;looking-forward&#34;&gt;Looking Forward&lt;/h2&gt;
-
 &lt;p&gt;Hopefully this vulnerability will &lt;a href=&#34;https://medium.com/@billbuchanan_27654/the-beginning-of-the-end-of-wpa-2-cracking-wpa-2-just-got-a-whole-lot-easier-55d7775a7a5a&#34;&gt;speed the demise of WPA2&lt;/a&gt; in favor of its replacement, WPA3. The WPA3 draft is finalized, however, no routers implement the draft as of this writing.&lt;/p&gt;
 </description>
     </item>

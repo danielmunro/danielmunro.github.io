@@ -52,96 +52,51 @@ if (!doNotTrack) {
 <div class="content">
   <h1>Practical Kubernetes Security</h1>
   <aside></aside>
-  <p>
-
-<p><img src="/images/k8slogo.png" style="float: left;" /></p>
-
+  <p><p><!-- raw HTML omitted --></p>
 <p>Kubernetes is a fascinating software development that has rapidly revolutionized the container and ops spaces. However, with quick evolution comes new attack vectors.</p>
-
 <p>This article hopes to highlight some important Kubernetes security best practices, including hardening default options, isolation at the network level, and tools for auditing security settings in deployed clusters. Reference links and documentation will be added for further reading.</p>
-
 <p>Some advice is specific to AWS, however this guide aims to be hosting agnostic as much as possible.</p>
-
 <p>A huge thanks to everyone who has documented Kubernetes extensively already. The official docs linked in these tips, and <a href="https://github.com/freach/kubernetes-security-best-practice">Kubernetes Security Best Practices</a> made this article possible.</p>
-
 <h2 id="api-server-settings">API Server Settings</h2>
-
 <p>As the only component in a Kubernetes cluster to connect to <code>etcd</code>, as well as being a central control point for worker nodes, the api server is a prime target for attackers.</p>
-
 <h3 id="authorization-mode">Authorization Mode</h3>
-
 <p>Per <a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/">this authorization overview</a>, avoid using the <code>AlwaysAllow</code> authorization mode for a cluster. This mode grants any authenticated entity full access to the cluster. With this level of access, an attacker will have the ability to launch new pods within the cluster &ndash; a fairly straightforward method for privilege escalation.</p>
-
 <blockquote>
 <p>Users who have the ability to create pods in a namespace can potentially escalate their privileges within that namespace. They can create pods that access their privileges within that namespace. They can create pods that access secrets the user cannot themselves read, or that run under a service account with different/greater permissions. <a href="https://kubernetes.io/docs/reference/access-authn-authz/authorization/">(read more)</a></p>
 </blockquote>
-
 <p>Instead, <a href="https://kubernetes.io/blog/2017/10/using-rbac-generally-available-18/">RBAC should be used</a>. RBAC allows policy storage and retrieval natively via the Kubernetes API. Roles may be applied to users, groups, or service accounts, and a number of roles are defined out of the box. Pod creation is reserved for special roles, which should be restricted.</p>
-
 <p>Check the <code>--authorization-mode</code> parameter of your <em>kube-apiserver</em> processes. <code>RBAC</code> is the desired option.</p>
-
 <p>Bitnami provides an <a href="https://docs.bitnami.com/kubernetes/how-to/configure-rbac-in-your-kubernetes-cluster/">excellent guide for setting up RBAC</a>.</p>
-
 <h3 id="insecure-port">Insecure Port</h3>
-
 <p>Deprecated since <code>v1.10</code>, this option really should be disabled. If enabled, a port is open which provides no authorization. No TLS, no auth, no authz.</p>
-
 <p>Disable with <code>--insecure-port=0</code>.</p>
-
-<p><img src="/images/kubernetes.webp" alt="Kubernetes at a high level" /></p>
-
+<p><img src="/images/kubernetes.webp" alt="Kubernetes at a high level"></p>
 <h2 id="kubelet-settings">Kubelet Settings</h2>
-
-<p>Ensure kubelet&rsquo;s port (<code>10250/tcp</code>) is behind a firewall. Kubelet offers an api for arbitrary command execution on worker nodes, which is utilized by the API server.</p>
-
+<p>Ensure kubelet's port (<code>10250/tcp</code>) is behind a firewall. Kubelet offers an api for arbitrary command execution on worker nodes, which is utilized by the API server.</p>
 <h2 id="restrict-docker-image-pull">Restrict &ldquo;docker image pull&rdquo;</h2>
-
 <p>Owing to the fact that docker images are uncontrolled environments, pulling an unauthorized image is a convenient way to gain arbitrary code execution within a cluster, among other nasty possibilities.</p>
-
 <p>Use the <a href="https://github.com/freach/docker-image-policy-plugin">docker image policy plugin</a> to restrict this attack vector.</p>
-
 <h2 id="disallow-dashboard-access-from-inside-the-cluster">Disallow Dashboard Access From Inside The Cluster</h2>
-
 <p>Depending on the Kubernetes version, <code>kubernetes-dashboard</code> uses a service account with full cluster access. Access to the dashboard from within the cluster can be disallowed without affecting <code>kubectl proxy</code>. <a href="https://github.com/freach/kubernetes-security-best-practice#kubernetes-dashboard-boom">Read this section</a> for more information and to get a NetworkPolicy that will guard against this exploit.</p>
-
 <h2 id="kube-bench">Kube-bench</h2>
-
 <p>Kube-bench is a tool for <a href="https://github.com/aquasecurity/kube-bench">auditing deployed Kubernetes clusters</a>. Some configuration is required, and the readme is well worth the time. There are a large number of configuration checks across different versions of Kubernetes.</p>
-
 <h2 id="firewall-ports">Firewall Ports</h2>
-
-<p><a href="https://github.com/freach/kubernetes-security-best-practice#firewall-ports-fire">Following this advice</a>, firewall all ports at the network level that aren&rsquo;t needed by platform services.</p>
-
+<p><a href="https://github.com/freach/kubernetes-security-best-practice#firewall-ports-fire">Following this advice</a>, firewall all ports at the network level that aren't needed by platform services.</p>
 <h3 id="bastion-host">Bastion Host</h3>
-
 <p>Disallow direct ssh access to Kubernetes nodes. Instead expose one edge node, which serves as a proxy between the internet and the private network. This is a small detail but has huge advantages. Auditing and logging become much easier concerns to monitor. And in the case of a breach, there is one location to disable ssh.</p>
-
-<p><img src="/images/awsbastion.png" alt="AWS bastion host setup within a VPC" /></p>
-
-<p>The bastion host should still be protected by ip rules, such as security groups in AWS. <a href="https://aws.amazon.com/blogs/security/how-to-record-ssh-sessions-established-through-a-bastion-host/">Here&rsquo;s a good guide</a> for AWS bastion host setup (not for kubernetes but the concept is the same).</p>
-
+<p><img src="/images/awsbastion.png" alt="AWS bastion host setup within a VPC"></p>
+<p>The bastion host should still be protected by ip rules, such as security groups in AWS. <a href="https://aws.amazon.com/blogs/security/how-to-record-ssh-sessions-established-through-a-bastion-host/">Here's a good guide</a> for AWS bastion host setup (not for kubernetes but the concept is the same).</p>
 <h2 id="kube2iam">Kube2IAM</h2>
-
 <p>Kubernetes running directly in EC2 has no native way to represent IAM roles on individual running pods within a node. Instead, roles must be applied to the nodes, which is suboptimal from a security perspective. Ideally, we can follow the principle of least privilege and apply roles on a per-container or per-pod basis.</p>
-
 <p><a href="https://github.com/jtblin/kube2iam">Kube2IAM does just that</a>. By creating a sidecar container that serves as a proxy to the AWS metadata api, the sidecar then authorizes requests to that api via configured roles, which serves as an effective work-around.</p>
-
 <h2 id="cves">CVEs</h2>
-
 <p>This past March, <a href="https://www.twistlock.com/2018/03/21/deep-dive-severe-kubernetes-vulnerability-date-cve-2017-1002101/">two of the most critical CVEs</a> for Kubernetes to date were reported. Both CVEs involve hacks which allow an attacker to break the normal filesystem isolation afforded by containerization.</p>
-
 <p>The first hack requires shell access inside the container, after which arbitrary root access to the host filesystem can be gained. The second allows arbitrary host path deletion via a few different vectors within the Kubernetes platform.</p>
-
 <p>Fixes for both issues have been deployed and backported as far back as <code>1.7</code>. These CVEs highlight the importance of software updates and automated vulnerability scanning.</p>
-
-<p><br/></p>
-
-<hr />
-
+<!-- raw HTML omitted -->
+<hr>
 <p>Image attributions:</p>
-
 <p><a href="https://x-team.com/blog/introduction-kubernetes-architecture/">X-Team</a></p>
-
 <p><a href="https://aws.amazon.com/blogs/security/how-to-record-ssh-sessions-established-through-a-bastion-host/">AWS ssh via bastion host</a></p>
 </p>
 </div>

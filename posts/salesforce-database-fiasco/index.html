@@ -52,124 +52,70 @@ if (!doNotTrack) {
 <div class="content">
   <h1>Salesforce Database Fiasco</h1>
   <aside></aside>
-  <p>
-
-<p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">To all of our <a href="https://twitter.com/salesforce?ref_src=twsrc%5Etfw">@salesforce</a> customers, please be aware that we are experiencing a major issue with our service and apologize for the impact it is having on you. Please know that we have all hands on this issue and are resolving as quickly as possible.</p>&mdash; Parker Harris (@parkerharris) <a href="https://twitter.com/parkerharris/status/1129426438325587969?ref_src=twsrc%5Etfw">May 17, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-
+  <p><!-- raw HTML omitted -->
 <h2 id="current-news-coverage">Current News Coverage</h2>
-
 <p>ZDNet - <a href="https://www.zdnet.com/article/faulty-database-script-brings-salesforce-to-its-knees/">Faulty database script brings salesforce to its knees</a></p>
-
 <p>The Register - <a href="https://www.theregister.co.uk/2019/05/17/salesforce_database_outage/">Salesforce database outage</a></p>
-
 <p>Geekwire - <a href="https://www.geekwire.com/2019/database-error-causes-widespread-ongoing-salesforce-outage-affecting-pardot-customers/">Database error causes widespread ongoing salesforce outage&hellip;</a></p>
-
 <h2 id="may-18-status-update">May 18 Status Update</h2>
-
 <p>Service availability appears to be restored for a majority of users, although a subset are still locked out of their data. Based on initial reporting some details remain unclear.</p>
-
 <h2 id="unanswered-questions">Unanswered Questions</h2>
-
 <blockquote>
 <p>&hellip;a database script deployment that inadvertently gave users broader data access than intended.
 <a href="https://www.zdnet.com/article/faulty-database-script-brings-salesforce-to-its-knees/">ZDNet reporting</a></p>
 </blockquote>
-
 <p>Due to the lack of technical details in initial reporting, there are many unanswered questions. Unanswered questions naturally lead to idle speculation.</p>
-
 <h3 id="ongoing-remediation">Ongoing Remediation</h3>
-
 <p>Firstly, service remediation appears to be at least partially manual. This conclusion is not without reproach, but is based on evidence in the initial reports and the careful wording of company statements since the incident broke. This recovery has spanned a long duration, that has apparently been intensively staffed, with service restoration being fragmented and ongoing.</p>
-
 <p>While in no way conclusive, these are signs of a potentially manual, disorganized, and unplanned-for rollback.</p>
-
 <h3 id="response">Response</h3>
-
 <p>Secondly, a primary feature of this misconfigured deployment is that all users were granted read-write access to all databases.</p>
-
 <p>How long was the misconfiguration live before it was noticed? Before access was revoked?</p>
-
 <p>How did Salesforce finally notice the misconfiguration? Did they have a horrified scramble after a puzzled customer reached out?</p>
-
 <p>If password hashes were leaked, it would be prudent to force password resets on users. Yet, no reporting or updates from Salesforce have mentioned as much.</p>
-
 <h3 id="data-integrity">Data Integrity</h3>
-
-<p>A detail that has been missing so far is whether, or to what extent, unauthorized access or modification happened to any affected databases. Hopefully, remediation includes rolling back databases to a known good state, which would at least ensure data integrity from before the incident. However due to the wording, and focus on &ldquo;restoring&rdquo; permissions and access, it&rsquo;s hard to know exactly how unauthorized access or modification is being handled.</p>
-
+<p>A detail that has been missing so far is whether, or to what extent, unauthorized access or modification happened to any affected databases. Hopefully, remediation includes rolling back databases to a known good state, which would at least ensure data integrity from before the incident. However due to the wording, and focus on &ldquo;restoring&rdquo; permissions and access, it's hard to know exactly how unauthorized access or modification is being handled.</p>
 <h3 id="root-cause">Root Cause</h3>
-
 <p>According to reports, a misconfigured deployment script ran, which modified all customer databases to allow read-write access to all users.</p>
-
 <p>What was the review process for this deployment? Was it approved?</p>
-
 <p>Did this deployment go to a staging environment before production? How was that environment verified?</p>
-
 <p>How was the deployment monitored?</p>
-
 <p>How was the new deployed state verified?</p>
-
 <p>How was monitoring conducted on the affected infrastructure?</p>
-
 <h2 id="the-hard-truth">The Hard Truth</h2>
-
 <p>A mistake like this only happens when there are a lack of controls, or very weak controls, on many levels. From the organization, to its review and deploy processes, and its monitoring and alerting capabilities. Legitimate oversights and mistakes do happen, which is why mature engineering organizations rely on a multi-layered process to stop defects during the SDLC.</p>
-
 <h2 id="best-practice-solutions">Best Practice Solutions</h2>
-
 <p>While no strategy <em>guarantees</em> safety against defects, there are practices and processes which are proven to reduce the number of defects that ultimately reach production and impact paying customers.</p>
-
 <p>For the defects that do make it through to production, there are strategies which will help with response and recovery.</p>
-
 <h3 id="code-reviews">Code Reviews</h3>
-
 <p>Code reviews are an easy, low cost, high value process to add to the SDLC. In addition to catching defects, code reviews are an <em>excellent</em> way to share knowledge across an organization.</p>
-
-<p>Senior engineers get daily opportunities to mentor and coach their peers. It&rsquo;s also a great opportunity to ask questions, gather feedback, and improve implementation.</p>
-
+<p>Senior engineers get daily opportunities to mentor and coach their peers. It's also a great opportunity to ask questions, gather feedback, and improve implementation.</p>
 <h3 id="configuration-management">Configuration Management</h3>
-
 <p>Configuration management is critical to a few key defect-minimization strategies. Having fully automated deployment and rollback procedures almost requires some level of configuration management. Configuration versioning and secrets management are other important pieces to this puzzle.</p>
-
 <p><a href="https://www.terraform.io/">Terraform</a> by HashiCorp is one of many great options for configuration as code.</p>
-
-<p><a href="https://www.vaultproject.io/">Vault</a> (also by HashiCorp) is a secret management option which has a CLI, a web interface, and integrates natively with cloud providers. It&rsquo;s pretty intuitive and easy to use.</p>
-
+<p><a href="https://www.vaultproject.io/">Vault</a> (also by HashiCorp) is a secret management option which has a CLI, a web interface, and integrates natively with cloud providers. It's pretty intuitive and easy to use.</p>
 <h3 id="deployment-testing">Deployment Testing</h3>
-
 <p>Every deployment to production should be preceded by a deployment to a similar production-like environment. That environment should be monitored during and after deployment. It should be tested rigorously with smoke tests, UI tests, or a manual QA team.</p>
-
 <h3 id="phased-deployments">Phased Deployments</h3>
-
-<p>Deployments should roll across clusters or partitions in phases, with each phase being monitored against expectations. Rollbacks, particularly rollbacks of schema changes, are difficult to prepare for. If that&rsquo;s the case, backups need to be hot and ready to roll back to. The deployment should be scheduled for the lowest-use time of the week.</p>
-
+<p>Deployments should roll across clusters or partitions in phases, with each phase being monitored against expectations. Rollbacks, particularly rollbacks of schema changes, are difficult to prepare for. If that's the case, backups need to be hot and ready to roll back to. The deployment should be scheduled for the lowest-use time of the week.</p>
 <h3 id="incident-planning-disaster-recovery">Incident Planning, Disaster Recovery</h3>
-
-<p><img src="/images/dumpster-fire.jpg" alt="" /></p>
-
+<p><img src="/images/dumpster-fire.jpg" alt=""></p>
 <blockquote>
 <p>Proper planning prevents piss-poor performance.</p>
 </blockquote>
-
 <p>&ndash; Coach Hanika, high school wrestling</p>
-
 <p>and</p>
-
 <blockquote>
 <p>Fail to plan, plan to fail.</p>
 </blockquote>
-
 <p>Both of these statements are corny, often repeated, and completely true. Incident response requires planning, organization, practice, trust, and coordination.</p>
-
 <p>Designated roles reduce confusion and response time. Roles will depend on organizations and their individual requirements, but some common ones include:</p>
-
 <ul>
 <li>incident commander</li>
 <li>communications point person</li>
 <li>investigators</li>
 <li>scribes (for documenting timelines and actions taken)</li>
 </ul>
-
 <p>With these roles and an incident response plan in place, <a href="https://en.wikipedia.org/wiki/Mean_time_to_recovery">MTTR</a> has the best chance to be minimized. Investigators are insulated from fly-by questions, and are allowed to focus on the problem. The company and its various teams can stay up to date on any news via the communications person. And the incident commander ensures that the response stays focused and investigators have all the resources they need to complete the recovery.</p>
 </p>
 </div>

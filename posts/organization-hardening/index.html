@@ -52,106 +52,61 @@ if (!doNotTrack) {
 <div class="content">
   <h1>Organization Hardening</h1>
   <aside></aside>
-  <p>
-
-<p><img src="/images/fortress.jpg" alt="https://www.thisismoney.co.uk/money/investing/article-3049542/Will-safe-Fortress-Bond-New-bond-Castle-Trust-promises-pay-4-5.html" /></p>
-
-<p>This article is written for security specialists working at cloud-native companies. On-prem systems will have different requirements around physical security than ones which don&rsquo;t have infrastructure hardware on site. Device security for employees will be covered, along with other physical and employee risks.</p>
-
+  <p><p><img src="/images/fortress.jpg" alt="https://www.thisismoney.co.uk/money/investing/article-3049542/Will-safe-Fortress-Bond-New-bond-Castle-Trust-promises-pay-4-5.html"></p>
+<p>This article is written for security specialists working at cloud-native companies. On-prem systems will have different requirements around physical security than ones which don't have infrastructure hardware on site. Device security for employees will be covered, along with other physical and employee risks.</p>
 <p>Authentication best practices, including <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">MFA</a>, and (actually) good password policies are in scope.</p>
-
-<p>Finally, we&rsquo;ll look at strategies organizations can pursue in order to have a security-first mindset. Proactive knowledge sharing around risks and best practices can have a multiplying factor across an organization.</p>
-
+<p>Finally, we'll look at strategies organizations can pursue in order to have a security-first mindset. Proactive knowledge sharing around risks and best practices can have a multiplying factor across an organization.</p>
 <h1 id="physical-security">Physical Security</h1>
-
 <p>Physical security has a reputation for not being as sexy as security engineering. Device inventories, policies &amp; procedures, audits. Electronic doors and locks, security cameras, secure enclaves within the office.</p>
-
 <h2 id="perimeter-security">Perimeter Security</h2>
-
-<p>Don&rsquo;t overlook office perimeter security. Electronic doors and locks, and security cameras are critically important in securing any office, and provides audit-ability if the need arises.</p>
-
-<p>Doors will never accidentally be left unlocked if a keyless locking system is in place. It&rsquo;s small, but significant.</p>
-
+<p>Don't overlook office perimeter security. Electronic doors and locks, and security cameras are critically important in securing any office, and provides audit-ability if the need arises.</p>
+<p>Doors will never accidentally be left unlocked if a keyless locking system is in place. It's small, but significant.</p>
 <h2 id="documents-and-devices">Documents And Devices</h2>
-
 <p>Sensitive documents and devices with sensitive data (laptops, thumb drives, etc) must be stored within a secure enclave in the office. This can consist of a room or closet with a solid door and tamper-proof lock. A safe within the secure enclave for the most sensitive documents &amp; devices is perfectly reasonable.</p>
-
-<p>Encrypt all hard drives. It&rsquo;s easy to do these days and provides a big win.</p>
-
+<p>Encrypt all hard drives. It's easy to do these days and provides a big win.</p>
 <h1 id="password-hygiene">Password Hygiene</h1>
-
 <p>There is a lot of misinformation out there about passwords and what makes for good policy. Fortunately, we do have some fairly objective ways to measure the effectiveness of various password practices and policies.</p>
-
 <p>To start out, we must acknowledge the current state of password-based security: <a href="/posts/the-password-is-dead/">the password is dead</a>.</p>
-
 <p>Having minimum, or no requirements, around passwords is not acceptable. However, burdensome policies can actually make password hygiene <em>worse</em> among users. So what policies are proven to work?</p>
-
 <h2 id="forced-password-changes">Forced Password Changes</h2>
-
 <p>Forced password rotations, somewhat counter-intuitively, <a href="https://www.ftc.gov/news-events/blogs/techftc/2016/03/time-rethink-mandatory-password-changes">lead to <em>worse</em> overall password hygiene</a>. So when should passwords change? According to <a href="https://blog.lastpass.com/2018/08/often-change-password.html/">LastPass</a>:</p>
-
 <ul>
 <li>After a service discloses a security incident.</li>
 <li>There is evidence of unauthorized access to your account.</li>
 <li>There is evidence of malware or other compromise of your device.</li>
 <li>You shared access to an account with someone else and they no longer use the login.</li>
 <li>You logged in to the account on a shared or public computer (such as at a library or hotel).</li>
-<li>It&rsquo;s been a year or more since you last changed the password, especially if you don&rsquo;t have multi-factor authentication enabled.</li>
+<li>It's been a year or more since you last changed the password, especially if you don't have multi-factor authentication enabled.</li>
 </ul>
-
 <p>Additionally, if <a href="https://haveibeenpwned.com/">HaveIBeenPwned</a> reveals an account compromise, that password should be changed (as well as any accounts re-using that password).</p>
-
 <h2 id="password-managers">Password Managers</h2>
-
-<p>According to a <a href="https://blog.lastpass.com/2017/11/lastpass-reveals-8-truths-about-passwords-in-the-new-password-expose.html/">report by LastPass</a>, the average person has 191 passwords. Without a password manager it&rsquo;s literally impossible to have strong, unique passwords that are never re-used. Do some research, and propose one to use company-wide.</p>
-
+<p>According to a <a href="https://blog.lastpass.com/2017/11/lastpass-reveals-8-truths-about-passwords-in-the-new-password-expose.html/">report by LastPass</a>, the average person has 191 passwords. Without a password manager it's literally impossible to have strong, unique passwords that are never re-used. Do some research, and propose one to use company-wide.</p>
 <h1 id="multi-factor-authentication">Multi-Factor Authentication</h1>
-
-<p><a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">Multi-Factor Authentication</a> is an authentication system, which combines something you know (your password) with something you have (your generated MFA code, bound to a physical device). In order to successfully authenticate, a user must have both their password and their device&rsquo;s current MFA token. Tokens are dynamic, changing regularly.</p>
-
+<p><a href="https://en.wikipedia.org/wiki/Multi-factor_authentication">Multi-Factor Authentication</a> is an authentication system, which combines something you know (your password) with something you have (your generated MFA code, bound to a physical device). In order to successfully authenticate, a user must have both their password and their device's current MFA token. Tokens are dynamic, changing regularly.</p>
 <p>MFA is increasingly moving from a smart recommendation to a requirement, and for good reason. Google reduced the effectiveness of phishing among its 85,000 employees to zero, <a href="https://www.businessinsider.com/none-of-googles-employees-get-phished-because-of-yubikey-security-key-2018-7">by requiring MFA across its organization</a>.</p>
-
 <h1 id="keybase-for-secret-management">Keybase For Secret Management</h1>
-
-<p>Shared accounts. Documents. Forms. Development server keys, credentials. Employees have secrets, it&rsquo;s unavoidable. And not all communication channels are safe.</p>
-
+<p>Shared accounts. Documents. Forms. Development server keys, credentials. Employees have secrets, it's unavoidable. And not all communication channels are safe.</p>
 <p>Use tools that support E2E encryption for these types of communications, such as <a href="https://keybase.io/">Keybase</a>. Avoid email, IM, and physical copies when possible.</p>
-
 <h1 id="security-champions">Security Champions</h1>
-
-<p>Recruit champions across the organization who are interested in improving security. Target at least one representative from each functional group, you don&rsquo;t all need to meet in one room at one time. However you do need to meet with small groups on a regular basis.</p>
-
+<p>Recruit champions across the organization who are interested in improving security. Target at least one representative from each functional group, you don't all need to meet in one room at one time. However you do need to meet with small groups on a regular basis.</p>
 <p>A high performing security council will have a few primary goals and responsibilities outlined below.</p>
-
 <h2 id="job-based-risk-analysis">Job-Based Risk Analysis</h2>
-
-<p>It&rsquo;s hard to apply a one-size-fits-all approach to risk assessment and communication at the organization level. Meaning, customer support will have a different risks than QA. Engineers will have different risks than management. And so on.</p>
-
+<p>It's hard to apply a one-size-fits-all approach to risk assessment and communication at the organization level. Meaning, customer support will have a different risks than QA. Engineers will have different risks than management. And so on.</p>
 <p>Communicating directly with members of those teams, and understanding the primary threat vectors they face in day-to-day work will allow a more sophisticated risk analysis framework to be developed.</p>
-
 <h2 id="best-practices-communication-and-implementation">Best Practices Communication And Implementation</h2>
-
-<p>After identifying primary job-specific risks, use that information to craft security best practice recommendations. Accountability for following through on those recommendations falls to that team&rsquo;s security champion, who is empowered to effect change within their team.</p>
-
+<p>After identifying primary job-specific risks, use that information to craft security best practice recommendations. Accountability for following through on those recommendations falls to that team's security champion, who is empowered to effect change within their team.</p>
 <h2 id="foster-a-red-team-mentality">Foster A Red Team Mentality</h2>
-
-<p>Make it fun. Create short, informative presentations that include demos of hacks against the company&rsquo;s platform. Show that hacking isn&rsquo;t theoretical. Teach champions context specific ways to hack.</p>
-
+<p>Make it fun. Create short, informative presentations that include demos of hacks against the company's platform. Show that hacking isn't theoretical. Teach champions context specific ways to hack.</p>
 <p>For non-technical folks, set them up with a script and show them how to run it. Set them up with a phishing campaign. Task them with swiping unsecured documents, thumb drives, or writing silly messages on unlocked and unattended computers.</p>
-
 <h1 id="conclusion">Conclusion</h1>
-
 <p>Humans are prime first targets when an organization is attacked, yet we spend relatively little time addressing the problem. Most of the advice in this article is common sense:</p>
-
 <ul>
 <li>Use strong, unique passwords.</li>
 <li>Use a password manager.</li>
 <li>Use MFA everywhere possible.</li>
 <li>Avoid unencrypted channels for sensitive information.</li>
 </ul>
-
-<p>So why don&rsquo;t more people follow this commonsense advice? That is a critical failure in our profession. We&rsquo;ve got to make it easier to do things the right way than it is do things the wrong way. To address this problem requires face-to-face dialog, leadership, mentoring, empathy, and empowerment. A security champion system is designed to be just such a framework.</p>
-
+<p>So why don't more people follow this commonsense advice? That is a critical failure in our profession. We've got to make it easier to do things the right way than it is do things the wrong way. To address this problem requires face-to-face dialog, leadership, mentoring, empathy, and empowerment. A security champion system is designed to be just such a framework.</p>
 <p>A little bit of mischievous fun helps too.</p>
 </p>
 </div>

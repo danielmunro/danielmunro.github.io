@@ -52,22 +52,13 @@ if (!doNotTrack) {
 <div class="content">
   <h1>Thinking Beyond M &amp; M Security</h1>
   <aside></aside>
-  <p>
-
-<p><img src="/images/mm.jpg" alt="Candy with a soft center. Good model for candy, not so much for security." /></p>
-
+  <p><p><img src="/images/mm.jpg" alt="Candy with a soft center. Good model for candy, not so much for security."></p>
 <p>For the uninitiated, “M &amp; M” security is a pejorative term, comparing a security posture to candy: a hardened shell with a soft, delicious interior. This comparison is apt for a few reasons, but mainly because it highlights a larger theme in information security: why do we so consistently get things so wrong?</p>
-
 <h2 id="foot-in-the-door">Foot In The Door</h2>
-
 <p>Even a partial compromise of an edge node inside of a multi-tiered architecture built following this security strategy can be catastrophic. Privilege escalation via credential siphoning, packet sniffing, or other means, will inevitably allow complete infiltration of that edge and inevitable further penetration of the network.</p>
-
 <p>In a hypothetical M &amp; M scenario, our adversary has already attained a complete compromise of our infrastructure, or will do so as a function of time. They may now proceed unhindered to attaining their goal. In case it’s not clear, this is bad news.</p>
-
 <h3 id="anatomy-of-an-attack">Anatomy Of An Attack</h3>
-
 <p>For an adversary with shell access inside a network, there are a few immediate goals:</p>
-
 <ul>
 <li>Understand the network topology</li>
 <li>Siphoning credentials, keys, accounts, repositories, configs</li>
@@ -75,65 +66,35 @@ if (!doNotTrack) {
 <li>Evidence destruction</li>
 <li>Create a backdoor whereby access can be regained later. This is done by opening a port to the internet and running an unsigned executable.</li>
 </ul>
-
 <p>As devops engineers, we must consider each of these concerns and how best to protect against them.</p>
-
 <p>At this point in the attack, the adversary already has an enormous advantage. Hindering an ongoing attack, while successfully quarantining an intrusion without service interruption to end users becomes exponentially more challenging.</p>
-
 <h2 id="attack-mitigation-and-remediation">Attack Mitigation And Remediation</h2>
-
 <p>Affected infrastructure must be disconnected, isolated, and stopped for later analysis. Compromised credentials and keys must be replaced with pristine infrastructure, and all rotated in sychronized action. If any of these actions are not automated and practiced via playbooks, considering human error under duress, the odds are not good for a quick recovery.</p>
-
 <p>For any known compromised node, all assets and unsecured attached resources <em>must</em> be considered compromised and treated as such.</p>
-
 <p>So what is a better approach? The problem is complicated, and the solution involves both infrastructure hardening and organizational preparation.</p>
-
-<p><img src="/images/fort.jpg" alt="As threat vectors evolve, defenses of yesterday are no longer sufficient." /></p>
-
+<p><img src="/images/fort.jpg" alt="As threat vectors evolve, defenses of yesterday are no longer sufficient."></p>
 <h2 id="infrastructure-planning">Infrastructure Planning</h2>
-
 <p>Take steps during the design phase of a platform to make actions transparent, isolation at the hardware or OS level, and mitigation/remeditation as painless as possible.</p>
-
 <h3 id="automate-infrastructure-tests">Automate Infrastructure Tests</h3>
-
 <p>Use <a href="/posts/infrastructure-validation-and-auditing/">infrastructure testing</a> to automatically validate assumptions about the platform. These assumptions can range from provisioning tool correctness to security audits.</p>
-
 <h3 id="zero-trust-architecture">Zero Trust Architecture</h3>
-
 <p><a href="https://www.paloaltonetworks.com/cyberpedia/what-is-a-zero-trust-architecture">Zero trust architecture</a> involves design decisions that treat internal networks as <a href="https://www.darkreading.com/attacks-breaches/zero-trust-the-way-forward-in-cybersecurity/a/d-id/1327827">not inherently secure</a>. Never trust, always verify. Use the principle of least privilege. Monitor continuously.</p>
-
 <h4 id="inside-the-network">Inside The Network</h4>
-
 <p>Use internal proxies to verify requests between platform services. Disallow direct service to service communication, via isolated networks sharing an edge proxy.</p>
-
-<p>Think about access, authorization, and process execution on a whitelist basis, instead of the traditional blacklist strategy. Does the internal proxy expect a connection from executable A on port N? If not, maybe we don&rsquo;t want to outright block the connection, but we do want to monitor it closely and automatically generate a context-bound report of that connection&rsquo;s activities.</p>
-
+<p>Think about access, authorization, and process execution on a whitelist basis, instead of the traditional blacklist strategy. Does the internal proxy expect a connection from executable A on port N? If not, maybe we don't want to outright block the connection, but we do want to monitor it closely and automatically generate a context-bound report of that connection's activities.</p>
 <h3 id="credential-hygiene">Credential Hygiene</h3>
-
 <p>Have a process in place for revoking and regenerating credentials at any level of the system. These credentials should be defined with minimal permissions, have a TTL, and live in an encrypted store. Credentials can be shared across services if the services reside within the same network space. However, credentials should <em>never</em> be used by services across network boundaries. The reason is simple.</p>
-
 <h3 id="a-ship-metaphor">A Ship Metaphor</h3>
-
 <p>Modern ship design includes a feature called bulkheads. By partitioning the ship into sections, which can be easily shut off from one another, the ship becomes much more robust in the face of catastrophic failure.</p>
-
 <p>Typically, the bulkhead pattern is applied to <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/bulkhead">fault tolerance</a> in distributed systems. The concept is the same, but applied from a security perspective.</p>
-
 <p>Applied to modern security architecture, one environment might be spread out over multiple firewalls. Each firewall has tight access controls, with keys and credentials isolated from one resource to another. Compromise of one network bulkhead limits the blast radius of an attacker scooping credentials or sniffing traffic.</p>
-
 <h3 id="logging">Logging</h3>
-
 <p><a href="https://www.owasp.org/index.php/Logging_Cheat_Sheet">Follow security logging best practices</a> recommended by OWASP. Log often, and ship logs to a log aggregation service. In addition to aiding in transparency and auditing, destruction of evidence by the attacker is much more difficult.</p>
-
 <h2 id="organizational-prep">Organizational Prep</h2>
-
-<p>An organization&rsquo;s employees are its most valuable asset, and this is doubly true when responding to a security incident. There is nothing more dangerous than a sentient, motivated, responsive attacker.</p>
-
+<p>An organization's employees are its most valuable asset, and this is doubly true when responding to a security incident. There is nothing more dangerous than a sentient, motivated, responsive attacker.</p>
 <h3 id="plan-to-be-pwned">Plan To Be Pwned</h3>
-
 <p>Carve out a <a href="https://en.wikipedia.org/wiki/Red_team">red team</a> that will perform live penetration attacks again public environments. Their goal is root access, database dumps, api keys, and other credentials.</p>
-
 <p>If red team is successful, measure some key metrics:</p>
-
 <ul>
 <li>Time to intrusion discovery</li>
 <li>Was the attack successfully quarantined? How long did it take?</li>
@@ -141,35 +102,20 @@ if (!doNotTrack) {
 <li>Duration of the attack</li>
 <li>Was the scope of the breach understood?</li>
 </ul>
-
 <p>Collecting this information will help with a blameless retro and continuous improvement for the organization.</p>
-
-<p>Unsuccessful attempts are equally important. Both scenarios help develop the organization&rsquo;s playbooks. <a href="https://www.redteamsecure.com/what-is-red-teaming-and-why-do-i-need-it-2/">This article</a> has some more good information on the topic.</p>
-
+<p>Unsuccessful attempts are equally important. Both scenarios help develop the organization's playbooks. <a href="https://www.redteamsecure.com/what-is-red-teaming-and-why-do-i-need-it-2/">This article</a> has some more good information on the topic.</p>
 <h3 id="incident-playbooks">Incident Playbooks</h3>
-
 <p>Playbooks are nothing special. They are simply defined processes for security responders to follow given a breach scenario. A typical playbook will include what systems to check, how to perform a quarantine, and how to recover with pristine infrastructure, credentials, and configs, while minimizing mean time to recovery (MTTR).</p>
-
-<p><img src="/images/castle.jpg" alt="Security as a feature." /></p>
-
+<p><img src="/images/castle.jpg" alt="Security as a feature."></p>
 <h2 id="conclusion">Conclusion</h2>
-
 <p>Focusing on perimeter security, to the exclusion of other concerns, is a one dimensional approach to a hard problem.</p>
-
 <p>Thinking about isolation of resources within an environment during the design phase will pay off in dividends. If, in order to compromise sensitive customer information, an attacker must breach multiple firewalls and steal encrypted credentials for every section of the infrastructure&hellip; well, the time this buys is crucial for responders to mount a coherent response.</p>
-
 <p>When attack vectors are defined and understood, it becomes easier to monitor and respond more quickly. Diagnosis of the depth of the intrusion should be easier too. And when responders have practiced their roles, the likelihood of mistakes being made during a stressful moment is lessened.</p>
-
-<p>Breaches are terrible, and may be inevitable in an engineer&rsquo;s career, but our preparation and ability to respond effectively is ours to control.</p>
-
-<hr />
-
+<p>Breaches are terrible, and may be inevitable in an engineer's career, but our preparation and ability to respond effectively is ours to control.</p>
+<hr>
 <p>Image attributions:</p>
-
 <p><a href="https://www.brandeating.com/2012/07/review-m-mint-dark-chocolate.html">Brand Eating</a></p>
-
 <p><a href="http://www.ct.gov/deep/cwp/view.asp?a=2716&amp;q=325198&amp;deepNav_GID=1650%20">CT Dept of Energy</a></p>
-
 <p><a href="https://www.cnn.com/travel/article/abandoned-castles-worldwide/index.html">CNN</a></p>
 </p>
 </div>
