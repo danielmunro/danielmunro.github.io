@@ -65,10 +65,10 @@ if (!doNotTrack) {
 <p>&hellip;What does one even say to this?</p>
 <p>Why did they have all this data in the first place?</p>
 <p>Did Marriott not even have security engineers on staff?</p>
-<p>Let's examine at a high level a handful of defense and mitigation strategies that could have greatly improved Marriott's response to this incident.</p>
-<p>It's important that these recommendations be implemented <em>correctly</em>. For example, an IDS which generates thousands of alerts, does not contribute any value. That is the definition of <a href="https://en.wikipedia.org/wiki/Security_theater">security theater</a>.</p>
+<p>Let&rsquo;s examine at a high level a handful of defense and mitigation strategies that could have greatly improved Marriott&rsquo;s response to this incident.</p>
+<p>It&rsquo;s important that these recommendations be implemented <em>correctly</em>. For example, an IDS which generates thousands of alerts, does not contribute any value. That is the definition of <a href="https://en.wikipedia.org/wiki/Security_theater">security theater</a>.</p>
 <h2 id="intrusion-detection-systems">Intrusion Detection Systems</h2>
-<p>Any <a href="https://en.wikipedia.org/wiki/Intrusion_detection_system">IDS</a> worth its weight in salt would have most likely significantly reduced the blast radius of this attack. It's hard to say for certain when speaking in hypotheticals, but this is literally their job.</p>
+<p>Any <a href="https://en.wikipedia.org/wiki/Intrusion_detection_system">IDS</a> worth its weight in salt would have most likely significantly reduced the blast radius of this attack. It&rsquo;s hard to say for certain when speaking in hypotheticals, but this is literally their job.</p>
 <p>IDSs typically run as agents directly on host systems, and collate connections along with contextual information &ndash; source &amp; destination IPs, commands executed, possible data extrusion attempts. Either via configuration, or machine learning, alerts can trigger on suspicious activity. Suspicious activity is not limited to:</p>
 <ul>
 <li>A successful connection for the first time from a new IP address</li>
@@ -78,15 +78,15 @@ if (!doNotTrack) {
 <li>Failed commands run by authenticated users</li>
 <li>Unexpected connections between internal services</li>
 </ul>
-<p>If an IDS is in place, and is generating too many alerts, that's worse than no IDS at all.</p>
+<p>If an IDS is in place, and is generating too many alerts, that&rsquo;s worse than no IDS at all.</p>
 <h2 id="regular-key-and-certificate-rotation">Regular Key And Certificate Rotation</h2>
 <p>A huge part of successful information security programs is change management. Keys and certs must be in regular rotation. An audit log must be kept up to date with what secrets were changed, and when. A log must also be kept for who has access to these secrets.</p>
 <p>Manual rotation is a PITA, so automate it. Use <a href="https://www.vaultproject.io/">Vault</a> or another secret manager, and setup automatic key rotation.</p>
 <h2 id="penetration-testing">Penetration Testing</h2>
-<p>Attack yourself, before the bad guys do. Because they will attack, if they haven't yet. Use open source tools, such as <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">OWASP ZAP</a>, in order to proactively discover exploitable runtimes left on wide open ports.</p>
+<p>Attack yourself, before the bad guys do. Because they will attack, if they haven&rsquo;t yet. Use open source tools, such as <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">OWASP ZAP</a>, in order to proactively discover exploitable runtimes left on wide open ports.</p>
 <p><a href="https://www.backbox.org/">Backbox Linux</a> is an excellent pentesting linux distro. It comes loaded with ZAP and a host of other tools that will help in analyzing an infrastructure for security vulnerabilities.</p>
 <h2 id="principle-of-least-data">Principle Of Least Data</h2>
-<p>Don't store payment information. Use a payment processor and integrate with their API.</p>
+<p>Don&rsquo;t store payment information. Use a payment processor and integrate with their API.</p>
 <p>Why, <em>why</em>, were passport numbers stored on-site?</p>
 <p>Isolate and segregate databases behind private networks. For example, isolate PII to a database within its own private network. Configure databases with strong, unique credentials. Rotate those credentials regularly (again, automation is essential here).</p>
 <p>Here are pieces of data which may not need to be stored on site, or at least all in the same database, accessed by the same credentials:</p>
@@ -112,11 +112,11 @@ if (!doNotTrack) {
 <p>Minimize permissions on credentials to bare minimum, single purpose use-cases. Then, name those credentials after that single purpose. For example, in AWS, define specific roles (not machine users), such as: <code>ses-mailer</code>, <code>s3-uploader-svc-x</code>, <code>s3-viewer-svc-y</code>.</p>
 <h2 id="rant-summary">Rant Summary</h2>
 <p>On the one hand, the levels of negligence involved to have allowed this to happen is utterly, mind-numbingly, staggeringly massive. There are processes, policies, and an endless list of proprietary and open source tools for monitoring, detecting, alerting, and responding to security events.</p>
-<p>On the other hand, is anyone surprised? At all? It was only a year ago that Equifax failed to protect the personal information of over 147 million Americans. Yahoo's hack, with all three billion accounts compromised, was disclosed just a year before that (the actual hack happened around 2013).</p>
+<p>On the other hand, is anyone surprised? At all? It was only a year ago that Equifax failed to protect the personal information of over 147 million Americans. Yahoo&rsquo;s hack, with all three billion accounts compromised, was disclosed just a year before that (the actual hack happened around 2013).</p>
 <p>To summarize some of the strategies outlined above:</p>
 <ul>
 <li>Prioritize CVEs and the KPIs around responding to them (outlined above).</li>
-<li>Don't store data that is not required. Store sensitive data in a secure enclave.</li>
+<li>Don&rsquo;t store data that is not required. Store sensitive data in a secure enclave.</li>
 <li>Test yourself. Use penetration testing tools to find vulnerabilities in live systems.</li>
 <li>Use secret managers (such as Vault) for automated secret rotation, and centralized secret management.</li>
 <li>Use an IDS, and tune it so that it provides value.</li>

@@ -61,23 +61,23 @@ MAKE(1)
 NAME
        make - GNU make utility to maintain groups of programs
 </code></pre>
-<p>Can this humble utility simplify a web developer's life managing a complex system of front end assets <!-- raw HTML omitted --><a href="#myfootnote1">1</a><!-- raw HTML omitted -->?</p>
-<p>In the past I used tools like Grunt, Gulp, Ant, and PHP's own Assetic to do this. Nothing felt right. Complex configurations, new scripts, new dependencies. There must be a better way.</p>
+<p>Can this humble utility simplify a web developer&rsquo;s life managing a complex system of front end assets <!-- raw HTML omitted --><a href="#myfootnote1">1</a><!-- raw HTML omitted -->?</p>
+<p>In the past I used tools like Grunt, Gulp, Ant, and PHP&rsquo;s own Assetic to do this. Nothing felt right. Complex configurations, new scripts, new dependencies. There must be a better way.</p>
 <h4 id="digression-warning">Digression Warning</h4>
-<p>If anything is known about me, it is this: <strong>I'm lazy</strong> (<a href="http://photos2.meetupstatic.com/photos/event/2/d/b/5/600_431711701.jpeg">proof</a>). Don't make me do any extra work I don't have to do. Seriously. That previous sentence was only one word, that's how lazy I am. To me, laziness is an ideal. It's an ideal I can believe in, a rare gem awash in an ocean of ruthless pragmatism. But I digress.</p>
+<p>If anything is known about me, it is this: <strong>I&rsquo;m lazy</strong> (<a href="http://photos2.meetupstatic.com/photos/event/2/d/b/5/600_431711701.jpeg">proof</a>). Don&rsquo;t make me do any extra work I don&rsquo;t have to do. Seriously. That previous sentence was only one word, that&rsquo;s how lazy I am. To me, laziness is an ideal. It&rsquo;s an ideal I can believe in, a rare gem awash in an ocean of ruthless pragmatism. But I digress.</p>
 <h4 id="digression-averted-make-to-the-rescue">Digression Averted, Make To The Rescue</h4>
 <p>Today, I want to talk about make. Make allows me to get work done faster so I can spend more time thinking about interesting problems, and less time building the plumbing for my web applications.</p>
-<p>And, let's face it, plumbing carries shit. The less time I spend working on plumbing, the less time I have shit on my hands.</p>
+<p>And, let&rsquo;s face it, plumbing carries shit. The less time I spend working on plumbing, the less time I have shit on my hands.</p>
 <h3 id="a-brief-incomplete-mostly-wrong-history-of-make">A Brief, Incomplete, Mostly Wrong History of Make</h3>
 <p>Make was originally introduced by Dr. Stuart Feldman of Bell Labs, in April 1976. Prior to widespread adoption of the utility, software was distributed with OS-specific &ldquo;make&rdquo; and &ldquo;install&rdquo; scripts. Make allowed multiple targets with commands to be written uniformly into one standardized build script. And this elegant solution is still one of the most widely distributed tools ever almost 40 years later.</p>
-<h4 id="great-how-does-this-relate-to--my--job">Great. How Does This Relate To <em>My</em> Job?</h4>
+<h4 id="great-how-does-this-relate-to-_my_-job">Great. How Does This Relate To <em>My</em> Job?</h4>
 <p>The essence of make is to define repeatable transformations from a source to a target.</p>
 <h4 id="ok-so-what-does-that-mean">Ok. So what does that mean?</h4>
 <p><strong>Transformations</strong> are shell commands, grouped into logical tasks by task name.</p>
 <p>The <strong>source</strong> and <strong>target</strong> are filesystem objects. So what we have is a collection of shell commands, organized into logical groups of tasks, which define transformations in the filesystem.</p>
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h3 id="anatomy-of-a-makefile-for-the-web">Anatomy of a Makefile for the Web</h3>
-<p>By convention, a makefile's first target is a default catch-all, usually <code>all</code>:</p>
+<p>By convention, a makefile&rsquo;s first target is a default catch-all, usually <code>all</code>:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">all: clean build
 </code></pre></div><p>More on this below.</p>
 <h4 id="install">Install</h4>
@@ -92,7 +92,7 @@ install:
 </span><span style="color:#ae81ff"></span>    r.js -convert <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>/js/react-dropzone/ <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>/js/react-dropzone/ <span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span>    mkdir -p <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>/js <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>/css <span style="color:#ae81ff">\
 </span></code></pre></div><h4 id="clean-and-build">Clean And Build</h4>
-<p>The <code>build</code> step compiles and releases a new set of CSS and javascript. For the example below, we're compiling LESS to CSS and JSX to vanilla JS. As the name implies, <code>clean</code> removes files generated during build.</p>
+<p>The <code>build</code> step compiles and releases a new set of CSS and javascript. For the example below, we&rsquo;re compiling LESS to CSS and JSX to vanilla JS. As the name implies, <code>clean</code> removes files generated during build.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">assetsDir <span style="color:#f92672">=</span> /var/www/assets
 buildDir <span style="color:#f92672">=</span> /var/www/public
 
@@ -105,7 +105,7 @@ build:
 clean:
     rm <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>
 </code></pre></div><h4 id="watching-for-changes">Watching For Changes</h4>
-<p>Adding a <strong>&ndash;watch</strong> flag to the jsx command allows for automatic rebuild of JS resources when changed. Let's create a <code>watch</code> target for it.</p>
+<p>Adding a <strong>&ndash;watch</strong> flag to the jsx command allows for automatic rebuild of JS resources when changed. Let&rsquo;s create a <code>watch</code> target for it.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">watch:
     jsx --harmony --extension jsx --es6module --watch <span style="color:#66d9ef">$(</span>assetsDir<span style="color:#66d9ef">)</span>/jsx <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>/js
 </code></pre></div><h3 id="putting-it-all-together">Putting It All Together</h3>
@@ -130,7 +130,7 @@ watch:
 clean:
     rm <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>
 </code></pre></div><!-- raw HTML omitted -->
-<p><!-- raw HTML omitted -->1<!-- raw HTML omitted -->. By assets, I'm referring to: javascript, preprocessed css, fonts, third party dependencies, and anything else that will eventually become accessible to the public.</p>
+<p><!-- raw HTML omitted -->1<!-- raw HTML omitted -->. By assets, I&rsquo;m referring to: javascript, preprocessed css, fonts, third party dependencies, and anything else that will eventually become accessible to the public.</p>
 <p><!-- raw HTML omitted -->2<!-- raw HTML omitted -->. Macros are variables local to the makefile.</p>
 </p>
 </div>

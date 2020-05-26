@@ -38,7 +38,7 @@
 &lt;p&gt;How did Salesforce finally notice the misconfiguration? Did they have a horrified scramble after a puzzled customer reached out?&lt;/p&gt;
 &lt;p&gt;If password hashes were leaked, it would be prudent to force password resets on users. Yet, no reporting or updates from Salesforce have mentioned as much.&lt;/p&gt;
 &lt;h3 id=&#34;data-integrity&#34;&gt;Data Integrity&lt;/h3&gt;
-&lt;p&gt;A detail that has been missing so far is whether, or to what extent, unauthorized access or modification happened to any affected databases. Hopefully, remediation includes rolling back databases to a known good state, which would at least ensure data integrity from before the incident. However due to the wording, and focus on &amp;ldquo;restoring&amp;rdquo; permissions and access, it&#39;s hard to know exactly how unauthorized access or modification is being handled.&lt;/p&gt;
+&lt;p&gt;A detail that has been missing so far is whether, or to what extent, unauthorized access or modification happened to any affected databases. Hopefully, remediation includes rolling back databases to a known good state, which would at least ensure data integrity from before the incident. However due to the wording, and focus on &amp;ldquo;restoring&amp;rdquo; permissions and access, it&amp;rsquo;s hard to know exactly how unauthorized access or modification is being handled.&lt;/p&gt;
 &lt;h3 id=&#34;root-cause&#34;&gt;Root Cause&lt;/h3&gt;
 &lt;p&gt;According to reports, a misconfigured deployment script ran, which modified all customer databases to allow read-write access to all users.&lt;/p&gt;
 &lt;p&gt;What was the review process for this deployment? Was it approved?&lt;/p&gt;
@@ -53,15 +53,15 @@
 &lt;p&gt;For the defects that do make it through to production, there are strategies which will help with response and recovery.&lt;/p&gt;
 &lt;h3 id=&#34;code-reviews&#34;&gt;Code Reviews&lt;/h3&gt;
 &lt;p&gt;Code reviews are an easy, low cost, high value process to add to the SDLC. In addition to catching defects, code reviews are an &lt;em&gt;excellent&lt;/em&gt; way to share knowledge across an organization.&lt;/p&gt;
-&lt;p&gt;Senior engineers get daily opportunities to mentor and coach their peers. It&#39;s also a great opportunity to ask questions, gather feedback, and improve implementation.&lt;/p&gt;
+&lt;p&gt;Senior engineers get daily opportunities to mentor and coach their peers. It&amp;rsquo;s also a great opportunity to ask questions, gather feedback, and improve implementation.&lt;/p&gt;
 &lt;h3 id=&#34;configuration-management&#34;&gt;Configuration Management&lt;/h3&gt;
 &lt;p&gt;Configuration management is critical to a few key defect-minimization strategies. Having fully automated deployment and rollback procedures almost requires some level of configuration management. Configuration versioning and secrets management are other important pieces to this puzzle.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.terraform.io/&#34;&gt;Terraform&lt;/a&gt; by HashiCorp is one of many great options for configuration as code.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.vaultproject.io/&#34;&gt;Vault&lt;/a&gt; (also by HashiCorp) is a secret management option which has a CLI, a web interface, and integrates natively with cloud providers. It&#39;s pretty intuitive and easy to use.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.vaultproject.io/&#34;&gt;Vault&lt;/a&gt; (also by HashiCorp) is a secret management option which has a CLI, a web interface, and integrates natively with cloud providers. It&amp;rsquo;s pretty intuitive and easy to use.&lt;/p&gt;
 &lt;h3 id=&#34;deployment-testing&#34;&gt;Deployment Testing&lt;/h3&gt;
 &lt;p&gt;Every deployment to production should be preceded by a deployment to a similar production-like environment. That environment should be monitored during and after deployment. It should be tested rigorously with smoke tests, UI tests, or a manual QA team.&lt;/p&gt;
 &lt;h3 id=&#34;phased-deployments&#34;&gt;Phased Deployments&lt;/h3&gt;
-&lt;p&gt;Deployments should roll across clusters or partitions in phases, with each phase being monitored against expectations. Rollbacks, particularly rollbacks of schema changes, are difficult to prepare for. If that&#39;s the case, backups need to be hot and ready to roll back to. The deployment should be scheduled for the lowest-use time of the week.&lt;/p&gt;
+&lt;p&gt;Deployments should roll across clusters or partitions in phases, with each phase being monitored against expectations. Rollbacks, particularly rollbacks of schema changes, are difficult to prepare for. If that&amp;rsquo;s the case, backups need to be hot and ready to roll back to. The deployment should be scheduled for the lowest-use time of the week.&lt;/p&gt;
 &lt;h3 id=&#34;incident-planning-disaster-recovery&#34;&gt;Incident Planning, Disaster Recovery&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;/images/dumpster-fire.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -92,14 +92,14 @@
       <guid>/posts/cracks-forming-in-us-cyber-security/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/capitol-closed.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;A few important things are happening right now as a direct consequence of the ongoing government shutdown. And the longer the shutdown continues, the more damage will accumulate. Some damage may end up being irreversible by the time a spending bill is passed, the government is reopened, and agencies begin staffing up again.&lt;/p&gt;
-&lt;p&gt;How many staff will ultimately return? And how many have lost faith in government? How many furloughed employees have been &amp;ldquo;interviewed&amp;rdquo; unwittingly by foreign agents, while looking for temporary work? It&#39;s not as far fetched as it seems.&lt;/p&gt;
+&lt;p&gt;How many staff will ultimately return? And how many have lost faith in government? How many furloughed employees have been &amp;ldquo;interviewed&amp;rdquo; unwittingly by foreign agents, while looking for temporary work? It&amp;rsquo;s not as far fetched as it seems.&lt;/p&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;website-rot&#34;&gt;Website Rot&lt;/h1&gt;
 &lt;p&gt;Currently, &lt;a href=&#34;https://www.zdnet.com/article/government-shutdown-tls-certificates-not-renewed-many-websites-are-down/&#34;&gt;more than 80 TLS certificates have expired&lt;/a&gt;. Some websites are completely inaccessible. Websites with expired certificates that &lt;em&gt;also&lt;/em&gt; have misconfigured &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security&#34;&gt;HSTS&lt;/a&gt; are still available, however, browsers are now displaying a warning about the content of the site. All data transmission between client and server is unencrypted and susceptible to &lt;a href=&#34;https://en.wikipedia.org/wiki/Man-in-the-middle_attack&#34;&gt;MITM attacks&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Websites are not actively being managed, with many of the support staff furloughed. If a compromise happens, it will go undetected while the attackers entrench, spread, and exfiltrate sensitive data.&lt;/p&gt;
 &lt;h1 id=&#34;departments-shuttered&#34;&gt;Departments Shuttered&lt;/h1&gt;
 &lt;p&gt;The National Institute of Standards and Technology is reduced to 49 from roughly 3,000 employees.&lt;/p&gt;
-&lt;p&gt;The Department of Homeland Security&#39;s Cybersecurity and Infrastructure Security Agency has an estimated 43% of employees furloughed &amp;ndash; over 1,500 staff.&lt;/p&gt;
+&lt;p&gt;The Department of Homeland Security&amp;rsquo;s Cybersecurity and Infrastructure Security Agency has an estimated 43% of employees furloughed &amp;ndash; over 1,500 staff.&lt;/p&gt;
 &lt;p&gt;These furloughs have very real short term and long term security consequences.&lt;/p&gt;
 </description>
     </item>
@@ -130,17 +130,17 @@
       
       <guid>/posts/organization-hardening/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/fortress.jpg&#34; alt=&#34;https://www.thisismoney.co.uk/money/investing/article-3049542/Will-safe-Fortress-Bond-New-bond-Castle-Trust-promises-pay-4-5.html&#34;&gt;&lt;/p&gt;
-&lt;p&gt;This article is written for security specialists working at cloud-native companies. On-prem systems will have different requirements around physical security than ones which don&#39;t have infrastructure hardware on site. Device security for employees will be covered, along with other physical and employee risks.&lt;/p&gt;
+&lt;p&gt;This article is written for security specialists working at cloud-native companies. On-prem systems will have different requirements around physical security than ones which don&amp;rsquo;t have infrastructure hardware on site. Device security for employees will be covered, along with other physical and employee risks.&lt;/p&gt;
 &lt;p&gt;Authentication best practices, including &lt;a href=&#34;https://en.wikipedia.org/wiki/Multi-factor_authentication&#34;&gt;MFA&lt;/a&gt;, and (actually) good password policies are in scope.&lt;/p&gt;
-&lt;p&gt;Finally, we&#39;ll look at strategies organizations can pursue in order to have a security-first mindset. Proactive knowledge sharing around risks and best practices can have a multiplying factor across an organization.&lt;/p&gt;
+&lt;p&gt;Finally, we&amp;rsquo;ll look at strategies organizations can pursue in order to have a security-first mindset. Proactive knowledge sharing around risks and best practices can have a multiplying factor across an organization.&lt;/p&gt;
 &lt;h1 id=&#34;physical-security&#34;&gt;Physical Security&lt;/h1&gt;
 &lt;p&gt;Physical security has a reputation for not being as sexy as security engineering. Device inventories, policies &amp;amp; procedures, audits. Electronic doors and locks, security cameras, secure enclaves within the office.&lt;/p&gt;
 &lt;h2 id=&#34;perimeter-security&#34;&gt;Perimeter Security&lt;/h2&gt;
-&lt;p&gt;Don&#39;t overlook office perimeter security. Electronic doors and locks, and security cameras are critically important in securing any office, and provides audit-ability if the need arises.&lt;/p&gt;
-&lt;p&gt;Doors will never accidentally be left unlocked if a keyless locking system is in place. It&#39;s small, but significant.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t overlook office perimeter security. Electronic doors and locks, and security cameras are critically important in securing any office, and provides audit-ability if the need arises.&lt;/p&gt;
+&lt;p&gt;Doors will never accidentally be left unlocked if a keyless locking system is in place. It&amp;rsquo;s small, but significant.&lt;/p&gt;
 &lt;h2 id=&#34;documents-and-devices&#34;&gt;Documents And Devices&lt;/h2&gt;
 &lt;p&gt;Sensitive documents and devices with sensitive data (laptops, thumb drives, etc) must be stored within a secure enclave in the office. This can consist of a room or closet with a solid door and tamper-proof lock. A safe within the secure enclave for the most sensitive documents &amp;amp; devices is perfectly reasonable.&lt;/p&gt;
-&lt;p&gt;Encrypt all hard drives. It&#39;s easy to do these days and provides a big win.&lt;/p&gt;
+&lt;p&gt;Encrypt all hard drives. It&amp;rsquo;s easy to do these days and provides a big win.&lt;/p&gt;
 &lt;h1 id=&#34;password-hygiene&#34;&gt;Password Hygiene&lt;/h1&gt;
 &lt;p&gt;There is a lot of misinformation out there about passwords and what makes for good policy. Fortunately, we do have some fairly objective ways to measure the effectiveness of various password practices and policies.&lt;/p&gt;
 &lt;p&gt;To start out, we must acknowledge the current state of password-based security: &lt;a href=&#34;/posts/the-password-is-dead/&#34;&gt;the password is dead&lt;/a&gt;.&lt;/p&gt;
@@ -153,27 +153,27 @@
 &lt;li&gt;There is evidence of malware or other compromise of your device.&lt;/li&gt;
 &lt;li&gt;You shared access to an account with someone else and they no longer use the login.&lt;/li&gt;
 &lt;li&gt;You logged in to the account on a shared or public computer (such as at a library or hotel).&lt;/li&gt;
-&lt;li&gt;It&#39;s been a year or more since you last changed the password, especially if you don&#39;t have multi-factor authentication enabled.&lt;/li&gt;
+&lt;li&gt;It&amp;rsquo;s been a year or more since you last changed the password, especially if you don&amp;rsquo;t have multi-factor authentication enabled.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Additionally, if &lt;a href=&#34;https://haveibeenpwned.com/&#34;&gt;HaveIBeenPwned&lt;/a&gt; reveals an account compromise, that password should be changed (as well as any accounts re-using that password).&lt;/p&gt;
 &lt;h2 id=&#34;password-managers&#34;&gt;Password Managers&lt;/h2&gt;
-&lt;p&gt;According to a &lt;a href=&#34;https://blog.lastpass.com/2017/11/lastpass-reveals-8-truths-about-passwords-in-the-new-password-expose.html/&#34;&gt;report by LastPass&lt;/a&gt;, the average person has 191 passwords. Without a password manager it&#39;s literally impossible to have strong, unique passwords that are never re-used. Do some research, and propose one to use company-wide.&lt;/p&gt;
+&lt;p&gt;According to a &lt;a href=&#34;https://blog.lastpass.com/2017/11/lastpass-reveals-8-truths-about-passwords-in-the-new-password-expose.html/&#34;&gt;report by LastPass&lt;/a&gt;, the average person has 191 passwords. Without a password manager it&amp;rsquo;s literally impossible to have strong, unique passwords that are never re-used. Do some research, and propose one to use company-wide.&lt;/p&gt;
 &lt;h1 id=&#34;multi-factor-authentication&#34;&gt;Multi-Factor Authentication&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Multi-factor_authentication&#34;&gt;Multi-Factor Authentication&lt;/a&gt; is an authentication system, which combines something you know (your password) with something you have (your generated MFA code, bound to a physical device). In order to successfully authenticate, a user must have both their password and their device&#39;s current MFA token. Tokens are dynamic, changing regularly.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Multi-factor_authentication&#34;&gt;Multi-Factor Authentication&lt;/a&gt; is an authentication system, which combines something you know (your password) with something you have (your generated MFA code, bound to a physical device). In order to successfully authenticate, a user must have both their password and their device&amp;rsquo;s current MFA token. Tokens are dynamic, changing regularly.&lt;/p&gt;
 &lt;p&gt;MFA is increasingly moving from a smart recommendation to a requirement, and for good reason. Google reduced the effectiveness of phishing among its 85,000 employees to zero, &lt;a href=&#34;https://www.businessinsider.com/none-of-googles-employees-get-phished-because-of-yubikey-security-key-2018-7&#34;&gt;by requiring MFA across its organization&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;keybase-for-secret-management&#34;&gt;Keybase For Secret Management&lt;/h1&gt;
-&lt;p&gt;Shared accounts. Documents. Forms. Development server keys, credentials. Employees have secrets, it&#39;s unavoidable. And not all communication channels are safe.&lt;/p&gt;
+&lt;p&gt;Shared accounts. Documents. Forms. Development server keys, credentials. Employees have secrets, it&amp;rsquo;s unavoidable. And not all communication channels are safe.&lt;/p&gt;
 &lt;p&gt;Use tools that support E2E encryption for these types of communications, such as &lt;a href=&#34;https://keybase.io/&#34;&gt;Keybase&lt;/a&gt;. Avoid email, IM, and physical copies when possible.&lt;/p&gt;
 &lt;h1 id=&#34;security-champions&#34;&gt;Security Champions&lt;/h1&gt;
-&lt;p&gt;Recruit champions across the organization who are interested in improving security. Target at least one representative from each functional group, you don&#39;t all need to meet in one room at one time. However you do need to meet with small groups on a regular basis.&lt;/p&gt;
+&lt;p&gt;Recruit champions across the organization who are interested in improving security. Target at least one representative from each functional group, you don&amp;rsquo;t all need to meet in one room at one time. However you do need to meet with small groups on a regular basis.&lt;/p&gt;
 &lt;p&gt;A high performing security council will have a few primary goals and responsibilities outlined below.&lt;/p&gt;
 &lt;h2 id=&#34;job-based-risk-analysis&#34;&gt;Job-Based Risk Analysis&lt;/h2&gt;
-&lt;p&gt;It&#39;s hard to apply a one-size-fits-all approach to risk assessment and communication at the organization level. Meaning, customer support will have a different risks than QA. Engineers will have different risks than management. And so on.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s hard to apply a one-size-fits-all approach to risk assessment and communication at the organization level. Meaning, customer support will have a different risks than QA. Engineers will have different risks than management. And so on.&lt;/p&gt;
 &lt;p&gt;Communicating directly with members of those teams, and understanding the primary threat vectors they face in day-to-day work will allow a more sophisticated risk analysis framework to be developed.&lt;/p&gt;
 &lt;h2 id=&#34;best-practices-communication-and-implementation&#34;&gt;Best Practices Communication And Implementation&lt;/h2&gt;
-&lt;p&gt;After identifying primary job-specific risks, use that information to craft security best practice recommendations. Accountability for following through on those recommendations falls to that team&#39;s security champion, who is empowered to effect change within their team.&lt;/p&gt;
+&lt;p&gt;After identifying primary job-specific risks, use that information to craft security best practice recommendations. Accountability for following through on those recommendations falls to that team&amp;rsquo;s security champion, who is empowered to effect change within their team.&lt;/p&gt;
 &lt;h2 id=&#34;foster-a-red-team-mentality&#34;&gt;Foster A Red Team Mentality&lt;/h2&gt;
-&lt;p&gt;Make it fun. Create short, informative presentations that include demos of hacks against the company&#39;s platform. Show that hacking isn&#39;t theoretical. Teach champions context specific ways to hack.&lt;/p&gt;
+&lt;p&gt;Make it fun. Create short, informative presentations that include demos of hacks against the company&amp;rsquo;s platform. Show that hacking isn&amp;rsquo;t theoretical. Teach champions context specific ways to hack.&lt;/p&gt;
 &lt;p&gt;For non-technical folks, set them up with a script and show them how to run it. Set them up with a phishing campaign. Task them with swiping unsecured documents, thumb drives, or writing silly messages on unlocked and unattended computers.&lt;/p&gt;
 &lt;h1 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;Humans are prime first targets when an organization is attacked, yet we spend relatively little time addressing the problem. Most of the advice in this article is common sense:&lt;/p&gt;
@@ -183,7 +183,7 @@
 &lt;li&gt;Use MFA everywhere possible.&lt;/li&gt;
 &lt;li&gt;Avoid unencrypted channels for sensitive information.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;So why don&#39;t more people follow this commonsense advice? That is a critical failure in our profession. We&#39;ve got to make it easier to do things the right way than it is do things the wrong way. To address this problem requires face-to-face dialog, leadership, mentoring, empathy, and empowerment. A security champion system is designed to be just such a framework.&lt;/p&gt;
+&lt;p&gt;So why don&amp;rsquo;t more people follow this commonsense advice? That is a critical failure in our profession. We&amp;rsquo;ve got to make it easier to do things the right way than it is do things the wrong way. To address this problem requires face-to-face dialog, leadership, mentoring, empathy, and empowerment. A security champion system is designed to be just such a framework.&lt;/p&gt;
 &lt;p&gt;A little bit of mischievous fun helps too.&lt;/p&gt;
 </description>
     </item>
@@ -207,10 +207,10 @@
 &lt;p&gt;&amp;hellip;What does one even say to this?&lt;/p&gt;
 &lt;p&gt;Why did they have all this data in the first place?&lt;/p&gt;
 &lt;p&gt;Did Marriott not even have security engineers on staff?&lt;/p&gt;
-&lt;p&gt;Let&#39;s examine at a high level a handful of defense and mitigation strategies that could have greatly improved Marriott&#39;s response to this incident.&lt;/p&gt;
-&lt;p&gt;It&#39;s important that these recommendations be implemented &lt;em&gt;correctly&lt;/em&gt;. For example, an IDS which generates thousands of alerts, does not contribute any value. That is the definition of &lt;a href=&#34;https://en.wikipedia.org/wiki/Security_theater&#34;&gt;security theater&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s examine at a high level a handful of defense and mitigation strategies that could have greatly improved Marriott&amp;rsquo;s response to this incident.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s important that these recommendations be implemented &lt;em&gt;correctly&lt;/em&gt;. For example, an IDS which generates thousands of alerts, does not contribute any value. That is the definition of &lt;a href=&#34;https://en.wikipedia.org/wiki/Security_theater&#34;&gt;security theater&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;intrusion-detection-systems&#34;&gt;Intrusion Detection Systems&lt;/h2&gt;
-&lt;p&gt;Any &lt;a href=&#34;https://en.wikipedia.org/wiki/Intrusion_detection_system&#34;&gt;IDS&lt;/a&gt; worth its weight in salt would have most likely significantly reduced the blast radius of this attack. It&#39;s hard to say for certain when speaking in hypotheticals, but this is literally their job.&lt;/p&gt;
+&lt;p&gt;Any &lt;a href=&#34;https://en.wikipedia.org/wiki/Intrusion_detection_system&#34;&gt;IDS&lt;/a&gt; worth its weight in salt would have most likely significantly reduced the blast radius of this attack. It&amp;rsquo;s hard to say for certain when speaking in hypotheticals, but this is literally their job.&lt;/p&gt;
 &lt;p&gt;IDSs typically run as agents directly on host systems, and collate connections along with contextual information &amp;ndash; source &amp;amp; destination IPs, commands executed, possible data extrusion attempts. Either via configuration, or machine learning, alerts can trigger on suspicious activity. Suspicious activity is not limited to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A successful connection for the first time from a new IP address&lt;/li&gt;
@@ -220,15 +220,15 @@
 &lt;li&gt;Failed commands run by authenticated users&lt;/li&gt;
 &lt;li&gt;Unexpected connections between internal services&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If an IDS is in place, and is generating too many alerts, that&#39;s worse than no IDS at all.&lt;/p&gt;
+&lt;p&gt;If an IDS is in place, and is generating too many alerts, that&amp;rsquo;s worse than no IDS at all.&lt;/p&gt;
 &lt;h2 id=&#34;regular-key-and-certificate-rotation&#34;&gt;Regular Key And Certificate Rotation&lt;/h2&gt;
 &lt;p&gt;A huge part of successful information security programs is change management. Keys and certs must be in regular rotation. An audit log must be kept up to date with what secrets were changed, and when. A log must also be kept for who has access to these secrets.&lt;/p&gt;
 &lt;p&gt;Manual rotation is a PITA, so automate it. Use &lt;a href=&#34;https://www.vaultproject.io/&#34;&gt;Vault&lt;/a&gt; or another secret manager, and setup automatic key rotation.&lt;/p&gt;
 &lt;h2 id=&#34;penetration-testing&#34;&gt;Penetration Testing&lt;/h2&gt;
-&lt;p&gt;Attack yourself, before the bad guys do. Because they will attack, if they haven&#39;t yet. Use open source tools, such as &lt;a href=&#34;https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project&#34;&gt;OWASP ZAP&lt;/a&gt;, in order to proactively discover exploitable runtimes left on wide open ports.&lt;/p&gt;
+&lt;p&gt;Attack yourself, before the bad guys do. Because they will attack, if they haven&amp;rsquo;t yet. Use open source tools, such as &lt;a href=&#34;https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project&#34;&gt;OWASP ZAP&lt;/a&gt;, in order to proactively discover exploitable runtimes left on wide open ports.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.backbox.org/&#34;&gt;Backbox Linux&lt;/a&gt; is an excellent pentesting linux distro. It comes loaded with ZAP and a host of other tools that will help in analyzing an infrastructure for security vulnerabilities.&lt;/p&gt;
 &lt;h2 id=&#34;principle-of-least-data&#34;&gt;Principle Of Least Data&lt;/h2&gt;
-&lt;p&gt;Don&#39;t store payment information. Use a payment processor and integrate with their API.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t store payment information. Use a payment processor and integrate with their API.&lt;/p&gt;
 &lt;p&gt;Why, &lt;em&gt;why&lt;/em&gt;, were passport numbers stored on-site?&lt;/p&gt;
 &lt;p&gt;Isolate and segregate databases behind private networks. For example, isolate PII to a database within its own private network. Configure databases with strong, unique credentials. Rotate those credentials regularly (again, automation is essential here).&lt;/p&gt;
 &lt;p&gt;Here are pieces of data which may not need to be stored on site, or at least all in the same database, accessed by the same credentials:&lt;/p&gt;
@@ -254,11 +254,11 @@
 &lt;p&gt;Minimize permissions on credentials to bare minimum, single purpose use-cases. Then, name those credentials after that single purpose. For example, in AWS, define specific roles (not machine users), such as: &lt;code&gt;ses-mailer&lt;/code&gt;, &lt;code&gt;s3-uploader-svc-x&lt;/code&gt;, &lt;code&gt;s3-viewer-svc-y&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;rant-summary&#34;&gt;Rant Summary&lt;/h2&gt;
 &lt;p&gt;On the one hand, the levels of negligence involved to have allowed this to happen is utterly, mind-numbingly, staggeringly massive. There are processes, policies, and an endless list of proprietary and open source tools for monitoring, detecting, alerting, and responding to security events.&lt;/p&gt;
-&lt;p&gt;On the other hand, is anyone surprised? At all? It was only a year ago that Equifax failed to protect the personal information of over 147 million Americans. Yahoo&#39;s hack, with all three billion accounts compromised, was disclosed just a year before that (the actual hack happened around 2013).&lt;/p&gt;
+&lt;p&gt;On the other hand, is anyone surprised? At all? It was only a year ago that Equifax failed to protect the personal information of over 147 million Americans. Yahoo&amp;rsquo;s hack, with all three billion accounts compromised, was disclosed just a year before that (the actual hack happened around 2013).&lt;/p&gt;
 &lt;p&gt;To summarize some of the strategies outlined above:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Prioritize CVEs and the KPIs around responding to them (outlined above).&lt;/li&gt;
-&lt;li&gt;Don&#39;t store data that is not required. Store sensitive data in a secure enclave.&lt;/li&gt;
+&lt;li&gt;Don&amp;rsquo;t store data that is not required. Store sensitive data in a secure enclave.&lt;/li&gt;
 &lt;li&gt;Test yourself. Use penetration testing tools to find vulnerabilities in live systems.&lt;/li&gt;
 &lt;li&gt;Use secret managers (such as Vault) for automated secret rotation, and centralized secret management.&lt;/li&gt;
 &lt;li&gt;Use an IDS, and tune it so that it provides value.&lt;/li&gt;
@@ -273,9 +273,9 @@
       <pubDate>Wed, 28 Nov 2018 21:40:08 -0600</pubDate>
       
       <guid>/posts/upgrade-adobe-acrobat-reader/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.cvedetails.com/vulnerability-list.php?vendor_id=0&amp;amp;product_id=0&amp;amp;version_id=0&amp;amp;page=1&amp;amp;hasexp=0&amp;amp;opdos=0&amp;amp;opec=0&amp;amp;opov=0&amp;amp;opcsrf=0&amp;amp;opgpriv=0&amp;amp;opsqli=0&amp;amp;opxss=0&amp;amp;opdirt=0&amp;amp;opmemc=0&amp;amp;ophttprs=0&amp;amp;opbyp=0&amp;amp;opfileinc=0&amp;amp;opginf=0&amp;amp;cvssscoremin=9&amp;amp;cvssscoremax=0&amp;amp;year=2018&amp;amp;month=10&amp;amp;cweid=0&amp;amp;order=1&amp;amp;trc=55&amp;amp;sha=4557eded0d640c29adace3b6e505ddd5f349c168&#34;&gt;That&#39;s a whole lotta red.&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.cvedetails.com/vulnerability-list.php?vendor_id=0&amp;amp;product_id=0&amp;amp;version_id=0&amp;amp;page=1&amp;amp;hasexp=0&amp;amp;opdos=0&amp;amp;opec=0&amp;amp;opov=0&amp;amp;opcsrf=0&amp;amp;opgpriv=0&amp;amp;opsqli=0&amp;amp;opxss=0&amp;amp;opdirt=0&amp;amp;opmemc=0&amp;amp;ophttprs=0&amp;amp;opbyp=0&amp;amp;opfileinc=0&amp;amp;opginf=0&amp;amp;cvssscoremin=9&amp;amp;cvssscoremax=0&amp;amp;year=2018&amp;amp;month=10&amp;amp;cweid=0&amp;amp;order=1&amp;amp;trc=55&amp;amp;sha=4557eded0d640c29adace3b6e505ddd5f349c168&#34;&gt;That&amp;rsquo;s a whole lotta red.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;A long list of versions are affected by this disclosure. Upgrade to a &lt;a href=&#34;https://get.adobe.com/reader/&#34;&gt;new version&lt;/a&gt; as soon as possible.&lt;/p&gt;
-&lt;p&gt;Most CVEs related to this disclosure have received a score of 9.3. &lt;a href=&#34;https://www.cvedetails.com/cve/CVE-2018-15966/&#34;&gt;Here&#39;s&lt;/a&gt; an example CVE, which explains the rationale behind such a high score.&lt;/p&gt;
+&lt;p&gt;Most CVEs related to this disclosure have received a score of 9.3. &lt;a href=&#34;https://www.cvedetails.com/cve/CVE-2018-15966/&#34;&gt;Here&amp;rsquo;s&lt;/a&gt; an example CVE, which explains the rationale behind such a high score.&lt;/p&gt;
 </description>
     </item>
     
@@ -286,10 +286,10 @@
       
       <guid>/posts/new-t2-security-chip-details/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/t2-chip.jpg&#34; alt=&#34;T2 Chip via iFixit: https://www.ifixit.com/Teardown/iMac+Pro+Teardown/101807&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Apple&#39;s new hardware event revealed several new devices. These devices are, with little surprise, thinner, faster, and have fewer ports (if that is possible). To be honest, the author didn&#39;t even watch the event, because that was not the interesting news of the day.&lt;/p&gt;
+&lt;p&gt;Apple&amp;rsquo;s new hardware event revealed several new devices. These devices are, with little surprise, thinner, faster, and have fewer ports (if that is possible). To be honest, the author didn&amp;rsquo;t even watch the event, because that was not the interesting news of the day.&lt;/p&gt;
 &lt;h2 id=&#34;automatic-microphone-disconnect&#34;&gt;Automatic Microphone Disconnect&lt;/h2&gt;
-&lt;p&gt;The second iteration of Apple&#39;s T2 security chip was also briefly announced. This new version adds a hardware disconnect to the internal device microphone, and activates when the device lid closes. By automatically engaging the hardware disconnect, Apple has added a layer of protection against a compromised microphone listening in on conversations while the device is closed.&lt;/p&gt;
-&lt;p&gt;This is a downright cool feature. But it wasn&#39;t until after the event, &lt;a href=&#34;https://www.apple.com/mac/docs/Apple_T2_Security_Chip_Overview.pdf&#34;&gt;when the chip&#39;s white paper was released&lt;/a&gt;, that we learned more about its design and function.&lt;/p&gt;
+&lt;p&gt;The second iteration of Apple&amp;rsquo;s T2 security chip was also briefly announced. This new version adds a hardware disconnect to the internal device microphone, and activates when the device lid closes. By automatically engaging the hardware disconnect, Apple has added a layer of protection against a compromised microphone listening in on conversations while the device is closed.&lt;/p&gt;
+&lt;p&gt;This is a downright cool feature. But it wasn&amp;rsquo;t until after the event, &lt;a href=&#34;https://www.apple.com/mac/docs/Apple_T2_Security_Chip_Overview.pdf&#34;&gt;when the chip&amp;rsquo;s white paper was released&lt;/a&gt;, that we learned more about its design and function.&lt;/p&gt;
 &lt;h2 id=&#34;t2-architecture&#34;&gt;T2 Architecture&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;/images/t2-architecture.png&#34; alt=&#34;T2 Architecture&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The T2 chip writes encrypted data to memory, storing the key within its Secure Enclave coprocessor (in addition to other sensitive system information, such as FileVault encryption keys, Touch ID algorithms, secure boot, and other essential system controllers).&lt;/p&gt;
@@ -312,30 +312,30 @@
       <description>&lt;p&gt;&lt;img src=&#34;/images/the-big-hack.jpg&#34; alt=&#34;The Big Hack&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Bloomberg News earlier this month &lt;a href=&#34;https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies&#34;&gt;reported the results of an investigation&lt;/a&gt;, which check all the boxes of a classic international spy drama. Actors include nation states, global server equipment manufacturers, and tech companies familiar to most American households.&lt;/p&gt;
 &lt;h2 id=&#34;a-spy-novel-in-real-life&#34;&gt;A Spy Novel In Real Life&lt;/h2&gt;
-&lt;p&gt;The narrative honestly reads like a spy novel. A rogue chip the size of the tip of a sharpened pencil. A clandestine operation, co-opting manufacturing facilities to install this chip possibly within motherboard substrates, making detection exceedingly difficult. The world&#39;s largest tech companies fill cavernous server farms with compromised motherboards. Certain unknown conditions occur, the chip activates, and a payload is delivered.&lt;/p&gt;
+&lt;p&gt;The narrative honestly reads like a spy novel. A rogue chip the size of the tip of a sharpened pencil. A clandestine operation, co-opting manufacturing facilities to install this chip possibly within motherboard substrates, making detection exceedingly difficult. The world&amp;rsquo;s largest tech companies fill cavernous server farms with compromised motherboards. Certain unknown conditions occur, the chip activates, and a payload is delivered.&lt;/p&gt;
 &lt;p&gt;Server firmware and software can be modified without integrity checks failing. Privilege escalation attacks can be launched. Network monitoring and secure information leakage occurs.&lt;/p&gt;
 &lt;p&gt;But this, unfortunately, is not the setup of a new spy novel or Summer blockbuster film.&lt;/p&gt;
-&lt;p&gt;It&#39;s also not necessarily what actually happened.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s also not necessarily what actually happened.&lt;/p&gt;
 &lt;p&gt;However, the truth likely lies somewhere in the middle. And if even some of the narrative turns out to be true, it represents the single most damaging compromise of computer hardware ever publicly discovered.&lt;/p&gt;
 &lt;h2 id=&#34;accusations-and-denials&#34;&gt;Accusations, And Denials&lt;/h2&gt;
 &lt;p&gt;Across the board, strong denial has been the response du jour. And for good reason. As &lt;a href=&#34;https://www.schneier.com/blog/archives/2018/10/chinese_supply_.html&#34;&gt;Bruce Schneier&lt;/a&gt; notes,&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;We cannot trust anyone, yet we have no choice but to trust everyone. No one is ready for the costs that solving this would entail.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;The alleged compromised companies, who again strongly deny these accusation, include Apple and Amazon among dozens of other companies. At this point, a confirmation would be much more surprising than what we&#39;re seeing: across the board denials. A response to any other effect would be highly unusual, considering the national security implications these allegations carry. So who is right?&lt;/p&gt;
+&lt;p&gt;The alleged compromised companies, who again strongly deny these accusation, include Apple and Amazon among dozens of other companies. At this point, a confirmation would be much more surprising than what we&amp;rsquo;re seeing: across the board denials. A response to any other effect would be highly unusual, considering the national security implications these allegations carry. So who is right?&lt;/p&gt;
 &lt;h3 id=&#34;reading-between-the-lines&#34;&gt;Reading Between The Lines&lt;/h3&gt;
 &lt;p&gt;Hardware supply chains span the globe. Securing every supply line, in every manufacturing facility, for every manufacturer, everywhere, is simply not feasible. Even then, every shipping facility, middleman, and service provider is a potential attack vector. Periodic checks by expert analysts against provided schemas is just not foolproof.&lt;/p&gt;
-&lt;p&gt;Given the available evidence, it&#39;s reasonable to assume compromises have happened, are happening, and will continue to happen for the foreseeable future.&lt;/p&gt;
+&lt;p&gt;Given the available evidence, it&amp;rsquo;s reasonable to assume compromises have happened, are happening, and will continue to happen for the foreseeable future.&lt;/p&gt;
 &lt;h2 id=&#34;investigations-and-responsible-disclosure&#34;&gt;Investigations And Responsible Disclosure&lt;/h2&gt;
 &lt;p&gt;One point is important to emphasize: assuming this hack is true, this is &lt;strong&gt;exactly&lt;/strong&gt; how companies involved would respond. To confirm this level of supply chain compromise would be reckless on many levels &amp;ndash; most importantly, at the level of national security.&lt;/p&gt;
 &lt;p&gt;A (very) public confirmation will undoubtedly have unintended consequences. Revealing confidential sources and information during an ongoing investigation is dangerous, reckless, and raises roadblocks to progress. Sources get spooked; jury pools poisoned. Bias remains difficult to keep out of an investigation.&lt;/p&gt;
 &lt;p&gt;For any investigation, there is a target. Once privileged information leaks from the investigation and becomes public, the target also gains that knowledge. The advantage of information asymmetry is lost, and the target modifies their behavior in order to avoid future detection.&lt;/p&gt;
-&lt;p&gt;Secondly, the immediate extreme PR disaster fallout, not to mention possible legal jeopardy, will undoubtedly put jobs at risk. Jobs across the economic spectrum will not be safe, and that won&#39;t really help fix the problem at hand.&lt;/p&gt;
+&lt;p&gt;Secondly, the immediate extreme PR disaster fallout, not to mention possible legal jeopardy, will undoubtedly put jobs at risk. Jobs across the economic spectrum will not be safe, and that won&amp;rsquo;t really help fix the problem at hand.&lt;/p&gt;
 &lt;h2 id=&#34;accounting-for-the-unknowns&#34;&gt;Accounting For The Unknowns&lt;/h2&gt;
-&lt;p&gt;Of course, at this point, the evidence is far from conclusive. While Bloomberg News makes unambiguous, well-researched claims, has its reputation on the line, and &lt;a href=&#34;https://www.multichannel.com/blog/big-hack-or-big-hoax&#34;&gt;doubled down on their reporting&lt;/a&gt; &amp;ndash; we&#39;re still lacking key hard evidence. Confirmed photos. Detailed analysis by third party experts. Public confirmation by the parties involved (again, this is unlikely to ever happen regardless of the report&#39;s veracity).&lt;/p&gt;
+&lt;p&gt;Of course, at this point, the evidence is far from conclusive. While Bloomberg News makes unambiguous, well-researched claims, has its reputation on the line, and &lt;a href=&#34;https://www.multichannel.com/blog/big-hack-or-big-hoax&#34;&gt;doubled down on their reporting&lt;/a&gt; &amp;ndash; we&amp;rsquo;re still lacking key hard evidence. Confirmed photos. Detailed analysis by third party experts. Public confirmation by the parties involved (again, this is unlikely to ever happen regardless of the report&amp;rsquo;s veracity).&lt;/p&gt;
 &lt;p&gt;Still there are questions. The author of the chip is not verified. Where in the supply chain the compromise occurred is unknown. The conditions for its activation are unknown as well.&lt;/p&gt;
-&lt;p&gt;Was this all the work of one entity? Was it really a foreign spy agency? It wouldn&#39;t be unreasonable for a certain three letter domestic agency to pull off this hack on motherboards in transit around the world. The same agency would be able to benefit twice by framing opposing spy agencies and sowing disinformation to hide the true source.&lt;/p&gt;
-&lt;p&gt;At this point, with the available information, we can&#39;t say with any certainty what has happened. But that sure won&#39;t stop us from speculating.&lt;/p&gt;
+&lt;p&gt;Was this all the work of one entity? Was it really a foreign spy agency? It wouldn&amp;rsquo;t be unreasonable for a certain three letter domestic agency to pull off this hack on motherboards in transit around the world. The same agency would be able to benefit twice by framing opposing spy agencies and sowing disinformation to hide the true source.&lt;/p&gt;
+&lt;p&gt;At this point, with the available information, we can&amp;rsquo;t say with any certainty what has happened. But that sure won&amp;rsquo;t stop us from speculating.&lt;/p&gt;
 </description>
     </item>
     
@@ -348,12 +348,12 @@
       <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;A new duo of exploits collectively called &lt;a href=&#34;https://foreshadowattack.eu/&#34;&gt;Foreshadow-NG&lt;/a&gt; were &lt;a href=&#34;https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00161.html&#34;&gt;confirmed by Intel on August 14th&lt;/a&gt;. In the same family as &lt;a href=&#34;https://meltdownattack.com/&#34;&gt;Spectre&lt;/a&gt; and related to an exploit &lt;a href=&#34;https://foreshadowattack.eu/foreshadow.pdf&#34;&gt;previously reported in January 2018&lt;/a&gt;, this new generation allows unauthorized access to the L1 data cache layer inside a processor core. The L1 data cache layer is considered privileged and contains information about the operating system, drivers, userland applications, virtualized resources, and other information stored in the processor core. All an attacker needs is the ability to run code (without root privileges).&lt;/p&gt;
 &lt;h2 id=&#34;privilege-escalation-via-key-siphoning&#34;&gt;Privilege Escalation Via Key Siphoning&lt;/h2&gt;
-&lt;p&gt;One particularly concerning bit of privileged information that can be accessed with these attacks is a cryptographic key called an attestation key. This key is used when generating signatures for Intel&#39;s Secure Guard Extensions (SGX) integrity checks. With a valid attestation key, an attacker can generate SGX signatures that appear valid, but in fact are not. It gets better (read: worse), as due to the difficulty in knowing the source of a signed attestation key, a compromise of one key in an ecosystem will in turn potentially allow the compromise of multiple machines. Read more &lt;a href=&#34;https://appleinsider.com/articles/18/08/14/foreshadow-intel-processor-attack-bypasses-protections-for-secure-data-held-on-chip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;One particularly concerning bit of privileged information that can be accessed with these attacks is a cryptographic key called an attestation key. This key is used when generating signatures for Intel&amp;rsquo;s Secure Guard Extensions (SGX) integrity checks. With a valid attestation key, an attacker can generate SGX signatures that appear valid, but in fact are not. It gets better (read: worse), as due to the difficulty in knowing the source of a signed attestation key, a compromise of one key in an ecosystem will in turn potentially allow the compromise of multiple machines. Read more &lt;a href=&#34;https://appleinsider.com/articles/18/08/14/foreshadow-intel-processor-attack-bypasses-protections-for-secure-data-held-on-chip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;While the attack itself is fairly technical and requires some conditions to be met in order to execute, the impact on information confidentiality and the lack of required authentication make this a more noteworthy and concerning exploit. An excellent write up with more links can be found at &lt;a href=&#34;https://www.cvedetails.com/cve/CVE-2018-3615/&#34;&gt;CVE Details&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;speculative-execution&#34;&gt;Speculative Execution&lt;/h2&gt;
-&lt;p&gt;Speculative execution is a strategy modern processors use as a means of optimizing performance in a multi-core environment. By performing calculations in advance of possible usage on underutilized cores, the processor better parallelizes the work it has to do, even if some of that work doesn&#39;t get used. This calculated information is then stored in L1 cache, in case it is needed. Breaking isolation allows an attacker to access this stored cache.&lt;/p&gt;
-&lt;h2 id=&#34;a-fix-is-out-but-dont-think-its-over&#34;&gt;A Fix Is Out, But Don&#39;t Think It&#39;s Over&lt;/h2&gt;
-&lt;p&gt;Intel has released updates to affected processors and is working with vendors to get the fixes deployed. However, due to the complicated nature of speculative execution and modern processor design, don&#39;t expect this to be the last echo of Spectre.&lt;/p&gt;
+&lt;p&gt;Speculative execution is a strategy modern processors use as a means of optimizing performance in a multi-core environment. By performing calculations in advance of possible usage on underutilized cores, the processor better parallelizes the work it has to do, even if some of that work doesn&amp;rsquo;t get used. This calculated information is then stored in L1 cache, in case it is needed. Breaking isolation allows an attacker to access this stored cache.&lt;/p&gt;
+&lt;h2 id=&#34;a-fix-is-out-but-dont-think-its-over&#34;&gt;A Fix Is Out, But Don&amp;rsquo;t Think It&amp;rsquo;s Over&lt;/h2&gt;
+&lt;p&gt;Intel has released updates to affected processors and is working with vendors to get the fixes deployed. However, due to the complicated nature of speculative execution and modern processor design, don&amp;rsquo;t expect this to be the last echo of Spectre.&lt;/p&gt;
 </description>
     </item>
     
@@ -363,9 +363,9 @@
       <pubDate>Fri, 24 Aug 2018 21:59:42 -0500</pubDate>
       
       <guid>/posts/nodesrv-a-mud-framework-in-2018/</guid>
-      <description>&lt;p&gt;In this article I want to share my free-time project, a &lt;a href=&#34;https://en.wikipedia.org/wiki/MUD&#34;&gt;MUD&lt;/a&gt;, or multi-user dungeon. This particular project is not quite a game per-se, but a framework for building a game. It&#39;s called &lt;a href=&#34;https://github.com/danielmunro/nodesrv&#34;&gt;nodesrv&lt;/a&gt;. Prefaced with a short story about the history of MUDs to provide some context, I&#39;ll lay out my reasoning for such a peculiar project and why I think it has value today.&lt;/p&gt;
+      <description>&lt;p&gt;In this article I want to share my free-time project, a &lt;a href=&#34;https://en.wikipedia.org/wiki/MUD&#34;&gt;MUD&lt;/a&gt;, or multi-user dungeon. This particular project is not quite a game per-se, but a framework for building a game. It&amp;rsquo;s called &lt;a href=&#34;https://github.com/danielmunro/nodesrv&#34;&gt;nodesrv&lt;/a&gt;. Prefaced with a short story about the history of MUDs to provide some context, I&amp;rsquo;ll lay out my reasoning for such a peculiar project and why I think it has value today.&lt;/p&gt;
 &lt;h2 id=&#34;a-narrated-history&#34;&gt;A Narrated History&lt;/h2&gt;
-&lt;p&gt;Back in the early days of the consumer internet, when social interactions happened in text over &lt;a href=&#34;https://en.wikipedia.org/wiki/Transmission_Control_Protocol&#34;&gt;TCP&lt;/a&gt;, a new form of leisure entertainment was starting to take shape. There weren&#39;t many defining characteristics for this emerging genre of games, however they did share some traits.&lt;/p&gt;
+&lt;p&gt;Back in the early days of the consumer internet, when social interactions happened in text over &lt;a href=&#34;https://en.wikipedia.org/wiki/Transmission_Control_Protocol&#34;&gt;TCP&lt;/a&gt;, a new form of leisure entertainment was starting to take shape. There weren&amp;rsquo;t many defining characteristics for this emerging genre of games, however they did share some traits.&lt;/p&gt;
 &lt;p&gt;Fantasy in the form of medieval, LOTR, and scifi themes were common. Dungeon crawling, usually via cardinal directions, was also a defining trait. Complex application state, network connections that measured in the hundreds, authentication over unencrypted protocols, bespoke persistence schemes, and a culture that did not include automated tests. Truly, it was a wild west.&lt;/p&gt;
 &lt;p&gt;Blended with social aspects of &lt;a href=&#34;https://en.wikipedia.org/wiki/Bulletin_board_system&#34;&gt;BBS&lt;/a&gt;, these games were an audacious mix of technology and imagination. Often developed and run by volunteers, each game represented an experiment in anarchy, value was derived through individual interactions and connections between people. Friendships blossomed where individuals would have otherwise never known one another.&lt;/p&gt;
 &lt;h2 id=&#34;what&#34;&gt;What&lt;/h2&gt;
@@ -386,9 +386,9 @@
 &lt;li&gt;&lt;a href=&#34;https://js.tensorflow.org/&#34;&gt;TensorFlow.js&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;On its face, creating a MUD today seems like a bizarre hobby. But it&#39;s less about what the project &lt;em&gt;is&lt;/em&gt; and more about what the project &lt;em&gt;represents&lt;/em&gt;; learning, playing with technology, testing assumptions, refactoring, and flexing the imagination, to name a few.&lt;/p&gt;
-&lt;p&gt;It&#39;s a huge work in progress, and a lot of things have been done wrong along the way. But each mistake has been a potential learning opportunity. And a lot of those opportunities have been actualized into knowledge gained.&lt;/p&gt;
-&lt;p&gt;The first generation of MUDs were born from a wealth of ingenuity, curiousity, and playful imaginations.  And while MUDs may well never experience the popularity they once had, that&#39;s okay. To pay homage in some small way to such a radical and whimsy vision is enough.&lt;/p&gt;
+&lt;p&gt;On its face, creating a MUD today seems like a bizarre hobby. But it&amp;rsquo;s less about what the project &lt;em&gt;is&lt;/em&gt; and more about what the project &lt;em&gt;represents&lt;/em&gt;; learning, playing with technology, testing assumptions, refactoring, and flexing the imagination, to name a few.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a huge work in progress, and a lot of things have been done wrong along the way. But each mistake has been a potential learning opportunity. And a lot of those opportunities have been actualized into knowledge gained.&lt;/p&gt;
+&lt;p&gt;The first generation of MUDs were born from a wealth of ingenuity, curiousity, and playful imaginations.  And while MUDs may well never experience the popularity they once had, that&amp;rsquo;s okay. To pay homage in some small way to such a radical and whimsy vision is enough.&lt;/p&gt;
 </description>
     </item>
     
@@ -418,7 +418,7 @@
 &lt;p&gt;Disable with &lt;code&gt;--insecure-port=0&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/images/kubernetes.webp&#34; alt=&#34;Kubernetes at a high level&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;kubelet-settings&#34;&gt;Kubelet Settings&lt;/h2&gt;
-&lt;p&gt;Ensure kubelet&#39;s port (&lt;code&gt;10250/tcp&lt;/code&gt;) is behind a firewall. Kubelet offers an api for arbitrary command execution on worker nodes, which is utilized by the API server.&lt;/p&gt;
+&lt;p&gt;Ensure kubelet&amp;rsquo;s port (&lt;code&gt;10250/tcp&lt;/code&gt;) is behind a firewall. Kubelet offers an api for arbitrary command execution on worker nodes, which is utilized by the API server.&lt;/p&gt;
 &lt;h2 id=&#34;restrict-docker-image-pull&#34;&gt;Restrict &amp;ldquo;docker image pull&amp;rdquo;&lt;/h2&gt;
 &lt;p&gt;Owing to the fact that docker images are uncontrolled environments, pulling an unauthorized image is a convenient way to gain arbitrary code execution within a cluster, among other nasty possibilities.&lt;/p&gt;
 &lt;p&gt;Use the &lt;a href=&#34;https://github.com/freach/docker-image-policy-plugin&#34;&gt;docker image policy plugin&lt;/a&gt; to restrict this attack vector.&lt;/p&gt;
@@ -427,11 +427,11 @@
 &lt;h2 id=&#34;kube-bench&#34;&gt;Kube-bench&lt;/h2&gt;
 &lt;p&gt;Kube-bench is a tool for &lt;a href=&#34;https://github.com/aquasecurity/kube-bench&#34;&gt;auditing deployed Kubernetes clusters&lt;/a&gt;. Some configuration is required, and the readme is well worth the time. There are a large number of configuration checks across different versions of Kubernetes.&lt;/p&gt;
 &lt;h2 id=&#34;firewall-ports&#34;&gt;Firewall Ports&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/freach/kubernetes-security-best-practice#firewall-ports-fire&#34;&gt;Following this advice&lt;/a&gt;, firewall all ports at the network level that aren&#39;t needed by platform services.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/freach/kubernetes-security-best-practice#firewall-ports-fire&#34;&gt;Following this advice&lt;/a&gt;, firewall all ports at the network level that aren&amp;rsquo;t needed by platform services.&lt;/p&gt;
 &lt;h3 id=&#34;bastion-host&#34;&gt;Bastion Host&lt;/h3&gt;
 &lt;p&gt;Disallow direct ssh access to Kubernetes nodes. Instead expose one edge node, which serves as a proxy between the internet and the private network. This is a small detail but has huge advantages. Auditing and logging become much easier concerns to monitor. And in the case of a breach, there is one location to disable ssh.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/images/awsbastion.png&#34; alt=&#34;AWS bastion host setup within a VPC&#34;&gt;&lt;/p&gt;
-&lt;p&gt;The bastion host should still be protected by ip rules, such as security groups in AWS. &lt;a href=&#34;https://aws.amazon.com/blogs/security/how-to-record-ssh-sessions-established-through-a-bastion-host/&#34;&gt;Here&#39;s a good guide&lt;/a&gt; for AWS bastion host setup (not for kubernetes but the concept is the same).&lt;/p&gt;
+&lt;p&gt;The bastion host should still be protected by ip rules, such as security groups in AWS. &lt;a href=&#34;https://aws.amazon.com/blogs/security/how-to-record-ssh-sessions-established-through-a-bastion-host/&#34;&gt;Here&amp;rsquo;s a good guide&lt;/a&gt; for AWS bastion host setup (not for kubernetes but the concept is the same).&lt;/p&gt;
 &lt;h2 id=&#34;kube2iam&#34;&gt;Kube2IAM&lt;/h2&gt;
 &lt;p&gt;Kubernetes running directly in EC2 has no native way to represent IAM roles on individual running pods within a node. Instead, roles must be applied to the nodes, which is suboptimal from a security perspective. Ideally, we can follow the principle of least privilege and apply roles on a per-container or per-pod basis.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/jtblin/kube2iam&#34;&gt;Kube2IAM does just that&lt;/a&gt;. By creating a sidecar container that serves as a proxy to the AWS metadata api, the sidecar then authorizes requests to that api via configured roles, which serves as an effective work-around.&lt;/p&gt;
@@ -455,7 +455,7 @@
       <guid>/posts/have-i-been-pwned/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/pnwed.png&#34; alt=&#34;Have I Been Pwned?&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://haveibeenpwned.com/&#34;&gt;Check here now&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I&#39;ve had the same personal email address for a long time now. So it doesn&#39;t come as much of a surprise that there were a list of results when searching for it on Have I Been Pwnd? The size of the list, &lt;em&gt;at ten hacks&lt;/em&gt;, was a little surprising.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve had the same personal email address for a long time now. So it doesn&amp;rsquo;t come as much of a surprise that there were a list of results when searching for it on Have I Been Pwnd? The size of the list, &lt;em&gt;at ten hacks&lt;/em&gt;, was a little surprising.&lt;/p&gt;
 &lt;p&gt;Equally surprising, my work email had been included in hacks as well. This, despite being registered with far fewer accounts and all with good reputations.&lt;/p&gt;
 &lt;p&gt;All of this emphasizes the need for &lt;a href=&#34;/posts/the-password-is-dead/&#34;&gt;good password hygiene&lt;/a&gt;, including using strong, unique passwords for every account.&lt;/p&gt;
 </description>
@@ -468,31 +468,31 @@
       
       <guid>/posts/infrastructure-validation-and-auditing/</guid>
       <description>&lt;p&gt;There are many reasons why infrastructure and security validation checks are manual. Maybe the reliability of infrastructure provisioning is trusted; ops and dev teams are overloaded with work already; the perception that a manual check provides equivalent value to an automated check.&lt;/p&gt;
-&lt;p&gt;It&#39;s possible these assumptions are wrong.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s possible these assumptions are wrong.&lt;/p&gt;
 &lt;p&gt;Infrastructure and security checks, automated into a CI/CD pipeline, provide immense value. Benefits include internal and external audit compliance, CVE auditing, saving time and sanity &amp;ndash; the list goes on. High visibility failures in turn lead to fast fixes.&lt;/p&gt;
 &lt;h2 id=&#34;testing-tools&#34;&gt;Testing Tools&lt;/h2&gt;
 &lt;p&gt;There are a few options for infrastructure testing tools.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://serverspec.org/&#34;&gt;ServerSpec&lt;/a&gt; - With strong community support and a good reputation, ServerSpec is a solid option. Tests are in ruby and utilize RSpec. Example:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;spec_helper&amp;#39;&lt;/span&gt;
 
-describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#39;&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;:if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:family&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;redhat&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
+describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#39;&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;:if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:family&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;redhat&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
   it { should be_installed }
 &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://www.inspec.io/&#34;&gt;InSpec&lt;/a&gt; - Emphasizes compliance, policy requirements, and provisioning validation. InSpec is an expressive testing library built on ServerSpec, so it&#39;s ruby as well. Example:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://www.inspec.io/&#34;&gt;InSpec&lt;/a&gt; - Emphasizes compliance, policy requirements, and provisioning validation. InSpec is an expressive testing library built on ServerSpec, so it&amp;rsquo;s ruby as well. Example:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;control &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;sshd-21&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
   title &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Set SSH Protocol to 2&amp;#39;&lt;/span&gt;
   desc &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;A detailed description&amp;#39;&lt;/span&gt;
-  impact &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# This is critical ref &amp;#39;compliance guide, section 2.1&amp;#39;&lt;/span&gt;
+  impact &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# This is critical ref &amp;#39;compliance guide, section 2.1&amp;#39;&lt;/span&gt;
   describe sshd_config &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
-   its(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Protocol&amp;#39;&lt;/span&gt;) { should cmp &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&lt;/span&gt;}
+   its(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Protocol&amp;#39;&lt;/span&gt;) { should cmp &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; }
   &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://testinfra.readthedocs.io/en/latest/&#34;&gt;test_infra&lt;/a&gt; - Focused on provisioning tool validation, test_infra aims to be a port of ServerSpec to python. Example:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_passwd_file&lt;/span&gt;(host):
-  passwd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; host&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;file(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/etc/passwd&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;contains(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;root&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;)
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;user &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;root&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;root&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+  passwd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; host&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;file(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/etc/passwd&amp;#34;&lt;/span&gt;)
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;contains(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;)
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;user &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;
   &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mode &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;o644
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/danielmunro/test_myinfra&#34;&gt;Here&lt;/a&gt; is a small demo I put together, bolting test_infra tests onto a docker-compose flask + redis example app.&lt;/p&gt;
 </description>
@@ -509,7 +509,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
 &lt;h2 id=&#34;articles-about-the-new-spec&#34;&gt;Articles About The New Spec&lt;/h2&gt;
 &lt;p&gt;These articles do a much better job summarizing the changes than I could here:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ietf.org/blog/tls13/&#34;&gt;IETF Blog&lt;/a&gt; - straight from the horse&#39;s mouth.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ietf.org/blog/tls13/&#34;&gt;IETF Blog&lt;/a&gt; - straight from the horse&amp;rsquo;s mouth.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cloudflare.com/learning-resources/tls-1-3/&#34;&gt;Cloudflare&lt;/a&gt; - a really digestible technical overview of the important changes.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cnet.com/news/protecting-data-on-web-about-to-get-faster-with-tls-1-3/&#34;&gt;CNET&lt;/a&gt; - less technical but still good.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://kinsta.com/blog/tls-1-3/&#34;&gt;Kinsta&lt;/a&gt;&lt;/li&gt;
@@ -562,7 +562,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
 &lt;p&gt;&lt;a href=&#34;https://www.paloaltonetworks.com/cyberpedia/what-is-a-zero-trust-architecture&#34;&gt;Zero trust architecture&lt;/a&gt; involves design decisions that treat internal networks as &lt;a href=&#34;https://www.darkreading.com/attacks-breaches/zero-trust-the-way-forward-in-cybersecurity/a/d-id/1327827&#34;&gt;not inherently secure&lt;/a&gt;. Never trust, always verify. Use the principle of least privilege. Monitor continuously.&lt;/p&gt;
 &lt;h4 id=&#34;inside-the-network&#34;&gt;Inside The Network&lt;/h4&gt;
 &lt;p&gt;Use internal proxies to verify requests between platform services. Disallow direct service to service communication, via isolated networks sharing an edge proxy.&lt;/p&gt;
-&lt;p&gt;Think about access, authorization, and process execution on a whitelist basis, instead of the traditional blacklist strategy. Does the internal proxy expect a connection from executable A on port N? If not, maybe we don&#39;t want to outright block the connection, but we do want to monitor it closely and automatically generate a context-bound report of that connection&#39;s activities.&lt;/p&gt;
+&lt;p&gt;Think about access, authorization, and process execution on a whitelist basis, instead of the traditional blacklist strategy. Does the internal proxy expect a connection from executable A on port N? If not, maybe we don&amp;rsquo;t want to outright block the connection, but we do want to monitor it closely and automatically generate a context-bound report of that connection&amp;rsquo;s activities.&lt;/p&gt;
 &lt;h3 id=&#34;credential-hygiene&#34;&gt;Credential Hygiene&lt;/h3&gt;
 &lt;p&gt;Have a process in place for revoking and regenerating credentials at any level of the system. These credentials should be defined with minimal permissions, have a TTL, and live in an encrypted store. Credentials can be shared across services if the services reside within the same network space. However, credentials should &lt;em&gt;never&lt;/em&gt; be used by services across network boundaries. The reason is simple.&lt;/p&gt;
 &lt;h3 id=&#34;a-ship-metaphor&#34;&gt;A Ship Metaphor&lt;/h3&gt;
@@ -572,7 +572,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
 &lt;h3 id=&#34;logging&#34;&gt;Logging&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.owasp.org/index.php/Logging_Cheat_Sheet&#34;&gt;Follow security logging best practices&lt;/a&gt; recommended by OWASP. Log often, and ship logs to a log aggregation service. In addition to aiding in transparency and auditing, destruction of evidence by the attacker is much more difficult.&lt;/p&gt;
 &lt;h2 id=&#34;organizational-prep&#34;&gt;Organizational Prep&lt;/h2&gt;
-&lt;p&gt;An organization&#39;s employees are its most valuable asset, and this is doubly true when responding to a security incident. There is nothing more dangerous than a sentient, motivated, responsive attacker.&lt;/p&gt;
+&lt;p&gt;An organization&amp;rsquo;s employees are its most valuable asset, and this is doubly true when responding to a security incident. There is nothing more dangerous than a sentient, motivated, responsive attacker.&lt;/p&gt;
 &lt;h3 id=&#34;plan-to-be-pwned&#34;&gt;Plan To Be Pwned&lt;/h3&gt;
 &lt;p&gt;Carve out a &lt;a href=&#34;https://en.wikipedia.org/wiki/Red_team&#34;&gt;red team&lt;/a&gt; that will perform live penetration attacks again public environments. Their goal is root access, database dumps, api keys, and other credentials.&lt;/p&gt;
 &lt;p&gt;If red team is successful, measure some key metrics:&lt;/p&gt;
@@ -584,7 +584,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
 &lt;li&gt;Was the scope of the breach understood?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Collecting this information will help with a blameless retro and continuous improvement for the organization.&lt;/p&gt;
-&lt;p&gt;Unsuccessful attempts are equally important. Both scenarios help develop the organization&#39;s playbooks. &lt;a href=&#34;https://www.redteamsecure.com/what-is-red-teaming-and-why-do-i-need-it-2/&#34;&gt;This article&lt;/a&gt; has some more good information on the topic.&lt;/p&gt;
+&lt;p&gt;Unsuccessful attempts are equally important. Both scenarios help develop the organization&amp;rsquo;s playbooks. &lt;a href=&#34;https://www.redteamsecure.com/what-is-red-teaming-and-why-do-i-need-it-2/&#34;&gt;This article&lt;/a&gt; has some more good information on the topic.&lt;/p&gt;
 &lt;h3 id=&#34;incident-playbooks&#34;&gt;Incident Playbooks&lt;/h3&gt;
 &lt;p&gt;Playbooks are nothing special. They are simply defined processes for security responders to follow given a breach scenario. A typical playbook will include what systems to check, how to perform a quarantine, and how to recover with pristine infrastructure, credentials, and configs, while minimizing mean time to recovery (MTTR).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/images/castle.jpg&#34; alt=&#34;Security as a feature.&#34;&gt;&lt;/p&gt;
@@ -592,7 +592,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
 &lt;p&gt;Focusing on perimeter security, to the exclusion of other concerns, is a one dimensional approach to a hard problem.&lt;/p&gt;
 &lt;p&gt;Thinking about isolation of resources within an environment during the design phase will pay off in dividends. If, in order to compromise sensitive customer information, an attacker must breach multiple firewalls and steal encrypted credentials for every section of the infrastructure&amp;hellip; well, the time this buys is crucial for responders to mount a coherent response.&lt;/p&gt;
 &lt;p&gt;When attack vectors are defined and understood, it becomes easier to monitor and respond more quickly. Diagnosis of the depth of the intrusion should be easier too. And when responders have practiced their roles, the likelihood of mistakes being made during a stressful moment is lessened.&lt;/p&gt;
-&lt;p&gt;Breaches are terrible, and may be inevitable in an engineer&#39;s career, but our preparation and ability to respond effectively is ours to control.&lt;/p&gt;
+&lt;p&gt;Breaches are terrible, and may be inevitable in an engineer&amp;rsquo;s career, but our preparation and ability to respond effectively is ours to control.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Image attributions:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.brandeating.com/2012/07/review-m-mint-dark-chocolate.html&#34;&gt;Brand Eating&lt;/a&gt;&lt;/p&gt;
@@ -607,7 +607,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
       <pubDate>Fri, 10 Aug 2018 07:25:01 -0500</pubDate>
       
       <guid>/posts/krack-attacks/</guid>
-      <description>&lt;p&gt;In case you haven&#39;t heard, &lt;a href=&#34;https://www.krackattacks.com/&#34;&gt;a critical security flaw&lt;/a&gt; has been uncovered in &lt;a href=&#34;https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPA2&#34;&gt;WPA2&lt;/a&gt;. The scope of this flaw includes all modern wifi routers, and requires only close proximity to the device in order to carry out the attack.&lt;/p&gt;
+      <description>&lt;p&gt;In case you haven&amp;rsquo;t heard, &lt;a href=&#34;https://www.krackattacks.com/&#34;&gt;a critical security flaw&lt;/a&gt; has been uncovered in &lt;a href=&#34;https://en.wikipedia.org/wiki/Wi-Fi_Protected_Access#WPA2&#34;&gt;WPA2&lt;/a&gt;. The scope of this flaw includes all modern wifi routers, and requires only close proximity to the device in order to carry out the attack.&lt;/p&gt;
 &lt;p&gt;All devices are affected because the flaw is in the standard itself, and not an individual product or implementation. Specifically, correct implementations of WPA2 are affected by KRACK attacks.&lt;/p&gt;
 &lt;p&gt;While firmware updates are not yet available, there are scripts to detect susceptibility to the attack &lt;a href=&#34;https://github.com/vanhoefm/krackattacks-scripts&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://arstechnica.com/information-technology/2017/10/severe-flaw-in-wpa2-protocol-leaves-wi-fi-traffic-open-to-eavesdropping/&#34;&gt;Here&lt;/a&gt; is another good write up of the attack.&lt;/p&gt;
@@ -630,7 +630,7 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
       
       <guid>/posts/the-password-is-dead/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;They just don&#39;t meet the challenge for anything you really want to secure.&lt;/p&gt;
+&lt;p&gt;They just don&amp;rsquo;t meet the challenge for anything you really want to secure.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Bill Gates, 2004&lt;/p&gt;
 &lt;blockquote&gt;
@@ -664,30 +664,30 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
       <description>&lt;p&gt;A little over a year ago I took the plunge and joined a small startup working remotely as lead software engineer. I was nervous for a lot of reasons. This was my first lead position, my first job at a fully remote company. And being a startup, finances were not guaranteed. Could I handle it?&lt;/p&gt;
 &lt;p&gt;I did know a few things. The product was going to be interesting and fun to work on, while pushing me to grow and learn at the same time. There was a real demand for new features and infrastructure work. No time to ramp up. Development practices seemed forward facing, the tech stack and code modern. Not only fully distributed, the company was committed to fostering that culture both in tools and communication.&lt;/p&gt;
 &lt;h2 id=&#34;five-lessons-learned-in-the-first-year&#34;&gt;Five Lessons Learned In The First Year&lt;/h2&gt;
-&lt;p&gt;It was July 2014. Finally fed up with the daily grind of commuting 3+ hours daily (thanks Seattle), I quit my job and started this adventure. Here are a few things I&#39;ve learned along the way that have helped me adjust to this kind of work style. Hopefully these lessons can help you too.&lt;/p&gt;
+&lt;p&gt;It was July 2014. Finally fed up with the daily grind of commuting 3+ hours daily (thanks Seattle), I quit my job and started this adventure. Here are a few things I&amp;rsquo;ve learned along the way that have helped me adjust to this kind of work style. Hopefully these lessons can help you too.&lt;/p&gt;
 &lt;h3 id=&#34;have-a-schedule&#34;&gt;Have A Schedule&lt;/h3&gt;
-&lt;p&gt;Some distributed companies still keep core hours for various reasons. Usually it&#39;s to help facilitate communication among team members that are geographically distributed. Or, someone made an arbitrary decision to do so and it stuck. Company culture is weird like that.&lt;/p&gt;
-&lt;p&gt;Anyway, we don&#39;t keep core hours. Theoretically this lets each team member set a schedule that maximizes their own productivity. Practically, however, work and life have a way of leeching into each other, so that neither get the full attention they deserve. Focus is sacrificed, and eventually each side feels short-changed. Don&#39;t do this!&lt;/p&gt;
+&lt;p&gt;Some distributed companies still keep core hours for various reasons. Usually it&amp;rsquo;s to help facilitate communication among team members that are geographically distributed. Or, someone made an arbitrary decision to do so and it stuck. Company culture is weird like that.&lt;/p&gt;
+&lt;p&gt;Anyway, we don&amp;rsquo;t keep core hours. Theoretically this lets each team member set a schedule that maximizes their own productivity. Practically, however, work and life have a way of leeching into each other, so that neither get the full attention they deserve. Focus is sacrificed, and eventually each side feels short-changed. Don&amp;rsquo;t do this!&lt;/p&gt;
 &lt;p&gt;Set strict boundaries for when work takes precedence, and for when life takes precedence. Boundaries can be having a dedicated office space, with &amp;ldquo;work hours&amp;rdquo;. Or telling your boss that you are unavailable after 6 PM. Next, set reasonable accommodations for exception cases (life: my kid has the flu; work: OMG production is burning). Then, &lt;strong&gt;communicate&lt;/strong&gt; your plan. Tell your spouse/significant other, boss, coworkers, and dog.&lt;/p&gt;
-&lt;p&gt;I still wake up by alarm at 6 AM, every morning. Work is broken up into two main chunks, separated by a two to three hour lunch. Obviously this isn&#39;t a one size fits all answer, experimentation is encouraged.&lt;/p&gt;
+&lt;p&gt;I still wake up by alarm at 6 AM, every morning. Work is broken up into two main chunks, separated by a two to three hour lunch. Obviously this isn&amp;rsquo;t a one size fits all answer, experimentation is encouraged.&lt;/p&gt;
 &lt;h3 id=&#34;track-your-progress&#34;&gt;Track Your Progress&lt;/h3&gt;
-&lt;p&gt;It&#39;s easy to get lost in a waterfall of tasks, user stories, bug reports, etc. This is especially true in small companies. This is &lt;strong&gt;even more true&lt;/strong&gt; in small, distributed companies.&lt;/p&gt;
-&lt;p&gt;Luckily I&#39;ve never had the displeasure of having to justify my time on projects. However, it&#39;s still a good idea to track where time gets spent. We use Github, and we track progress in the form of issues and pull requests, organized around milestones. Milestones function as sprints, and every two weeks the current one closes and the next one opens. Right now we&#39;re on sprint 27.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s easy to get lost in a waterfall of tasks, user stories, bug reports, etc. This is especially true in small companies. This is &lt;strong&gt;even more true&lt;/strong&gt; in small, distributed companies.&lt;/p&gt;
+&lt;p&gt;Luckily I&amp;rsquo;ve never had the displeasure of having to justify my time on projects. However, it&amp;rsquo;s still a good idea to track where time gets spent. We use Github, and we track progress in the form of issues and pull requests, organized around milestones. Milestones function as sprints, and every two weeks the current one closes and the next one opens. Right now we&amp;rsquo;re on sprint 27.&lt;/p&gt;
 &lt;p&gt;A changelog gets updated with each release, highlighting PRs and issues closed since last release. Accountability is built in.&lt;/p&gt;
 &lt;h3 id=&#34;face-time-is-valuable&#34;&gt;Face Time Is Valuable&lt;/h3&gt;
 &lt;p&gt;If you want something done, grab someone and tell them to do it. You may need to tell them a few times.&lt;/p&gt;
 &lt;p&gt;If distributed, use video chat, and you may need to tell them a half dozen times.&lt;/p&gt;
-&lt;p&gt;Just don&#39;t bother with chat or email.&lt;/p&gt;
+&lt;p&gt;Just don&amp;rsquo;t bother with chat or email.&lt;/p&gt;
 &lt;h3 id=&#34;embrace-asynchronous-communication&#34;&gt;Embrace Asynchronous Communication&lt;/h3&gt;
-&lt;p&gt;Chat and email do have a purpose. These are the tools that should only be used when an answer is needed within days if at all. Think company-wide emails, press releases, automated alerts, medium and low priority tasks, and idle banter. I&#39;ll refer to this kind of communication as low intensity communication.&lt;/p&gt;
+&lt;p&gt;Chat and email do have a purpose. These are the tools that should only be used when an answer is needed within days if at all. Think company-wide emails, press releases, automated alerts, medium and low priority tasks, and idle banter. I&amp;rsquo;ll refer to this kind of communication as low intensity communication.&lt;/p&gt;
 &lt;p&gt;Chat and email are great for low intensity communication. Know what they suck at? Accountability. Communication that is the opposite, high intensity. If something &lt;strong&gt;needs&lt;/strong&gt; to get done, then chat and email are a great way to get ignored.&lt;/p&gt;
-&lt;p&gt;That being said, probably at least the majority of communication falls into the first category. Low intensity communication is important, on some scale, but also distracting in that it&#39;s usually not relevant to the task at hand. Contain it to communication channels that don&#39;t demand immediate attention.&lt;/p&gt;
+&lt;p&gt;That being said, probably at least the majority of communication falls into the first category. Low intensity communication is important, on some scale, but also distracting in that it&amp;rsquo;s usually not relevant to the task at hand. Contain it to communication channels that don&amp;rsquo;t demand immediate attention.&lt;/p&gt;
 &lt;h3 id=&#34;communicate-communicate-communicate&#34;&gt;Communicate, Communicate, Communicate&lt;/h3&gt;
 &lt;p&gt;Like all of these points, good communication applies to any job, not just distributed ones. Aim to over communicate. Set expectations, send updates, ask questions, and report failures. Have daily video stand-ups, and weekly company meetings. Use email, chat, and text messages. Hold each other accountable. Document important decisions, and who made them. Then share that documentation. Good communication (or lack thereof) can literally mean success or failure for the entire organization.&lt;/p&gt;
 &lt;p&gt;Communication is like logging. Incident reports rarely cite too much of it.&lt;/p&gt;
 &lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;This last year, with its ups and downs, has overall been very successful working remotely. The motivation dynamic can be much different, and I think it&#39;s crucial to be working on an interesting problem at a company that inspires. It&#39;s easy to lose motivation and put things off for later. Instead, keeping a schedule, communicating goals, and knowing the people who rely on you are great ways to stay on track and get stuff done.&lt;/p&gt;
-&lt;p&gt;There are incredible benefits to remote life. I became a dad in April, and having the flexibility to be with the little one during the day is very valuable. Mom gets a break and I get some bonding time. It&#39;s  not enough time, but I&#39;ll take what I can get.&lt;/p&gt;
+&lt;p&gt;This last year, with its ups and downs, has overall been very successful working remotely. The motivation dynamic can be much different, and I think it&amp;rsquo;s crucial to be working on an interesting problem at a company that inspires. It&amp;rsquo;s easy to lose motivation and put things off for later. Instead, keeping a schedule, communicating goals, and knowing the people who rely on you are great ways to stay on track and get stuff done.&lt;/p&gt;
+&lt;p&gt;There are incredible benefits to remote life. I became a dad in April, and having the flexibility to be with the little one during the day is very valuable. Mom gets a break and I get some bonding time. It&amp;rsquo;s  not enough time, but I&amp;rsquo;ll take what I can get.&lt;/p&gt;
 &lt;p&gt;Thanks I hope you enjoyed reading!&lt;/p&gt;
 </description>
     </item>
@@ -707,23 +707,23 @@ MAKE(1)
 NAME
        make - GNU make utility to maintain groups of programs
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Can this humble utility simplify a web developer&#39;s life managing a complex system of front end assets &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;#myfootnote1&#34;&gt;1&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;?&lt;/p&gt;
-&lt;p&gt;In the past I used tools like Grunt, Gulp, Ant, and PHP&#39;s own Assetic to do this. Nothing felt right. Complex configurations, new scripts, new dependencies. There must be a better way.&lt;/p&gt;
+&lt;p&gt;Can this humble utility simplify a web developer&amp;rsquo;s life managing a complex system of front end assets &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;#myfootnote1&#34;&gt;1&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;?&lt;/p&gt;
+&lt;p&gt;In the past I used tools like Grunt, Gulp, Ant, and PHP&amp;rsquo;s own Assetic to do this. Nothing felt right. Complex configurations, new scripts, new dependencies. There must be a better way.&lt;/p&gt;
 &lt;h4 id=&#34;digression-warning&#34;&gt;Digression Warning&lt;/h4&gt;
-&lt;p&gt;If anything is known about me, it is this: &lt;strong&gt;I&#39;m lazy&lt;/strong&gt; (&lt;a href=&#34;http://photos2.meetupstatic.com/photos/event/2/d/b/5/600_431711701.jpeg&#34;&gt;proof&lt;/a&gt;). Don&#39;t make me do any extra work I don&#39;t have to do. Seriously. That previous sentence was only one word, that&#39;s how lazy I am. To me, laziness is an ideal. It&#39;s an ideal I can believe in, a rare gem awash in an ocean of ruthless pragmatism. But I digress.&lt;/p&gt;
+&lt;p&gt;If anything is known about me, it is this: &lt;strong&gt;I&amp;rsquo;m lazy&lt;/strong&gt; (&lt;a href=&#34;http://photos2.meetupstatic.com/photos/event/2/d/b/5/600_431711701.jpeg&#34;&gt;proof&lt;/a&gt;). Don&amp;rsquo;t make me do any extra work I don&amp;rsquo;t have to do. Seriously. That previous sentence was only one word, that&amp;rsquo;s how lazy I am. To me, laziness is an ideal. It&amp;rsquo;s an ideal I can believe in, a rare gem awash in an ocean of ruthless pragmatism. But I digress.&lt;/p&gt;
 &lt;h4 id=&#34;digression-averted-make-to-the-rescue&#34;&gt;Digression Averted, Make To The Rescue&lt;/h4&gt;
 &lt;p&gt;Today, I want to talk about make. Make allows me to get work done faster so I can spend more time thinking about interesting problems, and less time building the plumbing for my web applications.&lt;/p&gt;
-&lt;p&gt;And, let&#39;s face it, plumbing carries shit. The less time I spend working on plumbing, the less time I have shit on my hands.&lt;/p&gt;
+&lt;p&gt;And, let&amp;rsquo;s face it, plumbing carries shit. The less time I spend working on plumbing, the less time I have shit on my hands.&lt;/p&gt;
 &lt;h3 id=&#34;a-brief-incomplete-mostly-wrong-history-of-make&#34;&gt;A Brief, Incomplete, Mostly Wrong History of Make&lt;/h3&gt;
 &lt;p&gt;Make was originally introduced by Dr. Stuart Feldman of Bell Labs, in April 1976. Prior to widespread adoption of the utility, software was distributed with OS-specific &amp;ldquo;make&amp;rdquo; and &amp;ldquo;install&amp;rdquo; scripts. Make allowed multiple targets with commands to be written uniformly into one standardized build script. And this elegant solution is still one of the most widely distributed tools ever almost 40 years later.&lt;/p&gt;
-&lt;h4 id=&#34;great-how-does-this-relate-to--my--job&#34;&gt;Great. How Does This Relate To &lt;em&gt;My&lt;/em&gt; Job?&lt;/h4&gt;
+&lt;h4 id=&#34;great-how-does-this-relate-to-_my_-job&#34;&gt;Great. How Does This Relate To &lt;em&gt;My&lt;/em&gt; Job?&lt;/h4&gt;
 &lt;p&gt;The essence of make is to define repeatable transformations from a source to a target.&lt;/p&gt;
 &lt;h4 id=&#34;ok-so-what-does-that-mean&#34;&gt;Ok. So what does that mean?&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;Transformations&lt;/strong&gt; are shell commands, grouped into logical tasks by task name.&lt;/p&gt;
 &lt;p&gt;The &lt;strong&gt;source&lt;/strong&gt; and &lt;strong&gt;target&lt;/strong&gt; are filesystem objects. So what we have is a collection of shell commands, organized into logical groups of tasks, which define transformations in the filesystem.&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h3 id=&#34;anatomy-of-a-makefile-for-the-web&#34;&gt;Anatomy of a Makefile for the Web&lt;/h3&gt;
-&lt;p&gt;By convention, a makefile&#39;s first target is a default catch-all, usually &lt;code&gt;all&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;By convention, a makefile&amp;rsquo;s first target is a default catch-all, usually &lt;code&gt;all&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;all: clean build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;More on this below.&lt;/p&gt;
 &lt;h4 id=&#34;install&#34;&gt;Install&lt;/h4&gt;
@@ -738,7 +738,7 @@ install:
 &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    r.js -convert &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/js/react-dropzone/ &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/js/react-dropzone/ &lt;span style=&#34;color:#ae81ff&#34;&gt;\
 &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    mkdir -p &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/js &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/css &lt;span style=&#34;color:#ae81ff&#34;&gt;\
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;clean-and-build&#34;&gt;Clean And Build&lt;/h4&gt;
-&lt;p&gt;The &lt;code&gt;build&lt;/code&gt; step compiles and releases a new set of CSS and javascript. For the example below, we&#39;re compiling LESS to CSS and JSX to vanilla JS. As the name implies, &lt;code&gt;clean&lt;/code&gt; removes files generated during build.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;build&lt;/code&gt; step compiles and releases a new set of CSS and javascript. For the example below, we&amp;rsquo;re compiling LESS to CSS and JSX to vanilla JS. As the name implies, &lt;code&gt;clean&lt;/code&gt; removes files generated during build.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;assetsDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/assets
 buildDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/public
 
@@ -751,7 +751,7 @@ build:
 clean:
     rm &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;watching-for-changes&#34;&gt;Watching For Changes&lt;/h4&gt;
-&lt;p&gt;Adding a &lt;strong&gt;&amp;ndash;watch&lt;/strong&gt; flag to the jsx command allows for automatic rebuild of JS resources when changed. Let&#39;s create a &lt;code&gt;watch&lt;/code&gt; target for it.&lt;/p&gt;
+&lt;p&gt;Adding a &lt;strong&gt;&amp;ndash;watch&lt;/strong&gt; flag to the jsx command allows for automatic rebuild of JS resources when changed. Let&amp;rsquo;s create a &lt;code&gt;watch&lt;/code&gt; target for it.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;watch:
     jsx --harmony --extension jsx --es6module --watch &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;assetsDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/jsx &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/js
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;putting-it-all-together&#34;&gt;Putting It All Together&lt;/h3&gt;
@@ -776,7 +776,7 @@ watch:
 clean:
     rm &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;. By assets, I&#39;m referring to: javascript, preprocessed css, fonts, third party dependencies, and anything else that will eventually become accessible to the public.&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;. By assets, I&amp;rsquo;m referring to: javascript, preprocessed css, fonts, third party dependencies, and anything else that will eventually become accessible to the public.&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;2&lt;!-- raw HTML omitted --&gt;. Macros are variables local to the makefile.&lt;/p&gt;
 </description>
     </item>
@@ -798,20 +798,20 @@ draft: false&lt;/h2&gt;
 &lt;p&gt;Originally posted way back in 2011 on &lt;a href=&#34;https://blogs.technet.microsoft.com/rhalbheer/2011/06/16/ten-immutable-laws-of-security-version-2-0/&#34;&gt;Microsoft Technet&lt;/a&gt;, here they are:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
-&lt;li&gt;If a bad guy can persuade you to run his program on your computer, it&#39;s not solely your computer anymore.&lt;/li&gt;
-&lt;li&gt;If a bad guy can alter the operating system on your computer, it&#39;s not your computer anymore.&lt;/li&gt;
-&lt;li&gt;If a bad guy has unrestricted physical access to your computer, it&#39;s not your computer anymore.&lt;/li&gt;
-&lt;li&gt;If you allow a bad guy to run active content in your website, it&#39;s not your website any more.&lt;/li&gt;
+&lt;li&gt;If a bad guy can persuade you to run his program on your computer, it&amp;rsquo;s not solely your computer anymore.&lt;/li&gt;
+&lt;li&gt;If a bad guy can alter the operating system on your computer, it&amp;rsquo;s not your computer anymore.&lt;/li&gt;
+&lt;li&gt;If a bad guy has unrestricted physical access to your computer, it&amp;rsquo;s not your computer anymore.&lt;/li&gt;
+&lt;li&gt;If you allow a bad guy to run active content in your website, it&amp;rsquo;s not your website any more.&lt;/li&gt;
 &lt;li&gt;Weak passwords trump strong security.&lt;/li&gt;
 &lt;li&gt;A computer is only as secure as the administrator is trustworthy.&lt;/li&gt;
 &lt;li&gt;Encrypted data is only as secure as its decryption key.&lt;/li&gt;
 &lt;li&gt;An out-of-date antimalware scanner is only marginally better than no scanner at all.&lt;/li&gt;
-&lt;li&gt;Absolute anonymity isn&#39;t practically achievable, online or offline.&lt;/li&gt;
+&lt;li&gt;Absolute anonymity isn&amp;rsquo;t practically achievable, online or offline.&lt;/li&gt;
 &lt;li&gt;Technology is not a panacea.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;an-observation-on-the-nature-of-laws&#34;&gt;An Observation On The Nature Of Laws&lt;/h3&gt;
-&lt;p&gt;First, let&#39;s acknowledge that these are laws. Not suggestions. Not rules. &lt;em&gt;Laws&lt;/em&gt;. And laws are differentiated from lesser impositions primarily by one characteristic. Namely, there are consequences for violations, including fines and jail time.&lt;/p&gt;
+&lt;p&gt;First, let&amp;rsquo;s acknowledge that these are laws. Not suggestions. Not rules. &lt;em&gt;Laws&lt;/em&gt;. And laws are differentiated from lesser impositions primarily by one characteristic. Namely, there are consequences for violations, including fines and jail time.&lt;/p&gt;
 &lt;p&gt;Of course, in the world of security, fines and jail time do not exist. However, unauthorized bank charges and credit lines are very real. And the hours spent on the phone disputing charges and closing fraudulently opened lines will never be reclaimed.&lt;/p&gt;
 &lt;h3 id=&#34;good-security-tips-age-well&#34;&gt;Good Security Tips Age Well&lt;/h3&gt;
 &lt;p&gt;The second important immediate observation is when this article was published. Two thousand and eleven. Seven years is about lifespan of the average Javascript framework, or about 50 startup years. That the laws are still just as relevant today as when they were written is a testament to their quality and timelessness.&lt;/p&gt;
@@ -823,7 +823,7 @@ draft: false&lt;/h2&gt;
 &lt;p&gt;Humans are really good at finding the easiest way to get a job done. We trust openly, we look for shortcuts, we leave things unlocked for convenient access. Something that worked yesterday, is expected to work the same tomorrow. Maintenance and investment is routinely deferred.&lt;/p&gt;
 &lt;p&gt;Simply put, humans are bad at security.&lt;/p&gt;
 &lt;h2 id=&#34;the-future-zero-trust&#34;&gt;The Future: Zero Trust&lt;/h2&gt;
-&lt;p&gt;That&#39;s why so many of these laws are critical of us humans and the implicit trust we put in each other. As the internet grows, our trust policy must evolve to meet its changing needs. Never trust, always verify. Every session requires authentication, every request requires authorization. Requests that originate and terminate within a private network are no exception.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s why so many of these laws are critical of us humans and the implicit trust we put in each other. As the internet grows, our trust policy must evolve to meet its changing needs. Never trust, always verify. Every session requires authentication, every request requires authorization. Requests that originate and terminate within a private network are no exception.&lt;/p&gt;
 &lt;p&gt;How can you improve? How can your company improve? Your profession?&lt;/p&gt;
 &lt;p&gt;As a profession, we have a lot of room to improve. We can start by remembering the lessons learned and compiled by those who came before us, and always striving to live up to the ideal of continuous improvement.&lt;/p&gt;
 </description>

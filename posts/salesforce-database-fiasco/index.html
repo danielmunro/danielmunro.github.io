@@ -74,7 +74,7 @@ if (!doNotTrack) {
 <p>How did Salesforce finally notice the misconfiguration? Did they have a horrified scramble after a puzzled customer reached out?</p>
 <p>If password hashes were leaked, it would be prudent to force password resets on users. Yet, no reporting or updates from Salesforce have mentioned as much.</p>
 <h3 id="data-integrity">Data Integrity</h3>
-<p>A detail that has been missing so far is whether, or to what extent, unauthorized access or modification happened to any affected databases. Hopefully, remediation includes rolling back databases to a known good state, which would at least ensure data integrity from before the incident. However due to the wording, and focus on &ldquo;restoring&rdquo; permissions and access, it's hard to know exactly how unauthorized access or modification is being handled.</p>
+<p>A detail that has been missing so far is whether, or to what extent, unauthorized access or modification happened to any affected databases. Hopefully, remediation includes rolling back databases to a known good state, which would at least ensure data integrity from before the incident. However due to the wording, and focus on &ldquo;restoring&rdquo; permissions and access, it&rsquo;s hard to know exactly how unauthorized access or modification is being handled.</p>
 <h3 id="root-cause">Root Cause</h3>
 <p>According to reports, a misconfigured deployment script ran, which modified all customer databases to allow read-write access to all users.</p>
 <p>What was the review process for this deployment? Was it approved?</p>
@@ -89,15 +89,15 @@ if (!doNotTrack) {
 <p>For the defects that do make it through to production, there are strategies which will help with response and recovery.</p>
 <h3 id="code-reviews">Code Reviews</h3>
 <p>Code reviews are an easy, low cost, high value process to add to the SDLC. In addition to catching defects, code reviews are an <em>excellent</em> way to share knowledge across an organization.</p>
-<p>Senior engineers get daily opportunities to mentor and coach their peers. It's also a great opportunity to ask questions, gather feedback, and improve implementation.</p>
+<p>Senior engineers get daily opportunities to mentor and coach their peers. It&rsquo;s also a great opportunity to ask questions, gather feedback, and improve implementation.</p>
 <h3 id="configuration-management">Configuration Management</h3>
 <p>Configuration management is critical to a few key defect-minimization strategies. Having fully automated deployment and rollback procedures almost requires some level of configuration management. Configuration versioning and secrets management are other important pieces to this puzzle.</p>
 <p><a href="https://www.terraform.io/">Terraform</a> by HashiCorp is one of many great options for configuration as code.</p>
-<p><a href="https://www.vaultproject.io/">Vault</a> (also by HashiCorp) is a secret management option which has a CLI, a web interface, and integrates natively with cloud providers. It's pretty intuitive and easy to use.</p>
+<p><a href="https://www.vaultproject.io/">Vault</a> (also by HashiCorp) is a secret management option which has a CLI, a web interface, and integrates natively with cloud providers. It&rsquo;s pretty intuitive and easy to use.</p>
 <h3 id="deployment-testing">Deployment Testing</h3>
 <p>Every deployment to production should be preceded by a deployment to a similar production-like environment. That environment should be monitored during and after deployment. It should be tested rigorously with smoke tests, UI tests, or a manual QA team.</p>
 <h3 id="phased-deployments">Phased Deployments</h3>
-<p>Deployments should roll across clusters or partitions in phases, with each phase being monitored against expectations. Rollbacks, particularly rollbacks of schema changes, are difficult to prepare for. If that's the case, backups need to be hot and ready to roll back to. The deployment should be scheduled for the lowest-use time of the week.</p>
+<p>Deployments should roll across clusters or partitions in phases, with each phase being monitored against expectations. Rollbacks, particularly rollbacks of schema changes, are difficult to prepare for. If that&rsquo;s the case, backups need to be hot and ready to roll back to. The deployment should be scheduled for the lowest-use time of the week.</p>
 <h3 id="incident-planning-disaster-recovery">Incident Planning, Disaster Recovery</h3>
 <p><img src="/images/dumpster-fire.jpg" alt=""></p>
 <blockquote>
