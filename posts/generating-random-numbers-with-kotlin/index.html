@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Generating Random Numbers With Kotlin</title>
+	
+	<meta name="description" content="Quick and easy random numbers in Kotlin.">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="Generating Random Numbers With Kotlin">
+	<meta itemprop="description" content="Quick and easy random numbers in Kotlin.">
+	<meta itemprop="image" content="">
+	
+	<meta name="og:title" content="Generating Random Numbers With Kotlin">
+	<meta name="og:description" content="Quick and easy random numbers in Kotlin.">
+	
+	<meta name="og:url" content="/posts/generating-random-numbers-with-kotlin/">
+	<meta name="og:site_name" content="Generating Random Numbers With Kotlin">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:tag" content="">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123776938-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body>
+
+<header>
+	
+	<a href="/" style="float: left;color:#ff3b30;">Dan Munro - Dev-Sec-Ops Engineer</a>
+	
+	&nbsp;&nbsp;<a href="/news/" style="color:#777;">News</a>&nbsp;&nbsp;<a href="/archives/" style="color:#777;">Archives</a>&nbsp;&nbsp;<a href="/recommendations/" style="color:#777;">Recommendations</a>
+	
+	<a href="/posts/index.xml" style="color:#777;float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+</header>
+
+
+<div class="content">
+  <h1>Generating Random Numbers With Kotlin</h1>
+  <aside></aside>
+  <p><p>Official Kotlin random API documentation: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/">HERE</a></p>
+<h2 id="generate-a-random-number-between-0-and-1">Generate a random number between 0 and 1:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">randomDouble</span>(): Double {
+    <span style="color:#66d9ef">return</span> Math.random()
+}
+</code></pre></div><h2 id="generate-a-random-number-within-a-range">Generate a random number within a range:</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"><span style="color:#66d9ef">fun</span> <span style="color:#a6e22e">randomWithinRange</span>(start: Int, stop: Int): Int {
+    <span style="color:#66d9ef">return</span> (start..stop).random()
+}
+</code></pre></div><h2 id="other-resources">Other resources</h2>
+<ul>
+<li><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/">Kotlin API docs</a></li>
+<li><a href="https://www.baeldung.com/kotlin-random-number">Baeldung</a></li>
+<li><a href="https://medium.com/@TheSomeshKumar/randoms-in-kotlin-3e8c4b46803">Somesh Kumar</a></li>
+</ul>
+</p>
+</div>
+
+
+  <p>Written on May 29, 2020.</p>
+
+
+<footer>
+</footer>
+</body>
+</html>

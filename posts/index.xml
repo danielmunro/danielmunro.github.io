@@ -5,10 +5,34 @@
     <description>Recent content in Posts on Dan Munro - Dev-Sec-Ops Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 26 May 2020 22:24:10 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 29 May 2020 08:21:47 -0700</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Generating Random Numbers With Kotlin</title>
+      <link>/posts/generating-random-numbers-with-kotlin/</link>
+      <pubDate>Fri, 29 May 2020 08:21:47 -0700</pubDate>
+      
+      <guid>/posts/generating-random-numbers-with-kotlin/</guid>
+      <description>&lt;p&gt;Official Kotlin random API documentation: &lt;a href=&#34;https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/&#34;&gt;HERE&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;generate-a-random-number-between-0-and-1&#34;&gt;Generate a random number between 0 and 1:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;randomDouble&lt;/span&gt;(): Double {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; Math.random()
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;generate-a-random-number-within-a-range&#34;&gt;Generate a random number within a range:&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;randomWithinRange&lt;/span&gt;(start: Int, stop: Int): Int {
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (start..stop).random()
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;other-resources&#34;&gt;Other resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/&#34;&gt;Kotlin API docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.baeldung.com/kotlin-random-number&#34;&gt;Baeldung&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@TheSomeshKumar/randoms-in-kotlin-3e8c4b46803&#34;&gt;Somesh Kumar&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Hacking the Interview: Algorithms and Big O</title>

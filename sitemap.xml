@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/hacking-the-interview-algorithms-and-big-o/</loc>
-    <lastmod>2020-05-26T22:24:10-07:00</lastmod>
+    <loc>/posts/generating-random-numbers-with-kotlin/</loc>
+    <lastmod>2020-05-29T08:21:47-07:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
+    <lastmod>2020-05-29T08:21:47-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/hacking-the-interview-algorithms-and-big-o/</loc>
     <lastmod>2020-05-26T22:24:10-07:00</lastmod>
   </url>
   
