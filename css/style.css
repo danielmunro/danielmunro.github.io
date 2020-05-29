@@ -121,11 +121,13 @@ h1 {
 
 h2 {
 	margin-top: 2rem;
+    margin-bottom: 1rem;
 	font-size: 1.4em;
 }
 
 h3 {
 	margin-top: 1.75rem;
+    margin-bottom: .75rem;
 	font-size: 1.2em;
 }
 
