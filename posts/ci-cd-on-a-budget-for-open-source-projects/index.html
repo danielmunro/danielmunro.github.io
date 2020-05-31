@@ -135,8 +135,8 @@ jacocoTestReport<span style="color:#f92672">.</span><span style="color:#a6e22e">
         <span style="color:#66d9ef">uses</span>: HurricanKai/Publish-Docker-Github-Action@master
         <span style="color:#66d9ef">if</span>: contains(github.ref, <span style="color:#e6db74">&#39;refs/tags/v&#39;</span>)
         <span style="color:#66d9ef">with</span>:
-          <span style="color:#66d9ef">name</span>: quay.io/dmunro/kotlinmud
-          <span style="color:#66d9ef">username</span>: ${{ secrets.DOCKER_USERNAME }}
+          <span style="color:#66d9ef">name</span>: &lt;&lt; DOCKER REPOSITORY URL &gt;<span style="color:#e6db74">&gt;
+</span><span style="color:#e6db74">          username: ${{ secrets.DOCKER_USERNAME }}</span>
           <span style="color:#66d9ef">password</span>: ${{ secrets.DOCKER_PASSWORD }}
           <span style="color:#66d9ef">registry</span>: quay.io
           <span style="color:#66d9ef">tagging</span>: <span style="color:#66d9ef">true</span>
@@ -152,7 +152,7 @@ jacocoTestReport<span style="color:#f92672">.</span><span style="color:#a6e22e">
 </span><span style="color:#e6db74">            systemctl stop &lt;&lt; MY SERVICE &gt;&gt;</span>
             /snap/bin/docker system prune -af
             systemctl start &lt;&lt; MY SERVICE &gt;&gt;
-</code></pre></div><p>Add relevant secrets to the GitHub:</p>
+</code></pre></div><p>With the above snippet, add relevant secrets to the GitHub:</p>
 <pre><code># if using Quay
 DOCKER_USERNAME=
 DOCKER_PASSWORD=
@@ -162,7 +162,8 @@ HOST=
 USERNAME=
 PORT=
 SSHKEY=
-</code></pre></p>
+</code></pre><p>Also replace <code>&lt;&lt; PLACEHOLDER &gt;&gt;</code> values with actual values, and your project should be good to go.</p>
+</p>
 </div>
 
 

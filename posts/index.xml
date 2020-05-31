@@ -99,8 +99,8 @@ jacocoTestReport&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span
         &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: HurricanKai/Publish-Docker-Github-Action@master
         &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;: contains(github.ref, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;refs/tags/v&amp;#39;&lt;/span&gt;)
         &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: quay.io/dmunro/kotlinmud
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;username&lt;/span&gt;: ${{ secrets.DOCKER_USERNAME }}
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: &amp;lt;&amp;lt; DOCKER REPOSITORY URL &amp;gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          username: ${{ secrets.DOCKER_USERNAME }}&lt;/span&gt;
           &lt;span style=&#34;color:#66d9ef&#34;&gt;password&lt;/span&gt;: ${{ secrets.DOCKER_PASSWORD }}
           &lt;span style=&#34;color:#66d9ef&#34;&gt;registry&lt;/span&gt;: quay.io
           &lt;span style=&#34;color:#66d9ef&#34;&gt;tagging&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
@@ -116,7 +116,7 @@ jacocoTestReport&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            systemctl stop &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;&lt;/span&gt;
             /snap/bin/docker system prune -af
             systemctl start &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add relevant secrets to the GitHub:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With the above snippet, add relevant secrets to the GitHub:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# if using Quay
 DOCKER_USERNAME=
 DOCKER_PASSWORD=
@@ -126,7 +126,8 @@ HOST=
 USERNAME=
 PORT=
 SSHKEY=
-&lt;/code&gt;&lt;/pre&gt;</description>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Also replace &lt;code&gt;&amp;lt;&amp;lt; PLACEHOLDER &amp;gt;&amp;gt;&lt;/code&gt; values with actual values, and your project should be good to go.&lt;/p&gt;
+</description>
     </item>
     
     <item>
