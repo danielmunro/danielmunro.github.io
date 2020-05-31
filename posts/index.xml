@@ -11,13 +11,23 @@
     
     
     <item>
-      <title>CI/CD With Gradle, GitHub Actions, Quay, and SonarCloud</title>
-      <link>/posts/ci-cd-with-gradle-github-actions-quay-sonarcloud/</link>
+      <title>CI/CD On A Budget For Open Source Projects</title>
+      <link>/posts/ci-cd-on-a-budget-for-open-source-projects/</link>
       <pubDate>Sat, 30 May 2020 22:06:03 -0700</pubDate>
       
-      <guid>/posts/ci-cd-with-gradle-github-actions-quay-sonarcloud/</guid>
-      <description>&lt;p&gt;I love to learn. I also love to build and automate. Here is an example pipeline that is completely free to operate for open source projects.&lt;/p&gt;
-&lt;p&gt;TL;DR - an &lt;a href=&#34;https://github.com/danielmunro/kotlinmud&#34;&gt;example project&lt;/a&gt; with all the moving components hooked up.&lt;/p&gt;
+      <guid>/posts/ci-cd-on-a-budget-for-open-source-projects/</guid>
+      <description>&lt;p&gt;TL;DR - an &lt;a href=&#34;https://github.com/danielmunro/kotlinmud&#34;&gt;example project&lt;/a&gt; with all the moving components hooked up.&lt;/p&gt;
+&lt;p&gt;I love to learn. I also love to build and automate. These are activities that provide natural, intrinsic joy for me. Writing, on the other hand, is a skill to be consciously practiced. So, to that end, I&amp;rsquo;m documenting the relevant parts for setting up a build and deploy pipeline using the following technologies:&lt;/p&gt;
+&lt;h2 id=&#34;the-tech&#34;&gt;The Tech&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub - code repository, CI service&lt;/li&gt;
+&lt;li&gt;Gradle - test, build environment&lt;/li&gt;
+&lt;li&gt;Quay - docker image repository&lt;/li&gt;
+&lt;li&gt;SonarCloud - code quality, coverage, metrics&lt;/li&gt;
+&lt;li&gt;Digital Ocean - example service running in a droplet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;One of the biggest benefits to the above pipeline is cost. For open source projects, everything except the droplet in Digital Ocean is completely free.&lt;/p&gt;
+&lt;p&gt;Digital Ocean starts at a $5/mo buy in.&lt;/p&gt;
 &lt;h2 id=&#34;setting-up-gradle&#34;&gt;Setting up Gradle&lt;/h2&gt;
 &lt;p&gt;Below are portions of a &lt;code&gt;build.gradle&lt;/code&gt; configuration which add &lt;a href=&#34;https://www.jacoco.org/jacoco/trunk/index.html&#34;&gt;JaCoCo&lt;/a&gt; support, and &lt;a href=&#34;https://www.sonarqube.org/&#34;&gt;SonarQube&lt;/a&gt; configured to send reports to a &lt;a href=&#34;https://sonarcloud.io&#34;&gt;SonarCloud&lt;/a&gt; project.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;plugins &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -59,14 +69,14 @@ jacocoTestReport&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span
     subprojects&lt;span style=&#34;color:#f92672&#34;&gt;*.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github-actions&#34;&gt;GitHub Actions&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/features/actions&#34;&gt;GitHub Actions&lt;/a&gt; are a new feature of GitHub, which allow automating workflows. The example below does a few things:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/features/actions&#34;&gt;GitHub Actions&lt;/a&gt; are a relatively new feature of GitHub, which allow automating workflows. The example workflow below is configured to run whenever a commit is pushed (line two, &lt;code&gt;on: push&lt;/code&gt;). The steps roughly follow:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;uses an Ubuntu image&lt;/li&gt;
-&lt;li&gt;checks out the git repository&lt;/li&gt;
-&lt;li&gt;runs tests and reports coverage&lt;/li&gt;
-&lt;li&gt;pushes to SonarCloud&lt;/li&gt;
-&lt;li&gt;(if tagged) push a docker image to &lt;a href=&#34;https://quay.io/&#34;&gt;Quay&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;(if tagged) restart a systemd service in &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;Digital Ocean&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;download an Ubuntu image&lt;/li&gt;
+&lt;li&gt;check out the git repository attached to this action&lt;/li&gt;
+&lt;li&gt;run tests and report coverage&lt;/li&gt;
+&lt;li&gt;push to SonarCloud&lt;/li&gt;
+&lt;li&gt;(if commit is tagged) push a docker image to &lt;a href=&#34;https://quay.io/&#34;&gt;Quay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(if commit is tagged) restart a systemd service in a &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;Digital Ocean&lt;/a&gt; droplet&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Run Gradle Tests
 &lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;: push
@@ -103,9 +113,9 @@ jacocoTestReport&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span
           &lt;span style=&#34;color:#66d9ef&#34;&gt;PORT&lt;/span&gt;: ${{ secrets.PORT }}
           &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt;: ${{ secrets.SSHKEY }}
           &lt;span style=&#34;color:#66d9ef&#34;&gt;script&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;|
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            systemctl stop kotlinmud&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            systemctl stop &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;&lt;/span&gt;
             /snap/bin/docker system prune -af
-            systemctl start kotlinmud
+            systemctl start &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add relevant secrets to the GitHub:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# if using Quay
 DOCKER_USERNAME=
