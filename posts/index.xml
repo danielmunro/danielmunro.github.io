@@ -5,10 +5,119 @@
     <description>Recent content in Posts on Dan Munro - Dev-Sec-Ops Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 May 2020 08:21:47 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2020 22:06:03 -0700</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CI/CD With Gradle, GitHub Actions, Quay, and SonarCloud</title>
+      <link>/posts/ci-cd-with-gradle-github-actions-quay-sonarcloud/</link>
+      <pubDate>Sat, 30 May 2020 22:06:03 -0700</pubDate>
+      
+      <guid>/posts/ci-cd-with-gradle-github-actions-quay-sonarcloud/</guid>
+      <description>&lt;p&gt;I love to learn. I also love to build and automate. Here is an example pipeline that is completely free to operate for open source projects.&lt;/p&gt;
+&lt;p&gt;TL;DR - an &lt;a href=&#34;https://github.com/danielmunro/kotlinmud&#34;&gt;example project&lt;/a&gt; with all the moving components hooked up.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-gradle&#34;&gt;Setting up Gradle&lt;/h2&gt;
+&lt;p&gt;Below are portions of a &lt;code&gt;build.gradle&lt;/code&gt; configuration which add &lt;a href=&#34;https://www.jacoco.org/jacoco/trunk/index.html&#34;&gt;JaCoCo&lt;/a&gt; support, and &lt;a href=&#34;https://www.sonarqube.org/&#34;&gt;SonarQube&lt;/a&gt; configured to send reports to a &lt;a href=&#34;https://sonarcloud.io&#34;&gt;SonarCloud&lt;/a&gt; project.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;plugins &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    id &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;jacoco&amp;#39;&lt;/span&gt;
+
+    id &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org.sonarqube&amp;#39;&lt;/span&gt; version &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2.8&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+apply plugin: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;jacoco&amp;#39;&lt;/span&gt;
+
+jacoco &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    toolVersion &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.8.5&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+subprojects &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    test&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;useTestNG&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+jacocoTestReport &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    reports &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        xml&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;enabled&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; env &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getenv&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
+
+sonarqube &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    properties &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        property &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sonar.projectKey&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;&amp;lt; SONARCLOUD PROJECT KEY &amp;gt;&amp;gt;&amp;#34;&lt;/span&gt;
+        property &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sonar.organization&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;&amp;lt; SONARCLOUD ORGANIZATION &amp;gt;&amp;gt;&amp;#34;&lt;/span&gt;
+        property &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sonar.host.url&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://sonarcloud.io&amp;#34;&lt;/span&gt;
+        property &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sonar.login&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; env&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SONARCLOUD&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+        property &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sonar.java.coveragePlugin&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jacoco&amp;#34;&lt;/span&gt;
+        property &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sonar.coverage.jacoco.xmlReportPaths&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; file&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;${rootProject.projectDir}/build/reports/jacoco/test/jacocoTestReport.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+jacocoTestReport&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;dependsOn&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    subprojects&lt;span style=&#34;color:#f92672&#34;&gt;*.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;test&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;github-actions&#34;&gt;GitHub Actions&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/features/actions&#34;&gt;GitHub Actions&lt;/a&gt; are a new feature of GitHub, which allow automating workflows. The example below does a few things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;uses an Ubuntu image&lt;/li&gt;
+&lt;li&gt;checks out the git repository&lt;/li&gt;
+&lt;li&gt;runs tests and reports coverage&lt;/li&gt;
+&lt;li&gt;pushes to SonarCloud&lt;/li&gt;
+&lt;li&gt;(if tagged) push a docker image to &lt;a href=&#34;https://quay.io/&#34;&gt;Quay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;(if tagged) restart a systemd service in &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;Digital Ocean&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Run Gradle Tests
+&lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;: push
+&lt;span style=&#34;color:#66d9ef&#34;&gt;jobs&lt;/span&gt;:
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;gradle&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;runs-on&lt;/span&gt;: ubuntu-latest
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;steps&lt;/span&gt;:
+      - &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: actions/checkout@v1
+      - &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: actions/setup-java@v1
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;java-version&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;
+      - &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Gradle Tests
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: eskatos/gradle-command-action@v1
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;env&lt;/span&gt;:
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;: ci
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;GITHUB_TOKEN&lt;/span&gt;: ${{ secrets.GITHUB_TOKEN }}
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;arguments&lt;/span&gt;: clean test jacocoTestReport sonarqube -Dsonar.login=${{ secrets.SONARCLOUD }}
+      - &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Publish to Quay
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: HurricanKai/Publish-Docker-Github-Action@master
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;: contains(github.ref, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;refs/tags/v&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: quay.io/dmunro/kotlinmud
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;username&lt;/span&gt;: ${{ secrets.DOCKER_USERNAME }}
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;password&lt;/span&gt;: ${{ secrets.DOCKER_PASSWORD }}
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;registry&lt;/span&gt;: quay.io
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;tagging&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+      - &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Restart service
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: appleboy/ssh-action@master
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;: contains(github.ref, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;refs/tags/v&amp;#39;&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;host&lt;/span&gt;: ${{ secrets.HOST }}
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;USERNAME&lt;/span&gt;: ${{ secrets.USERNAME }}
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;PORT&lt;/span&gt;: ${{ secrets.PORT }}
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt;: ${{ secrets.SSHKEY }}
+          &lt;span style=&#34;color:#66d9ef&#34;&gt;script&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;|
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            systemctl stop kotlinmud&lt;/span&gt;
+            /snap/bin/docker system prune -af
+            systemctl start kotlinmud
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Add relevant secrets to the GitHub:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# if using Quay
+DOCKER_USERNAME=
+DOCKER_PASSWORD=
+
+# if deploying to Digital Ocean
+HOST=
+USERNAME=
+PORT=
+SSHKEY=
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
     
     <item>
       <title>Generating Random Numbers With Kotlin</title>

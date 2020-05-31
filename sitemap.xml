@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/generating-random-numbers-with-kotlin/</loc>
-    <lastmod>2020-05-29T08:21:47-07:00</lastmod>
+    <loc>/posts/ci-cd-with-gradle-github-actions-quay-sonarcloud/</loc>
+    <lastmod>2020-05-30T22:06:03-07:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/</loc>
+    <lastmod>2020-05-30T22:06:03-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/generating-random-numbers-with-kotlin/</loc>
     <lastmod>2020-05-29T08:21:47-07:00</lastmod>
   </url>
   
