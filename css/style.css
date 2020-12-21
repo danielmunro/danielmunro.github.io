@@ -257,3 +257,10 @@ blockquote ol li {
 blockquote p {
 	display: inline;
 }
+
+img[src*="#thumbnail"] {
+    width:150px;
+    padding-right: 10px;
+    float: left;
+    clear: both;
+}
