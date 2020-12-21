@@ -20,9 +20,9 @@
 I am working on an application. The project is far enough along, however at its current trajectory, I don&amp;rsquo;t think I can do all the development myself.&lt;/p&gt;
 &lt;h2 id=&#34;the-business-case&#34;&gt;The Business Case&lt;/h2&gt;
 &lt;p&gt;The application is designed to take on &lt;a href=&#34;https://www.meetup.com/&#34;&gt;Meetup.com&lt;/a&gt;. In addition to providing a more transparent long term pricing structure, the project aims to bring a community focus back to event organizing and planning.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/screen2.png#thumbnail&#34; alt=&#34;Screenshot 2&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;technology&#34;&gt;Technology&lt;/h2&gt;
 &lt;p&gt;The frontend is a react native mobile app, built and packaged using &lt;a href=&#34;https://expo.io/&#34;&gt;expo.io&lt;/a&gt;. The backend is a python-flask server, implemented using the &lt;a href=&#34;https://openapi.tools/&#34;&gt;OpenAPI Toolchain&lt;/a&gt;, running in a lambda on AWS. Deployment is managed by the &lt;a href=&#34;https://www.serverless.com/&#34;&gt;Serverless framework&lt;/a&gt;. The application uses Postgres, deployed as a serverless RDS cluster.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/images/screen2.png#thumbnail&#34; alt=&#34;Screenshot 2&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;missing-knowledge&#34;&gt;Missing Knowledge&lt;/h2&gt;
 &lt;p&gt;The application lacks an expert focus on user experience. Additionally, usability and accessibility must be audited and improved before general availability. I am very interested in improving my own understanding in these areas.&lt;/p&gt;
 &lt;h2 id=&#34;seeking-collaborators&#34;&gt;Seeking Collaborators&lt;/h2&gt;
