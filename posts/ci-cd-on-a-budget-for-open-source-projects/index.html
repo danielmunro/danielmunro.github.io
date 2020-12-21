@@ -114,44 +114,44 @@ jacocoTestReport<span style="color:#f92672">.</span><span style="color:#a6e22e">
 <li>(if commit is tagged) push a docker image to <a href="https://quay.io/">Quay</a></li>
 <li>(if commit is tagged) restart a systemd service in a <a href="https://www.digitalocean.com/">Digital Ocean</a> droplet</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">name</span>: Run Gradle Tests
-<span style="color:#66d9ef">on</span>: push
-<span style="color:#66d9ef">jobs</span>:
-  <span style="color:#66d9ef">gradle</span>:
-    <span style="color:#66d9ef">runs-on</span>: ubuntu-latest
-    <span style="color:#66d9ef">steps</span>:
-      - <span style="color:#66d9ef">uses</span>: actions/checkout@v1
-      - <span style="color:#66d9ef">uses</span>: actions/setup-java@v1
-        <span style="color:#66d9ef">with</span>:
-          <span style="color:#66d9ef">java-version</span>: <span style="color:#ae81ff">11</span>
-      - <span style="color:#66d9ef">name</span>: Gradle Tests
-        <span style="color:#66d9ef">uses</span>: eskatos/gradle-command-action@v1
-        <span style="color:#66d9ef">env</span>:
-          <span style="color:#66d9ef">ENV</span>: ci
-          <span style="color:#66d9ef">GITHUB_TOKEN</span>: ${{ secrets.GITHUB_TOKEN }}
-        <span style="color:#66d9ef">with</span>:
-          <span style="color:#66d9ef">arguments</span>: clean test jacocoTestReport sonarqube -Dsonar.login=${{ secrets.SONARCLOUD }}
-      - <span style="color:#66d9ef">name</span>: Publish to Quay
-        <span style="color:#66d9ef">uses</span>: HurricanKai/Publish-Docker-Github-Action@master
-        <span style="color:#66d9ef">if</span>: contains(github.ref, <span style="color:#e6db74">&#39;refs/tags/v&#39;</span>)
-        <span style="color:#66d9ef">with</span>:
-          <span style="color:#66d9ef">name</span>: &lt;&lt; DOCKER REPOSITORY URL &gt;<span style="color:#e6db74">&gt;
-</span><span style="color:#e6db74">          username: ${{ secrets.DOCKER_USERNAME }}</span>
-          <span style="color:#66d9ef">password</span>: ${{ secrets.DOCKER_PASSWORD }}
-          <span style="color:#66d9ef">registry</span>: quay.io
-          <span style="color:#66d9ef">tagging</span>: <span style="color:#66d9ef">true</span>
-      - <span style="color:#66d9ef">name</span>: Restart service
-        <span style="color:#66d9ef">uses</span>: appleboy/ssh-action@master
-        <span style="color:#66d9ef">if</span>: contains(github.ref, <span style="color:#e6db74">&#39;refs/tags/v&#39;</span>)
-        <span style="color:#66d9ef">with</span>:
-          <span style="color:#66d9ef">host</span>: ${{ secrets.HOST }}
-          <span style="color:#66d9ef">USERNAME</span>: ${{ secrets.USERNAME }}
-          <span style="color:#66d9ef">PORT</span>: ${{ secrets.PORT }}
-          <span style="color:#66d9ef">KEY</span>: ${{ secrets.SSHKEY }}
-          <span style="color:#66d9ef">script</span>: <span style="color:#e6db74">|
-</span><span style="color:#e6db74">            systemctl stop &lt;&lt; MY SERVICE &gt;&gt;</span>
-            /snap/bin/docker system prune -af
-            systemctl start &lt;&lt; MY SERVICE &gt;&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run Gradle Tests</span>
+<span style="color:#f92672">on</span>: <span style="color:#ae81ff">push</span>
+<span style="color:#f92672">jobs</span>:
+  <span style="color:#f92672">gradle</span>:
+    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+    <span style="color:#f92672">steps</span>:
+      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v1</span>
+      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/setup-java@v1</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">java-version</span>: <span style="color:#ae81ff">11</span>
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Gradle Tests</span>
+        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">eskatos/gradle-command-action@v1</span>
+        <span style="color:#f92672">env</span>:
+          <span style="color:#f92672">ENV</span>: <span style="color:#ae81ff">ci</span>
+          <span style="color:#f92672">GITHUB_TOKEN</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">arguments</span>: <span style="color:#ae81ff">clean test jacocoTestReport sonarqube -Dsonar.login=${{ secrets.SONARCLOUD }}</span>
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Publish to Quay</span>
+        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">HurricanKai/Publish-Docker-Github-Action@master</span>
+        <span style="color:#f92672">if</span>: <span style="color:#ae81ff">contains(github.ref, &#39;refs/tags/v&#39;)</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">name</span>: <span style="color:#ae81ff">&lt;&lt; DOCKER REPOSITORY URL &gt;&gt;</span>
+          <span style="color:#f92672">username</span>: <span style="color:#ae81ff">${{ secrets.DOCKER_USERNAME }}</span>
+          <span style="color:#f92672">password</span>: <span style="color:#ae81ff">${{ secrets.DOCKER_PASSWORD }}</span>
+          <span style="color:#f92672">registry</span>: <span style="color:#ae81ff">quay.io</span>
+          <span style="color:#f92672">tagging</span>: <span style="color:#66d9ef">true</span>
+      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Restart service</span>
+        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">appleboy/ssh-action@master</span>
+        <span style="color:#f92672">if</span>: <span style="color:#ae81ff">contains(github.ref, &#39;refs/tags/v&#39;)</span>
+        <span style="color:#f92672">with</span>:
+          <span style="color:#f92672">host</span>: <span style="color:#ae81ff">${{ secrets.HOST }}</span>
+          <span style="color:#f92672">USERNAME</span>: <span style="color:#ae81ff">${{ secrets.USERNAME }}</span>
+          <span style="color:#f92672">PORT</span>: <span style="color:#ae81ff">${{ secrets.PORT }}</span>
+          <span style="color:#f92672">KEY</span>: <span style="color:#ae81ff">${{ secrets.SSHKEY }}</span>
+          <span style="color:#f92672">script</span>: |<span style="color:#e6db74">
+</span><span style="color:#e6db74">            systemctl stop &lt;&lt; MY SERVICE &gt;&gt;
+</span><span style="color:#e6db74">            /snap/bin/docker system prune -af
+</span><span style="color:#e6db74">            systemctl start &lt;&lt; MY SERVICE &gt;&gt;</span>            
 </code></pre></div><p>With the above snippet, add relevant secrets to the GitHub:</p>
 <pre><code># if using Quay
 DOCKER_USERNAME=

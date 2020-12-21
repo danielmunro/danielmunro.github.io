@@ -5,7 +5,7 @@
     <description>Recent content in About Me on Dan Munro - Dev-Sec-Ops Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jun 2020 10:35:13 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 20 Dec 2020 19:20:07 -0800</lastBuildDate>
     
         <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +13,7 @@
     <item>
       <title>Posts</title>
       <link>/posts/</link>
-      <pubDate>Sat, 27 Jun 2020 10:35:13 -0700</pubDate>
+      <pubDate>Sun, 20 Dec 2020 19:20:07 -0800</pubDate>
       
       <guid>/posts/</guid>
       <description></description>
@@ -84,7 +84,7 @@ updated. New vulnerabilities are disclosed daily, putting engineering and securi
 the defensive. Patches are responsive in nature. Since this feedback loop means we are never completely secure, we must choose the most pragmatic option: apply patches as soon as they are available.&lt;/p&gt;
 &lt;h3 id=&#34;password-manager&#34;&gt;Password Manager&lt;/h3&gt;
 &lt;p&gt;Recommendation: &lt;a href=&#34;https://lastpass.com/&#34;&gt;LastPass&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;With a browser plugin, mobile apps, teams, and enterprise support, LastPass has a comprehensive suite of offerings for a range of needs. Individuals and companies alike can derive value from these offerings. &lt;a href=&#34;https://blog.lastpass.com/&#34;&gt;LastPass&amp;rsquo; blog&lt;/a&gt; has a lot of good content, both for current events and technical information.&lt;/p&gt;
+&lt;p&gt;With a browser plugin, mobile apps, teams, and enterprise support, LastPass has a comprehensive suite of offerings for a range of needs. Individuals and companies alike can derive value from these offerings. &lt;a href=&#34;https://blog.lastpass.com/&#34;&gt;LastPass&#39; blog&lt;/a&gt; has a lot of good content, both for current events and technical information.&lt;/p&gt;
 &lt;p&gt;Drawbacks include that LastPass is proprietary. Important things like pricing, ongoing service and support, code quality, and organization policies are out of scope for users to know or influence.&lt;/p&gt;
 &lt;p&gt;The user experience can be unintuitive at times, but serves its purpose.&lt;/p&gt;
 &lt;h3 id=&#34;browser-extensions&#34;&gt;Browser Extensions&lt;/h3&gt;

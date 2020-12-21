@@ -5,10 +5,28 @@
     <description>Recent content in Posts on Dan Munro - Dev-Sec-Ops Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jun 2020 10:35:13 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 20 Dec 2020 19:20:07 -0800</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Introducing Eventzen</title>
+      <link>/posts/introducing-eventzen/</link>
+      <pubDate>Sun, 20 Dec 2020 19:20:07 -0800</pubDate>
+      
+      <guid>/posts/introducing-eventzen/</guid>
+      <description>&lt;p&gt;I am working on an application. The project is far enough along, however at its current trajectory, I don&amp;rsquo;t think I can do all the development myself.&lt;/p&gt;
+&lt;h2 id=&#34;the-business-case&#34;&gt;The Business Case&lt;/h2&gt;
+&lt;p&gt;The application is designed to take on &lt;a href=&#34;https://www.meetup.com/&#34;&gt;Meetup.com&lt;/a&gt;. In addition to providing a more transparent long term pricing structure, the project aims to bring a community focus back to event organizing and planning.&lt;/p&gt;
+&lt;h2 id=&#34;technology&#34;&gt;Technology&lt;/h2&gt;
+&lt;p&gt;The frontend is a react native mobile app, built and packaged using &lt;a href=&#34;https://expo.io/&#34;&gt;expo.io&lt;/a&gt;. The backend is a python-flask server, implemented using the &lt;a href=&#34;https://openapi.tools/&#34;&gt;OpenAPI Toolchain&lt;/a&gt;, running in a lambda on AWS. Deployment is managed by the &lt;a href=&#34;https://www.serverless.com/&#34;&gt;Serverless framework&lt;/a&gt;. The application uses Postgres, deployed as a serverless RDS cluster.&lt;/p&gt;
+&lt;h2 id=&#34;missing-knowledge&#34;&gt;Missing Knowledge&lt;/h2&gt;
+&lt;p&gt;The application lacks an expert focus on user experience. Additionally, usability and accessibility must be audited and improved before general availability. I am very interested in improving my own understanding in these areas.&lt;/p&gt;
+&lt;h2 id=&#34;seeking-collaborators&#34;&gt;Seeking Collaborators&lt;/h2&gt;
+&lt;p&gt;If working on this project sounds like fun, please reach out to me. My email address is dan at danmunro dot com. No programming experience or knowledge needed. I&amp;rsquo;m happy to mentor. I&amp;rsquo;m happy to exchange tutoring. I can pay, a little. I&amp;rsquo;m happy to grant equity. Let&amp;rsquo;s chat.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Retro of a Startup Journey</title>
@@ -148,44 +166,44 @@ jacocoTestReport&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span
 &lt;li&gt;(if commit is tagged) push a docker image to &lt;a href=&#34;https://quay.io/&#34;&gt;Quay&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;(if commit is tagged) restart a systemd service in a &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;Digital Ocean&lt;/a&gt; droplet&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Run Gradle Tests
-&lt;span style=&#34;color:#66d9ef&#34;&gt;on&lt;/span&gt;: push
-&lt;span style=&#34;color:#66d9ef&#34;&gt;jobs&lt;/span&gt;:
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;gradle&lt;/span&gt;:
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;runs-on&lt;/span&gt;: ubuntu-latest
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;steps&lt;/span&gt;:
-      - &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: actions/checkout@v1
-      - &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: actions/setup-java@v1
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;java-version&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;
-      - &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Gradle Tests
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: eskatos/gradle-command-action@v1
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;env&lt;/span&gt;:
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;ENV&lt;/span&gt;: ci
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;GITHUB_TOKEN&lt;/span&gt;: ${{ secrets.GITHUB_TOKEN }}
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;arguments&lt;/span&gt;: clean test jacocoTestReport sonarqube -Dsonar.login=${{ secrets.SONARCLOUD }}
-      - &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Publish to Quay
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: HurricanKai/Publish-Docker-Github-Action@master
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;: contains(github.ref, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;refs/tags/v&amp;#39;&lt;/span&gt;)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: &amp;lt;&amp;lt; DOCKER REPOSITORY URL &amp;gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;gt;
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          username: ${{ secrets.DOCKER_USERNAME }}&lt;/span&gt;
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;password&lt;/span&gt;: ${{ secrets.DOCKER_PASSWORD }}
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;registry&lt;/span&gt;: quay.io
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;tagging&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-      - &lt;span style=&#34;color:#66d9ef&#34;&gt;name&lt;/span&gt;: Restart service
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;uses&lt;/span&gt;: appleboy/ssh-action@master
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;: contains(github.ref, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;refs/tags/v&amp;#39;&lt;/span&gt;)
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt;:
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;host&lt;/span&gt;: ${{ secrets.HOST }}
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;USERNAME&lt;/span&gt;: ${{ secrets.USERNAME }}
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;PORT&lt;/span&gt;: ${{ secrets.PORT }}
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt;: ${{ secrets.SSHKEY }}
-          &lt;span style=&#34;color:#66d9ef&#34;&gt;script&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;|
-&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            systemctl stop &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;&lt;/span&gt;
-            /snap/bin/docker system prune -af
-            systemctl start &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Run Gradle Tests&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;push&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;gradle&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;runs-on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ubuntu-latest&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;steps&lt;/span&gt;:
+      - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/checkout@v1&lt;/span&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;actions/setup-java@v1&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;java-version&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;11&lt;/span&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Gradle Tests&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;eskatos/gradle-command-action@v1&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;env&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;ENV&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ci&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;GITHUB_TOKEN&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.GITHUB_TOKEN }}&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;arguments&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;clean test jacocoTestReport sonarqube -Dsonar.login=${{ secrets.SONARCLOUD }}&lt;/span&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Publish to Quay&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;HurricanKai/Publish-Docker-Github-Action@master&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;if&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;contains(github.ref, &amp;#39;refs/tags/v&amp;#39;)&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;&amp;lt;&amp;lt; DOCKER REPOSITORY URL &amp;gt;&amp;gt;&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;username&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.DOCKER_USERNAME }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;password&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.DOCKER_PASSWORD }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;registry&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;quay.io&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;tagging&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+      - &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Restart service&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;uses&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;appleboy/ssh-action@master&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;if&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;contains(github.ref, &amp;#39;refs/tags/v&amp;#39;)&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;with&lt;/span&gt;:
+          &lt;span style=&#34;color:#f92672&#34;&gt;host&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.HOST }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;USERNAME&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.USERNAME }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;PORT&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.PORT }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;KEY&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;${{ secrets.SSHKEY }}&lt;/span&gt;
+          &lt;span style=&#34;color:#f92672&#34;&gt;script&lt;/span&gt;: |&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            systemctl stop &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            /snap/bin/docker system prune -af
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            systemctl start &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;&lt;/span&gt;            
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With the above snippet, add relevant secrets to the GitHub:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# if using Quay
 DOCKER_USERNAME=
@@ -213,7 +231,7 @@ SSHKEY=
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;generate-a-random-number-within-a-range&#34;&gt;Generate a random number within a range:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;randomWithinRange&lt;/span&gt;(start: Int, stop: Int): Int {
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (start..stop).random()
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (start&lt;span style=&#34;color:#f92672&#34;&gt;..&lt;/span&gt;stop).random()
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;other-resources&#34;&gt;Other resources&lt;/h2&gt;
 &lt;ul&gt;
