@@ -1,177 +1,107 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/</loc>
     <lastmod>2020-12-20T19:20:07-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/introducing-eventzen/</loc>
     <lastmod>2020-12-20T19:20:07-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/</loc>
     <lastmod>2020-12-20T19:20:07-08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/retro-of-a-startup-journey/</loc>
     <lastmod>2020-06-27T10:35:13-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/ci-cd-on-a-budget-for-open-source-projects/</loc>
     <lastmod>2020-05-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/generating-random-numbers-with-kotlin/</loc>
     <lastmod>2020-05-29T08:21:47-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/hacking-the-interview-algorithms-and-big-o/</loc>
     <lastmod>2020-05-26T22:24:10-07:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/news/</loc>
     <lastmod>2019-07-08T22:26:44-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/salesforce-database-fiasco/</loc>
     <lastmod>2019-05-18T16:19:24-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/cracks-forming-in-us-cyber-security/</loc>
     <lastmod>2019-01-11T22:05:19-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/marriott-hack-an-update/</loc>
     <lastmod>2019-01-04T19:48:53-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/recommendations/</loc>
     <lastmod>2018-12-08T21:12:15-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/organization-hardening/</loc>
     <lastmod>2018-12-04T19:40:30-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/the-colossal-monumental-screw-up-that-is-marriott-security/</loc>
     <lastmod>2018-11-30T20:10:09-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/upgrade-adobe-acrobat-reader/</loc>
     <lastmod>2018-11-28T21:40:08-06:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/new-t2-security-chip-details/</loc>
     <lastmod>2018-10-30T20:56:11-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/thoughts-on-the-chinese-motherboard-hack/</loc>
     <lastmod>2018-10-09T22:16:41-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/foreshadow-another-echo-of-spectre/</loc>
     <lastmod>2018-08-29T22:31:46-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/nodesrv-a-mud-framework-in-2018/</loc>
     <lastmod>2018-08-24T21:59:42-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/practical-kubernetes-security/</loc>
     <lastmod>2018-08-18T08:14:14-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/have-i-been-pwned/</loc>
     <lastmod>2018-08-16T22:35:09-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/infrastructure-validation-and-auditing/</loc>
     <lastmod>2018-08-15T04:15:31-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/tls-1.3-is-here/</loc>
     <lastmod>2018-08-13T22:59:37-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/thinking-beyond-mm-security/</loc>
     <lastmod>2018-08-11T22:02:47-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/about/</loc>
     <lastmod>2018-08-11T09:20:09-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/infosec/</loc>
     <lastmod>2018-08-10T07:25:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/krack/</loc>
     <lastmod>2018-08-10T07:25:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/krack-attacks/</loc>
     <lastmod>2018-08-10T07:25:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <lastmod>2018-08-10T07:25:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/the-password-is-dead/</loc>
     <lastmod>2018-07-25T08:22:24-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/working-remotely/</loc>
     <lastmod>2015-09-01T08:19:54-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/make-for-asset-management/</loc>
     <lastmod>2015-08-14T07:00:28-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/posts/ten-immutable-laws-of-security-thoughts/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/archives/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
   </url>
-  
 </urlset>
