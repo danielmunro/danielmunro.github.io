@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>My Experience Purchasing, And Then Cancelling, AWS Reserved Instances</title>
+	
+	<meta name="description" content="">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="My Experience Purchasing, And Then Cancelling, AWS Reserved Instances">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+	
+	<meta name="og:title" content="My Experience Purchasing, And Then Cancelling, AWS Reserved Instances">
+	<meta name="og:description" content="">
+	
+	<meta name="og:url" content="/posts/my-experience-purchasing-aws-reserved-instances/">
+	<meta name="og:site_name" content="My Experience Purchasing, And Then Cancelling, AWS Reserved Instances">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:tag" content="">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123776938-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body>
+
+<header>
+	
+	<a href="/" style="float: left;color:#ff3b30;">Dan Munro - Software Engineer</a>
+	
+	&nbsp;&nbsp;<a href="/news/" style="color:#777;">News</a>&nbsp;&nbsp;<a href="/archives/" style="color:#777;">Archives</a>&nbsp;&nbsp;<a href="/recommendations/" style="color:#777;">Recommendations</a>
+	
+	<a href="/posts/index.xml" style="color:#777;float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+</header>
+
+
+<div class="content">
+  <h1>My Experience Purchasing, And Then Cancelling, AWS Reserved Instances</h1>
+  <aside></aside>
+  <p><h2 id="preface-a-little-about-myself">Preface: A Little About Myself</h2>
+<p>Before getting to this story I&rsquo;m going to tell you, I need to explain a few things about myself. Most of these admissions are&hellip; with reluctance, because, well, they aren&rsquo;t all flattering. They are important to the story, to understanding why I did this dumb thing.</p>
+<p>Firstly, I did this dumb thing because <em>I Am Not Very Smart</em>. I am <em>Exceptionally Curious</em>, and <em>Someone Who Does Not Read Directions</em>.</p>
+<p>While I consider myself nice (enough), I can be <em>Stubborn Like A Mule</em>, and I <em>Have A Complicated Relationship To Rules And Authority</em>, which I try to keep in the context of my white, cis male privilege.</p>
+<h3 id="squirrel">Squirrel!</h3>
+<p>It sort of ruins the surprise, but I was diagnosed with ADHD at 28. More often then not my focus and attention cause me problems in my professional and personal life, but there are qualities of it that are endearing, and feel downright like superpowers. It&rsquo;s who I am, and I am comfortable with that. I learn very fast when I&rsquo;m motivated. When I am focused, I can devour information and come to reasonable conclusions on problems. As situations change, I can confidently reassess and adapt.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="the-mistake">The Mistake</h2>
+<p>In October 2019 I signed up for two reserved instances (RIs) in AWS. If you are unaware, a RI is a contract over a duration of time for an instance type. There are different types of RI contracts, for different lengths of time, and typically the discount is steep in return for the long term commitment versus standard on-demand EC2 instances.</p>
+<p>So, why did I purchase these contracts? Was there a valid business to run, or a use-case that required running instances long term?</p>
+<p>Nope! &hellip;Honestly, I don&rsquo;t know. I was stoned?</p>
+<p>Remember when I said I was <em>Exceptionally Curious</em>? Well I constantly tinker with side projects in my free time. I spend <em>an enormous</em> amount of free time digging into AWS documentation, services, SDKs, automation frameworks, security engineering, and anything else even remotely related.</p>
+<p>As <em>Someone Who Does Not Read Directions</em>, I clicked past all the notices about the commitment &ndash; about how RIs are not cancellable. The ones I purchased had zero down payment, and the process took minutes.</p>
+<p>&ldquo;This is perfect for my curious, impulsive learning style,&rdquo; I thought at the time. It&rsquo;s a moment, on reflection, that I wish I could warn myself about.</p>
+<h3 id="what-happens-to-nice-people-who-follow-the-rules">What Happens to Nice People Who Follow The Rules?</h3>
+<p>Due to privacy concerns I won&rsquo;t discuss the specifics of my dealings with AWS support.</p>
+<p>What I do want to share is that the AWS support <em>people</em> conveyed a genuine desire to help me. They seemed to mostly grasp my exasperation. It was clear, however, they they were bound to operate within the framework that didn&rsquo;t give them much, if any, flexibility.</p>
+<p>The framework to which I&rsquo;m referring, of course, is the draconian kafka-esque purgatory of bureaucracy that AWS management and corporate penny pinching culture has produced.</p>
+<p>Typically, when told (repeatedly) that something cannot be done, a nicer, less stubborn person might understand that the thing in question is, in fact, not possible. A kinder, less assuming individual might think what they are told is final. They might not understand that they have authority as one of two parties in a contract. They might also not understand that a contract is only as valid as it is enforceable.</p>
+<p>They might not understand that companies break contracts every day, as a course of business, based on simple cost-benefit analyses.</p>
+<h4 id="nice-guys-finish-last">Nice Guys Finish Last</h4>
+<p>People who <em>Have A Complicated Relationship To Rules And Authority</em> understand that contracts can be negotiated. We understand that flexibility exists, whether or not it is granted in any particular circumstance. We understand that these decisions are sometimes arbitrary, and this system of arbitrariness is, in a word, exhausting.</p>
+<h3 id="closing-an-aws-account-also-closes-amazon">Closing An AWS Account Also Closes Amazon</h3>
+<p>Surprise! Since all relationships are terminated with Amazon when an AWS account is closed</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>So now I have no AWS account anymore. No idea how AWS will handle the contracts I have terminated with them. No idea how vindictively they will pursue the remaining balance. I am reduced to a number, and they will decide my fate.</p>
+<p>If you&rsquo;re willing to burn the house down you can break your contracts with AWS. They will insist that you cannot, but don&rsquo;t listen to them. Because you also <em>Have A Complicated Relationship To Rules And Authority</em>, you can decide your own fate and tell them to shove off. If the cost of paying for the RIs exceeds the cost of breaking all relationships with AWS, then say good bye and don&rsquo;t look back.</p>
+</p>
+</div>
+
+
+  <p>Written on Nov 14, 2019.</p>
+
+
+<footer>
+</footer>
+</body>
+</html>
