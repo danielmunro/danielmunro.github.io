@@ -138,7 +138,7 @@ I am working on an application. The project is far enough along, however at its 
 &lt;p&gt;Digital Ocean starts at a $5/mo buy in.&lt;/p&gt;
 &lt;h2 id=&#34;setting-up-gradle&#34;&gt;Setting up Gradle&lt;/h2&gt;
 &lt;p&gt;Below are portions of a &lt;code&gt;build.gradle&lt;/code&gt; configuration which add &lt;a href=&#34;https://www.jacoco.org/jacoco/trunk/index.html&#34;&gt;JaCoCo&lt;/a&gt; support, and &lt;a href=&#34;https://www.sonarqube.org/&#34;&gt;SonarQube&lt;/a&gt; configured to send reports to a &lt;a href=&#34;https://sonarcloud.io&#34;&gt;SonarCloud&lt;/a&gt; project.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;plugins &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-groovy&#34; data-lang=&#34;groovy&#34;&gt;plugins &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     id &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;jacoco&amp;#39;&lt;/span&gt;
 
     id &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;org.sonarqube&amp;#39;&lt;/span&gt; version &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;2.8&amp;#39;&lt;/span&gt;
@@ -186,7 +186,7 @@ jacocoTestReport&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span
 &lt;li&gt;(if commit is tagged) push a docker image to &lt;a href=&#34;https://quay.io/&#34;&gt;Quay&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;(if commit is tagged) restart a systemd service in a &lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;Digital Ocean&lt;/a&gt; droplet&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Run Gradle Tests&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Run Gradle Tests&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;on&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;push&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;jobs&lt;/span&gt;:
   &lt;span style=&#34;color:#f92672&#34;&gt;gradle&lt;/span&gt;:
@@ -225,7 +225,7 @@ jacocoTestReport&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            /snap/bin/docker system prune -af
 &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;            systemctl start &amp;lt;&amp;lt; MY SERVICE &amp;gt;&amp;gt;&lt;/span&gt;            
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;With the above snippet, add relevant secrets to the GitHub:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# if using Quay
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# if using Quay
 DOCKER_USERNAME=
 DOCKER_PASSWORD=
 
@@ -246,11 +246,11 @@ SSHKEY=
       <guid>/posts/generating-random-numbers-with-kotlin/</guid>
       <description>&lt;p&gt;Official Kotlin random API documentation: &lt;a href=&#34;https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/&#34;&gt;HERE&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;generate-a-random-number-between-0-and-1&#34;&gt;Generate a random number between 0 and 1:&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;randomDouble&lt;/span&gt;(): Double {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;randomDouble&lt;/span&gt;(): Double {
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; Math.random()
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;generate-a-random-number-within-a-range&#34;&gt;Generate a random number within a range:&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;randomWithinRange&lt;/span&gt;(start: Int, stop: Int): Int {
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-kotlin&#34; data-lang=&#34;kotlin&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fun&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;randomWithinRange&lt;/span&gt;(start: Int, stop: Int): Int {
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (start&lt;span style=&#34;color:#f92672&#34;&gt;..&lt;/span&gt;stop).random()
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;other-resources&#34;&gt;Other resources&lt;/h2&gt;
@@ -613,7 +613,7 @@ SSHKEY=
       <pubDate>Wed, 29 Aug 2018 22:31:46 -0500</pubDate>
       
       <guid>/posts/foreshadow-another-echo-of-spectre/</guid>
-      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;A new duo of exploits collectively called &lt;a href=&#34;https://foreshadowattack.eu/&#34;&gt;Foreshadow-NG&lt;/a&gt; were &lt;a href=&#34;https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00161.html&#34;&gt;confirmed by Intel on August 14th&lt;/a&gt;. In the same family as &lt;a href=&#34;https://meltdownattack.com/&#34;&gt;Spectre&lt;/a&gt; and related to an exploit &lt;a href=&#34;https://foreshadowattack.eu/foreshadow.pdf&#34;&gt;previously reported in January 2018&lt;/a&gt;, this new generation allows unauthorized access to the L1 data cache layer inside a processor core. The L1 data cache layer is considered privileged and contains information about the operating system, drivers, userland applications, virtualized resources, and other information stored in the processor core. All an attacker needs is the ability to run code (without root privileges).&lt;/p&gt;
 &lt;h2 id=&#34;privilege-escalation-via-key-siphoning&#34;&gt;Privilege Escalation Via Key Siphoning&lt;/h2&gt;
 &lt;p&gt;One particularly concerning bit of privileged information that can be accessed with these attacks is a cryptographic key called an attestation key. This key is used when generating signatures for Intel&amp;rsquo;s Secure Guard Extensions (SGX) integrity checks. With a valid attestation key, an attacker can generate SGX signatures that appear valid, but in fact are not. It gets better (read: worse), as due to the difficulty in knowing the source of a signed attestation key, a compromise of one key in an ecosystem will in turn potentially allow the compromise of multiple machines. Read more &lt;a href=&#34;https://appleinsider.com/articles/18/08/14/foreshadow-intel-processor-attack-bypasses-protections-for-secure-data-held-on-chip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
@@ -666,7 +666,7 @@ SSHKEY=
       <pubDate>Sat, 18 Aug 2018 08:14:14 -0500</pubDate>
       
       <guid>/posts/practical-kubernetes-security/</guid>
-      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+      <description>&lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;Kubernetes is a fascinating software development that has rapidly revolutionized the container and ops spaces. However, with quick evolution comes new attack vectors.&lt;/p&gt;
 &lt;p&gt;This article hopes to highlight some important Kubernetes security best practices, including hardening default options, isolation at the network level, and tools for auditing security settings in deployed clusters. Reference links and documentation will be added for further reading.&lt;/p&gt;
 &lt;p&gt;Some advice is specific to AWS, however this guide aims to be hosting agnostic as much as possible.&lt;/p&gt;
@@ -741,13 +741,13 @@ SSHKEY=
 &lt;h2 id=&#34;testing-tools&#34;&gt;Testing Tools&lt;/h2&gt;
 &lt;p&gt;There are a few options for infrastructure testing tools.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://serverspec.org/&#34;&gt;ServerSpec&lt;/a&gt; - With strong community support and a good reputation, ServerSpec is a solid option. Tests are in ruby and utilize RSpec. Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;spec_helper&amp;#39;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;spec_helper&amp;#39;&lt;/span&gt;
 
 describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#39;&lt;/span&gt;), &lt;span style=&#34;color:#e6db74&#34;&gt;:if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; os&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;:family&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;redhat&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
   it { should be_installed }
 &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://www.inspec.io/&#34;&gt;InSpec&lt;/a&gt; - Emphasizes compliance, policy requirements, and provisioning validation. InSpec is an expressive testing library built on ServerSpec, so it&amp;rsquo;s ruby as well. Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;control &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;sshd-21&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ruby&#34; data-lang=&#34;ruby&#34;&gt;control &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;sshd-21&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
   title &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Set SSH Protocol to 2&amp;#39;&lt;/span&gt;
   desc &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;A detailed description&amp;#39;&lt;/span&gt;
   impact &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# This is critical ref &amp;#39;compliance guide, section 2.1&amp;#39;&lt;/span&gt;
@@ -756,12 +756,12 @@ describe package(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;httpd&amp;#3
   &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://testinfra.readthedocs.io/en/latest/&#34;&gt;test_infra&lt;/a&gt; - Focused on provisioning tool validation, test_infra aims to be a port of ServerSpec to python. Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_passwd_file&lt;/span&gt;(host):
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_passwd_file&lt;/span&gt;(host):
   passwd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; host&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;file(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/etc/passwd&amp;#34;&lt;/span&gt;)
   &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;contains(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;)
   &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;user &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;
   &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mode &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;o644
+  &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; passwd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mode &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0o644&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/danielmunro/test_myinfra&#34;&gt;Here&lt;/a&gt; is a small demo I put together, bolting test_infra tests onto a docker-compose flask + redis example app.&lt;/p&gt;
 </description>
     </item>
@@ -992,14 +992,14 @@ NAME
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;h3 id=&#34;anatomy-of-a-makefile-for-the-web&#34;&gt;Anatomy of a Makefile for the Web&lt;/h3&gt;
 &lt;p&gt;By convention, a makefile&amp;rsquo;s first target is a default catch-all, usually &lt;code&gt;all&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;all: clean build
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;all: clean build
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;More on this below.&lt;/p&gt;
 &lt;h4 id=&#34;install&#34;&gt;Install&lt;/h4&gt;
 &lt;p&gt;A web makefile is going to have different targets depending on things like libraries and the project structure. If dependencies are managed by Bower (and assuming bower is already configured and working), an &lt;code&gt;install&lt;/code&gt; target like the one below works:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;install:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;install:
     bower install
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I usually have a few extra steps: convert a JS library from &lt;a href=&#34;http://requirejs.org/docs/commonjs.html&#34;&gt;CommonJS to RequireJS&lt;/a&gt;, and create new distributable directories (note the &lt;strong&gt;buildDir&lt;/strong&gt; macro &lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;#myfootnote2&#34;&gt;2&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;):&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;buildDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/public
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;buildDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/public
 
 install:
     bower install &lt;span style=&#34;color:#ae81ff&#34;&gt;\
@@ -1007,7 +1007,7 @@ install:
 &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;    mkdir -p &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/js &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/css &lt;span style=&#34;color:#ae81ff&#34;&gt;\
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;clean-and-build&#34;&gt;Clean And Build&lt;/h4&gt;
 &lt;p&gt;The &lt;code&gt;build&lt;/code&gt; step compiles and releases a new set of CSS and javascript. For the example below, we&amp;rsquo;re compiling LESS to CSS and JSX to vanilla JS. As the name implies, &lt;code&gt;clean&lt;/code&gt; removes files generated during build.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;assetsDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/assets
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;assetsDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/assets
 buildDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/public
 
 build:
@@ -1020,11 +1020,11 @@ clean:
     rm &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;watching-for-changes&#34;&gt;Watching For Changes&lt;/h4&gt;
 &lt;p&gt;Adding a &lt;strong&gt;&amp;ndash;watch&lt;/strong&gt; flag to the jsx command allows for automatic rebuild of JS resources when changed. Let&amp;rsquo;s create a &lt;code&gt;watch&lt;/code&gt; target for it.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;watch:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;watch:
     jsx --harmony --extension jsx --es6module --watch &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;assetsDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/jsx &lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;buildDir&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;/js
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;putting-it-all-together&#34;&gt;Putting It All Together&lt;/h3&gt;
 &lt;p&gt;The makefile below contains two macros: &lt;strong&gt;assetsDir&lt;/strong&gt;, &lt;strong&gt;buildDir&lt;/strong&gt;, and four targets: &lt;code&gt;install&lt;/code&gt;, &lt;code&gt;build&lt;/code&gt;, &lt;code&gt;watch&lt;/code&gt;, &lt;code&gt;clean&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;assetsDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/assets
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;assetsDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/assets
 buildDir &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; /var/www/public
 
 install:

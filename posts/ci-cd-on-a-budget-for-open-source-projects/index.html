@@ -66,7 +66,7 @@ if (!doNotTrack) {
 <p>Digital Ocean starts at a $5/mo buy in.</p>
 <h2 id="setting-up-gradle">Setting up Gradle</h2>
 <p>Below are portions of a <code>build.gradle</code> configuration which add <a href="https://www.jacoco.org/jacoco/trunk/index.html">JaCoCo</a> support, and <a href="https://www.sonarqube.org/">SonarQube</a> configured to send reports to a <a href="https://sonarcloud.io">SonarCloud</a> project.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-groovy" data-lang="groovy">plugins <span style="color:#f92672">{</span>
     id <span style="color:#e6db74">&#39;jacoco&#39;</span>
 
     id <span style="color:#e6db74">&#39;org.sonarqube&#39;</span> version <span style="color:#e6db74">&#39;2.8&#39;</span>
@@ -114,7 +114,7 @@ jacocoTestReport<span style="color:#f92672">.</span><span style="color:#a6e22e">
 <li>(if commit is tagged) push a docker image to <a href="https://quay.io/">Quay</a></li>
 <li>(if commit is tagged) restart a systemd service in a <a href="https://www.digitalocean.com/">Digital Ocean</a> droplet</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run Gradle Tests</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">Run Gradle Tests</span>
 <span style="color:#f92672">on</span>: <span style="color:#ae81ff">push</span>
 <span style="color:#f92672">jobs</span>:
   <span style="color:#f92672">gradle</span>:
@@ -153,7 +153,7 @@ jacocoTestReport<span style="color:#f92672">.</span><span style="color:#a6e22e">
 </span><span style="color:#e6db74">            /snap/bin/docker system prune -af
 </span><span style="color:#e6db74">            systemctl start &lt;&lt; MY SERVICE &gt;&gt;</span>            
 </code></pre></div><p>With the above snippet, add relevant secrets to the GitHub:</p>
-<pre><code># if using Quay
+<pre tabindex="0"><code># if using Quay
 DOCKER_USERNAME=
 DOCKER_PASSWORD=
 

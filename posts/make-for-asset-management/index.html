@@ -78,14 +78,14 @@ NAME
 <p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
 <h3 id="anatomy-of-a-makefile-for-the-web">Anatomy of a Makefile for the Web</h3>
 <p>By convention, a makefile&rsquo;s first target is a default catch-all, usually <code>all</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">all: clean build
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">all: clean build
 </code></pre></div><p>More on this below.</p>
 <h4 id="install">Install</h4>
 <p>A web makefile is going to have different targets depending on things like libraries and the project structure. If dependencies are managed by Bower (and assuming bower is already configured and working), an <code>install</code> target like the one below works:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">install:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">install:
     bower install
 </code></pre></div><p>I usually have a few extra steps: convert a JS library from <a href="http://requirejs.org/docs/commonjs.html">CommonJS to RequireJS</a>, and create new distributable directories (note the <strong>buildDir</strong> macro <!-- raw HTML omitted --><a href="#myfootnote2">2</a><!-- raw HTML omitted -->):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">buildDir <span style="color:#f92672">=</span> /var/www/public
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">buildDir <span style="color:#f92672">=</span> /var/www/public
 
 install:
     bower install <span style="color:#ae81ff">\
@@ -93,7 +93,7 @@ install:
 </span><span style="color:#ae81ff"></span>    mkdir -p <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>/js <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>/css <span style="color:#ae81ff">\
 </span></code></pre></div><h4 id="clean-and-build">Clean And Build</h4>
 <p>The <code>build</code> step compiles and releases a new set of CSS and javascript. For the example below, we&rsquo;re compiling LESS to CSS and JSX to vanilla JS. As the name implies, <code>clean</code> removes files generated during build.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">assetsDir <span style="color:#f92672">=</span> /var/www/assets
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">assetsDir <span style="color:#f92672">=</span> /var/www/assets
 buildDir <span style="color:#f92672">=</span> /var/www/public
 
 build:
@@ -106,11 +106,11 @@ clean:
     rm <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>
 </code></pre></div><h4 id="watching-for-changes">Watching For Changes</h4>
 <p>Adding a <strong>&ndash;watch</strong> flag to the jsx command allows for automatic rebuild of JS resources when changed. Let&rsquo;s create a <code>watch</code> target for it.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">watch:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">watch:
     jsx --harmony --extension jsx --es6module --watch <span style="color:#66d9ef">$(</span>assetsDir<span style="color:#66d9ef">)</span>/jsx <span style="color:#66d9ef">$(</span>buildDir<span style="color:#66d9ef">)</span>/js
 </code></pre></div><h3 id="putting-it-all-together">Putting It All Together</h3>
 <p>The makefile below contains two macros: <strong>assetsDir</strong>, <strong>buildDir</strong>, and four targets: <code>install</code>, <code>build</code>, <code>watch</code>, <code>clean</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">assetsDir <span style="color:#f92672">=</span> /var/www/assets
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">assetsDir <span style="color:#f92672">=</span> /var/www/assets
 buildDir <span style="color:#f92672">=</span> /var/www/public
 
 install:
