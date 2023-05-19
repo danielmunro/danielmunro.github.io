@@ -7,26 +7,5 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 16 Dec 2021 21:08:53 -0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>December 16th</title>
-      <link>/posts/2021/12/16/</link>
-      <pubDate>Thu, 16 Dec 2021 21:08:53 -0800</pubDate>
-      
-      <guid>/posts/2021/12/16/</guid>
-      <description>Writing is hard, like really hard. And that is why I decided I need to start practicing again. After all, some of the best skills in life are hard to improve, yet incredibly gratifying.
-And the only way to get better at something is to practice it, right?
-Of Clouds And Developers After spending about a dozen years building infrastructure and applications in AWS, I&amp;rsquo;ve had to recently take a hiatus.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/posts/ten-immutable-laws-of-security-thoughts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/ten-immutable-laws-of-security-thoughts/</guid>
-      <description>****&amp;mdash; title: &amp;ldquo;Ten Immutable Laws Of Security: Thoughts&amp;rdquo; description: &amp;ldquo;Thoughts on the ten immutable laws of security, first published seven years ago.&amp;rdquo; image: https://danmunro.com/images/cyber.png date: 2018-09-10T21:45:02-05:00 draft: true The Laws Originally posted way back in 2011 on Microsoft Technet, here they are:
-If a bad guy can persuade you to run his program on your computer, it&amp;rsquo;s not solely your computer anymore. If a bad guy can alter the operating system on your computer, it&amp;rsquo;s not your computer anymore.</description>
-    </item>
-    
   </channel>
 </rss>
